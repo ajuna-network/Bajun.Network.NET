@@ -1,14 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<PackageId>Bajun.Network.NET.NetApiExt</PackageId>
+		<PackageId>Bajun.Network.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Company>BloGa Tech AG</Company>
 		<Authors>Cedric Decoster</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>Bajun Network .NET API</Description>
 		<PackageProjectUrl>https://ajuna.io</PackageProjectUrl>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/ajuna-network/Bajun.Network.NET</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
@@ -17,6 +18,10 @@
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\README.md">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
