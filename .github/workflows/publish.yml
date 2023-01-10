@@ -52,7 +52,7 @@ jobs:
         uses: alirezanet/publish-nuget@v3.0.4
         with:
            # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Bajun.Network.NET/Bajun.Network.NET.NetApiExt/Bajun.Network.NET.NetApiExt.csproj
+          PROJECT_FILE_PATH: Bajun.Network.NET.NetApiExt/Bajun.Network.NET.NetApiExt.csproj
           # NuGet package id, used for version detection & defaults to project name
           PACKAGE_NAME: Bajun.Network.NET.NetApiExt
           # API key to authenticate with NuGet server
