@@ -1,0 +1,58 @@
+name: publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: build & test & publish
+    runs-on: ubuntu-latest
+        
+    steps:
+      - uses: actions/checkout@v2
+
+      ##
+      # Setup
+      # Setup multiple .NET versions so we can build against all referenced .NET versions.
+      ##
+      - name: Setup .NET Core 2.1.x
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 2.1.x
+     
+      - name: Setup .NET Core 3.1.x
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
+
+      - name: Setup .NET 5.0.x
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+
+      - name: Setup .NET 6.0.x
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      ##
+      # Dependencies
+      # Restore the project and its dependencies.
+      ##
+      - name: Install dependencies
+        run: dotnet restore
+
+      ##
+      # Publishing
+      # Publish all NuGet packages from Bajun.Network .NET SDK.
+      ##
+      - name: Publish Bajun.Network.NET Extension
+        id: publish_nuget_1
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          PROJECT_FILE_PATH: Bajun.Network.NET/Bajun.Network.NET.NetApiExt.csproj
+          VERSION_FILE_PATH: Version.props
+          VERSION_REGEX: ^\s*<AjunaPackageVersion>(.*)<\/AjunaPackageVersion>\s*$
+          PACKAGE_NAME: Bajun.Network.NET.NetApiExt
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
