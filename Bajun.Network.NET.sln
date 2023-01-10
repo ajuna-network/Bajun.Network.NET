@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bajun.Network.NET.RestService", "Bajun.Network.NET.RestService\Bajun.Network.NET.RestService.csproj", "{E34B3C69-0D0D-456B-9894-1381C1A9183B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bajun.Network.NET.NetApiExt", "Bajun.Network.NET.NetApiExt\Bajun.Network.NET.NetApiExt.csproj", "{0F212A5E-ABB1-47ED-AD47-AC5D90A7674D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bajun.Network.NET.RestClient", "Bajun.Network.NET.RestClient\Bajun.Network.NET.RestClient.csproj", "{F8E4CBD6-47C5-4345-925F-817B1E4157B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bajun.Network.NET.RestClient.Mockup", "Bajun.Network.NET.RestClient.Mockup\Bajun.Network.NET.RestClient.Mockup.csproj", "{28D18BB0-6F98-4945-88C6-4DE8BB47569A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bajun.Network.NET.RestClient.Test", "Bajun.Network.NET.RestClient.Test\Bajun.Network.NET.RestClient.Test.csproj", "{E4D1C0FA-F3D0-4151-A6CC-25F70AD648E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E34B3C69-0D0D-456B-9894-1381C1A9183B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34B3C69-0D0D-456B-9894-1381C1A9183B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34B3C69-0D0D-456B-9894-1381C1A9183B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34B3C69-0D0D-456B-9894-1381C1A9183B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F212A5E-ABB1-47ED-AD47-AC5D90A7674D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F212A5E-ABB1-47ED-AD47-AC5D90A7674D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F212A5E-ABB1-47ED-AD47-AC5D90A7674D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F212A5E-ABB1-47ED-AD47-AC5D90A7674D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E4CBD6-47C5-4345-925F-817B1E4157B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E4CBD6-47C5-4345-925F-817B1E4157B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E4CBD6-47C5-4345-925F-817B1E4157B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E4CBD6-47C5-4345-925F-817B1E4157B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D18BB0-6F98-4945-88C6-4DE8BB47569A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D18BB0-6F98-4945-88C6-4DE8BB47569A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D18BB0-6F98-4945-88C6-4DE8BB47569A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D18BB0-6F98-4945-88C6-4DE8BB47569A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D1C0FA-F3D0-4151-A6CC-25F70AD648E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D1C0FA-F3D0-4151-A6CC-25F70AD648E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D1C0FA-F3D0-4151-A6CC-25F70AD648E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D1C0FA-F3D0-4151-A6CC-25F70AD648E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
