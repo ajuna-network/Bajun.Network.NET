@@ -309,9 +309,42 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          result.SuspendThreshold = this.GetTestValueU32();
          result.DropThreshold = this.GetTestValueU32();
          result.ResumeThreshold = this.GetTestValueU32();
-         result.ThresholdWeight = this.GetTestValueU64();
-         result.WeightRestrictDecay = this.GetTestValueU64();
-         result.XcmpMaxIndividualWeight = this.GetTestValueU64();
+         result.ThresholdWeight = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.ThresholdWeight = this.GetTestValue24();
+         result.WeightRestrictDecay = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.WeightRestrictDecay = this.GetTestValue25();
+         result.XcmpMaxIndividualWeight = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.XcmpMaxIndividualWeight = this.GetTestValue26();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue24()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue25()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue26()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
          return result;
       }
       [Test()]
@@ -343,21 +376,21 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue25()
+      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue28()
       {
          Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>();
-         result.Create(this.GetTestValue26(), this.GetTestValueU32(), this.GetTestValue27());
+         result.Create(this.GetTestValue29(), this.GetTestValueU32(), this.GetTestValue30());
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue26()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue29()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue27()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue30()
       {
          Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
@@ -376,7 +409,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue25();
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue28();
          Ajuna.NetApi.Model.Types.Primitive.U64 mockupKey = this.GetTestValueU64();
 
          Assert.IsTrue(await rpcClient.SubscribeOverweight(mockupKey));

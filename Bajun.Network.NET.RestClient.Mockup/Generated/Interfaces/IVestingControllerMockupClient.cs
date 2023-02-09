@@ -11,10 +11,10 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public interface IVestingControllerMockupClient
    {
-      Task<bool> SetVestingSchedules(BoundedVecT15 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetVestingSchedules(BoundedVecT19 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

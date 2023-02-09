@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset
     
     
     /// <summary>
-    /// >> 70 - Composite[xcm.v1.multiasset.MultiAssets]
+    /// >> 78 - Composite[xcm.v1.multiasset.MultiAssets]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class MultiAssets : BaseType

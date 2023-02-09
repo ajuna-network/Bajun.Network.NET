@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting
     
     
     /// <summary>
-    /// >> 46 - Composite[orml_vesting.VestingSchedule]
+    /// >> 55 - Composite[orml_vesting.VestingSchedule]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class VestingSchedule : BaseType

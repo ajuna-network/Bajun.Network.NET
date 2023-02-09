@@ -57,11 +57,6 @@ namespace Bajun.Network.NET.NetApiExt.Generated
         public UtilityStorage UtilityStorage;
         
         /// <summary>
-        /// RandomnessStorage storage calls.
-        /// </summary>
-        public RandomnessStorage RandomnessStorage;
-        
-        /// <summary>
         /// IdentityStorage storage calls.
         /// </summary>
         public IdentityStorage IdentityStorage;
@@ -80,6 +75,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated
         /// PreImageStorage storage calls.
         /// </summary>
         public PreImageStorage PreImageStorage;
+        
+        /// <summary>
+        /// UniquesStorage storage calls.
+        /// </summary>
+        public UniquesStorage UniquesStorage;
         
         /// <summary>
         /// BalancesStorage storage calls.
@@ -162,6 +162,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated
         public CouncilMembershipStorage CouncilMembershipStorage;
         
         /// <summary>
+        /// RandomnessStorage storage calls.
+        /// </summary>
+        public RandomnessStorage RandomnessStorage;
+        
+        /// <summary>
         /// AwesomeAvatarsStorage storage calls.
         /// </summary>
         public AwesomeAvatarsStorage AwesomeAvatarsStorage;
@@ -176,11 +181,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated
             this.ParachainInfoStorage = new ParachainInfoStorage(this);
             this.MultisigStorage = new MultisigStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
-            this.RandomnessStorage = new RandomnessStorage(this);
             this.IdentityStorage = new IdentityStorage(this);
             this.ProxyStorage = new ProxyStorage(this);
             this.SchedulerStorage = new SchedulerStorage(this);
             this.PreImageStorage = new PreImageStorage(this);
+            this.UniquesStorage = new UniquesStorage(this);
             this.BalancesStorage = new BalancesStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
             this.VestingStorage = new VestingStorage(this);
@@ -197,6 +202,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated
             this.TreasuryStorage = new TreasuryStorage(this);
             this.CouncilStorage = new CouncilStorage(this);
             this.CouncilMembershipStorage = new CouncilMembershipStorage(this);
+            this.RandomnessStorage = new RandomnessStorage(this);
             this.AwesomeAvatarsStorage = new AwesomeAvatarsStorage(this);
         }
     }

@@ -47,8 +47,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "UpwardMessages"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "PendingUpwardMessages"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "AnnouncedHrmpMessagesPerCandidate"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ReservedXcmpWeightOverride"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U64)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ReservedDmpWeightOverride"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U64)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ReservedXcmpWeightOverride"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ReservedDmpWeightOverride"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "AuthorizedUpgrade"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "CustomValidationHeadData"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>)));
         }
@@ -68,6 +68,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> PendingValidationCodeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PendingValidationCodeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> PendingValidationCode
         ///  In case of a scheduled upgrade, this storage field contains the validation code to be applied.
         /// 
@@ -79,7 +88,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> PendingValidationCode(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.PendingValidationCodeParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -96,6 +106,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> NewValidationCodeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string NewValidationCodeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> NewValidationCode
         ///  Validation code that is set by the parachain and is to be communicated to collator and
         ///  consequently the relay-chain.
@@ -106,7 +125,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> NewValidationCode(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.NewValidationCodeParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -121,6 +141,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ValidationDataDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ValidationDataDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> ValidationData
         ///  The [`PersistedValidationData`] set for this block.
         ///  This value is expected to be set only once per block and it's never stored
@@ -129,7 +158,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData> ValidationData(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ValidationDataParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -142,13 +172,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> DidSetValidationCodeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string DidSetValidationCodeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> DidSetValidationCode
         ///  Were the validation data set to notify the relay chain?
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Primitive.Bool> DidSetValidationCode(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.DidSetValidationCodeParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -161,13 +201,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> LastRelayChainBlockNumberDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LastRelayChainBlockNumberDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> LastRelayChainBlockNumber
         ///  The relay chain block number associated with the last parachain block.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> LastRelayChainBlockNumber(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastRelayChainBlockNumberParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -186,6 +236,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> UpgradeRestrictionSignalDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string UpgradeRestrictionSignalDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> UpgradeRestrictionSignal
         ///  An option which indicates if the relay-chain restricts signalling a validation code upgrade.
         ///  In other words, if this is `Some` and [`NewValidationCode`] is `Some` then the produced
@@ -198,7 +257,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>> UpgradeRestrictionSignal(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.UpgradeRestrictionSignalParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -216,6 +276,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> RelayStateProofDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RelayStateProofDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> RelayStateProof
         ///  The state proof for the last relay parent block.
         /// 
@@ -227,7 +296,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof> RelayStateProof(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.RelayStateProofParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -246,6 +316,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> RelevantMessagingStateDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RelevantMessagingStateDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> RelevantMessagingState
         ///  The snapshot of some state related to messaging relevant to the current parachain as per
         ///  the relay parent.
@@ -258,7 +337,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot> RelevantMessagingState(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.RelevantMessagingStateParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -276,6 +356,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> HostConfigurationDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string HostConfigurationDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> HostConfiguration
         ///  The parachain host configuration that was obtained from the relay parent.
         /// 
@@ -287,7 +376,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration> HostConfiguration(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HostConfigurationParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -303,6 +393,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> LastDmqMqcHeadDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LastDmqMqcHeadDefault()
+        {
+            return "0x0000000000000000000000000000000000000000000000000000000000000000";
+        }
+        
+        /// <summary>
         /// >> LastDmqMqcHead
         ///  The last downward message queue chain head we have observed.
         /// 
@@ -312,7 +411,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain> LastDmqMqcHead(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastDmqMqcHeadParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -328,6 +428,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> LastHrmpMqcHeadsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LastHrmpMqcHeadsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> LastHrmpMqcHeads
         ///  The message queue chain heads we have observed per each channel incoming channel.
         /// 
@@ -337,7 +446,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeMapT1> LastHrmpMqcHeads(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastHrmpMqcHeadsParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeMapT1>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeMapT1>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -352,6 +462,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ProcessedDownwardMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ProcessedDownwardMessagesDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> ProcessedDownwardMessages
         ///  Number of downward messages processed in a block.
         /// 
@@ -360,7 +479,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> ProcessedDownwardMessages(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ProcessedDownwardMessagesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -375,6 +495,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> HrmpWatermarkDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string HrmpWatermarkDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> HrmpWatermark
         ///  HRMP watermark that was set in a block.
         /// 
@@ -383,7 +512,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> HrmpWatermark(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HrmpWatermarkParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -398,6 +528,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> HrmpOutboundMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string HrmpOutboundMessagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> HrmpOutboundMessages
         ///  HRMP messages that were sent in a block.
         /// 
@@ -406,7 +545,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>> HrmpOutboundMessages(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HrmpOutboundMessagesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -421,6 +561,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> UpwardMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string UpwardMessagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> UpwardMessages
         ///  Upward messages that were sent in a block.
         /// 
@@ -429,7 +578,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> UpwardMessages(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.UpwardMessagesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -442,13 +592,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> PendingUpwardMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PendingUpwardMessagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> PendingUpwardMessages
         ///  Upward messages that are still pending and not yet send to the relay chain.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> PendingUpwardMessages(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.PendingUpwardMessagesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -462,6 +622,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> AnnouncedHrmpMessagesPerCandidateDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AnnouncedHrmpMessagesPerCandidateDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> AnnouncedHrmpMessagesPerCandidate
         ///  The number of HRMP messages we observed in `on_initialize` and thus used that number for
         ///  announcing the weight of `on_initialize` and `on_finalize`.
@@ -469,7 +638,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> AnnouncedHrmpMessagesPerCandidate(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.AnnouncedHrmpMessagesPerCandidateParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -483,14 +653,24 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ReservedXcmpWeightOverrideDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ReservedXcmpWeightOverrideDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> ReservedXcmpWeightOverride
         ///  The weight we reserve at the beginning of the block for processing XCMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.Types.Primitive.U64> ReservedXcmpWeightOverride(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedXcmpWeightOverride(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ReservedXcmpWeightOverrideParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -504,14 +684,24 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ReservedDmpWeightOverrideDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ReservedDmpWeightOverrideDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> ReservedDmpWeightOverride
         ///  The weight we reserve at the beginning of the block for processing DMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.Types.Primitive.U64> ReservedDmpWeightOverride(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedDmpWeightOverride(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ReservedDmpWeightOverrideParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -524,13 +714,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> AuthorizedUpgradeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AuthorizedUpgradeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> AuthorizedUpgrade
         ///  The next authorized upgrade, if there is one.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256> AuthorizedUpgrade(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.AuthorizedUpgradeParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -545,6 +745,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> CustomValidationHeadDataDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CustomValidationHeadDataDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> CustomValidationHeadData
         ///  A custom head data that should be returned as result of `validate_block`.
         /// 
@@ -553,7 +762,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> CustomValidationHeadData(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.CustomValidationHeadDataParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            return result;
         }
     }
     
@@ -603,6 +813,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(code.Encode());
             return new Method(1, "ParachainSystem", 3, "enact_authorized_upgrade", byteArray.ToArray());
         }
+    }
+    
+    public sealed class ParachainSystemConstants
+    {
     }
     
     public enum ParachainSystemErrors

@@ -38,11 +38,22 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> IncompleteSince
+        /// </summary>
+        [HttpGet("IncompleteSince")]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage), "IncompleteSinceParams")]
+        public IActionResult GetIncompleteSince()
+        {
+            return this.Ok(_schedulerStorage.GetIncompleteSince());
+        }
+        
+        /// <summary>
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
         [HttpGet("Agenda")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler.ScheduledV3>>), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage), "AgendaParams", typeof(Ajuna.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetAgenda(string key)
         {
@@ -51,11 +62,14 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> Lookup
-        ///  Lookup from identity to the block number and index of the task.
+        ///  Lookup from a name to the block number and index of the task.
+        /// 
+        ///  For v3 -> v4 the previously unbounded identities are Blake2-256 hashed to form the v4
+        ///  identities.
         /// </summary>
         [HttpGet("Lookup")]
         [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32>), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage), "LookupParams", typeof(Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>))]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage), "LookupParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8))]
         public IActionResult GetLookup(string key)
         {
             return this.Ok(_schedulerStorage.GetLookup(key));

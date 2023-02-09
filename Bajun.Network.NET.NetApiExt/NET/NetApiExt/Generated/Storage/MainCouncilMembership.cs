@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public CouncilMembershipStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CouncilMembership", "Members"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CouncilMembership", "Members"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CouncilMembership", "Prime"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
         }
         
@@ -44,13 +44,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> MembersDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string MembersDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22> Members(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26> Members(CancellationToken token)
         {
             string parameters = CouncilMembershipStorage.MembersParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -63,13 +73,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> PrimeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PrimeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Prime
         ///  The current prime member, if one exists.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(CancellationToken token)
         {
             string parameters = CouncilMembershipStorage.PrimeParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            return result;
         }
     }
     
@@ -80,7 +100,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> add_member
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method AddMember(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        public static Method AddMember(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -91,7 +111,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> remove_member
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method RemoveMember(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        public static Method RemoveMember(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -102,7 +122,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> swap_member
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SwapMember(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 remove, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 add)
+        public static Method SwapMember(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress remove, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress add)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(remove.Encode());
@@ -125,7 +145,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> change_key
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ChangeKey(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 @new)
+        public static Method ChangeKey(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -136,7 +156,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> set_prime
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetPrime(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        public static Method SetPrime(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -152,6 +172,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             return new Method(43, "CouncilMembership", 6, "clear_prime", byteArray.ToArray());
         }
+    }
+    
+    public sealed class CouncilMembershipConstants
+    {
     }
     
     public enum CouncilMembershipErrors

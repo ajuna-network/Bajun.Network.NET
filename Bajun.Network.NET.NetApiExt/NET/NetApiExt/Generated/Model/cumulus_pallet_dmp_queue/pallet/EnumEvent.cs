@@ -32,13 +32,13 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.p
     }
     
     /// <summary>
-    /// >> 95 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
+    /// >> 103 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumOutcome>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumOutcome>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Ajuna.NetApi.Model.Types.Primitive.U64, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

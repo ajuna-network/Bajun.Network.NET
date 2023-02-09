@@ -42,16 +42,30 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ParachainIdDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ParachainIdDefault()
+        {
+            return "0x64000000";
+        }
+        
+        /// <summary>
         /// >> ParachainId
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> ParachainId(CancellationToken token)
         {
             string parameters = ParachainInfoStorage.ParachainIdParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            return result;
         }
     }
     
     public sealed class ParachainInfoCalls
+    {
+    }
+    
+    public sealed class ParachainInfoConstants
     {
     }
 }

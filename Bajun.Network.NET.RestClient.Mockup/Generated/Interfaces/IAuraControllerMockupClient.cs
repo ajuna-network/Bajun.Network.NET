@@ -11,12 +11,12 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    
    public interface IAuraControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT19 value);
+      Task<bool> SetAuthorities(BoundedVecT23 value);
       Task<bool> SetCurrentSlot(Slot value);
    }
 }

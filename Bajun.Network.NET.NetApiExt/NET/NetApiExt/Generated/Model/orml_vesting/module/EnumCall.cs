@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 230 - Variant[orml_vesting.module.Call]
+    /// >> 236 - Variant[orml_vesting.module.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>>, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>

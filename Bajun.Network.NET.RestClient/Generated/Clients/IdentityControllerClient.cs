@@ -16,7 +16,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using Ajuna.NetApi.Model.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
    public sealed class IdentityControllerClient : BaseClient, IIdentityControllerClient
@@ -44,17 +44,17 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SuperOf", Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<BaseTuple<U128, BoundedVecT9>> GetSubsOf(AccountId32 key)
+      public async Task<BaseTuple<U128, BoundedVecT11>> GetSubsOf(AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<U128, BoundedVecT9>>(_httpClient, "identity/subsof", Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
+         return await SendRequestAsync<BaseTuple<U128, BoundedVecT11>>(_httpClient, "identity/subsof", Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
       public async Task<bool> SubscribeSubsOf(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SubsOf", Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<BoundedVecT10> GetRegistrars()
+      public async Task<BoundedVecT12> GetRegistrars()
       {
-         return await SendRequestAsync<BoundedVecT10>(_httpClient, "identity/registrars");
+         return await SendRequestAsync<BoundedVecT12>(_httpClient, "identity/registrars");
       }
       public async Task<bool> SubscribeRegistrars()
       {

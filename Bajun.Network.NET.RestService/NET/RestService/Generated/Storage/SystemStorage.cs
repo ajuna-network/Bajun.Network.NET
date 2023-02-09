@@ -40,7 +40,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1 GetBlockWeight();
+        Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 GetBlockWeight();
         
         /// <summary>
         /// >> AllExtrinsicsLen
@@ -156,7 +156,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _blockWeightTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1> _blockWeightTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> _blockWeightTypedStorage;
         
         /// <summary>
         /// _allExtrinsicsLenTypedStorage typed storage field
@@ -230,7 +230,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         {
             this.AccountTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.AccountInfo>("System.Account", storageDataProvider, storageChangeDelegates);
             this.ExtrinsicCountTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("System.ExtrinsicCount", storageDataProvider, storageChangeDelegates);
-            this.BlockWeightTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1>("System.BlockWeight", storageDataProvider, storageChangeDelegates);
+            this.BlockWeightTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>("System.BlockWeight", storageDataProvider, storageChangeDelegates);
             this.AllExtrinsicsLenTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("System.AllExtrinsicsLen", storageDataProvider, storageChangeDelegates);
             this.BlockHashTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>("System.BlockHash", storageDataProvider, storageChangeDelegates);
             this.ExtrinsicDataTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>("System.ExtrinsicData", storageDataProvider, storageChangeDelegates);
@@ -279,7 +279,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _blockWeightTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1> BlockWeightTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> BlockWeightTypedStorage
         {
             get
             {
@@ -569,7 +569,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1 GetBlockWeight()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 GetBlockWeight()
         {
             return BlockWeightTypedStorage.Get();
         }

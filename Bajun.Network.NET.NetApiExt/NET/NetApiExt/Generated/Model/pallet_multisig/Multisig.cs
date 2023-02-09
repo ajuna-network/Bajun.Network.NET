@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 167 - Composite[pallet_multisig.Multisig]
+    /// >> 172 - Composite[pallet_multisig.Multisig]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Multisig : BaseType
@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _approvals;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 _approvals;
         
         public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint When
         {
@@ -80,7 +80,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Approvals
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 Approvals
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig
             Deposit.Decode(byteArray, ref p);
             Depositor = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Depositor.Decode(byteArray, ref p);
-            Approvals = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+            Approvals = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8();
             Approvals.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

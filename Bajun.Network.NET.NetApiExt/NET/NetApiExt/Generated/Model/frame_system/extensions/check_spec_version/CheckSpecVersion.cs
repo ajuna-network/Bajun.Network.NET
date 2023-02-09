@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.extensions.ch
     
     
     /// <summary>
-    /// >> 386 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
+    /// >> 416 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class CheckSpecVersion : BaseType

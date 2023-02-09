@@ -51,11 +51,10 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> PreimageFor
-        ///  The preimages stored by this pallet.
         /// </summary>
         [HttpGet("PreimageFor")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT13), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage), "PreimageForParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256))]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage), "PreimageForParams", typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetPreimageFor(string key)
         {
             return this.Ok(_preImageStorage.GetPreimageFor(key));

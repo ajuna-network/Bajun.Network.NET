@@ -13,12 +13,13 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public interface ITreasuryControllerMockupClient
    {
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetProposals(Proposal value, U32 key);
-      Task<bool> SetApprovals(BoundedVecT20 value);
+      Task<bool> SetInactive(U128 value);
+      Task<bool> SetApprovals(BoundedVecT24 value);
    }
 }

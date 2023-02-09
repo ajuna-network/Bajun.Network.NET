@@ -32,13 +32,13 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_s
     }
     
     /// <summary>
-    /// >> 27 - Variant[cumulus_pallet_parachain_system.pallet.Event]
+    /// >> 29 - Variant[cumulus_pallet_parachain_system.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Ajuna.NetApi.Model.Types.Primitive.U32, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Ajuna.NetApi.Model.Types.Primitive.U32, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>>
     {
     }
 }

@@ -12,14 +12,9 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig;
-   using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface IMultisigControllerMockupClient
    {
-      Task<bool> SetMultisigs(Multisig value, BaseTuple<AccountId32, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8> key);
-      Task<bool> SetCalls(BaseTuple<WrapperKeepOpaque, AccountId32, U128> value, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
+      Task<bool> SetMultisigs(Multisig value, Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8> key);
    }
 }

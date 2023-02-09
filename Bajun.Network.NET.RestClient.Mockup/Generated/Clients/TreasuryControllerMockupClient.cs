@@ -14,7 +14,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class TreasuryControllerMockupClient : MockupBaseClient, ITreasuryControllerMockupClient
@@ -32,7 +32,11 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Proposals", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalsParams(key));
       }
-      public async Task<bool> SetApprovals(BoundedVecT20 value)
+      public async Task<bool> SetInactive(U128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Treasury/Inactive", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.InactiveParams());
+      }
+      public async Task<bool> SetApprovals(BoundedVecT24 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
       }

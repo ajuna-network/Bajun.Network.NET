@@ -37,6 +37,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
     {
     }
     
+    public sealed class CumulusXcmConstants
+    {
+    }
+    
     public enum CumulusXcmErrors
     {
     }

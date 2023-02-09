@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     }
     
     /// <summary>
-    /// >> 32 - Variant[pallet_utility.pallet.Event]
+    /// >> 34 - Variant[pallet_utility.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

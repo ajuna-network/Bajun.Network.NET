@@ -26,9 +26,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
         
         remove_proxies = 3,
         
-        anonymous = 4,
+        create_pure = 4,
         
-        kill_anonymous = 5,
+        kill_pure = 5,
         
         announce = 6,
         
@@ -40,10 +40,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     }
     
     /// <summary>
-    /// >> 223 - Variant[pallet_proxy.pallet.Call]
+    /// >> 226 - Variant[pallet_proxy.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType>, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U32>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U16, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType>, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType>, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U32>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Ajuna.NetApi.Model.Types.Primitive.U16, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType>, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>>
     {
     }
 }

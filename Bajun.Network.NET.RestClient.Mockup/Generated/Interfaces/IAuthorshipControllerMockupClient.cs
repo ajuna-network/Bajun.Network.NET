@@ -11,13 +11,13 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerMockupClient
    {
-      Task<bool> SetUncles(BoundedVecT16 value);
+      Task<bool> SetUncles(BoundedVecT20 value);
       Task<bool> SetAuthor(AccountId32 value);
       Task<bool> SetDidSetUncles(Bool value);
    }

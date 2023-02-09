@@ -13,10 +13,6 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig;
-   using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class MultisigControllerMockupClient : MockupBaseClient, IMultisigControllerMockupClient
@@ -26,13 +22,9 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMultisigs(Multisig value, BaseTuple<AccountId32, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8> key)
+      public async Task<bool> SetMultisigs(Multisig value, Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Multisig/Multisigs", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.MultisigStorage.MultisigsParams(key));
-      }
-      public async Task<bool> SetCalls(BaseTuple<WrapperKeepOpaque, AccountId32, U128> value, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8 key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "Multisig/Calls", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.MultisigStorage.CallsParams(key));
       }
    }
 }

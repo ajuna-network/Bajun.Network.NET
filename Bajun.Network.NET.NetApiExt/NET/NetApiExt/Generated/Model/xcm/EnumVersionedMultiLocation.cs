@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 93 - Variant[xcm.VersionedMultiLocation]
+    /// >> 101 - Variant[xcm.VersionedMultiLocation]
     /// </summary>
     public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.multi_location.EnumMultiLocation, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multilocation.MultiLocation>
     {

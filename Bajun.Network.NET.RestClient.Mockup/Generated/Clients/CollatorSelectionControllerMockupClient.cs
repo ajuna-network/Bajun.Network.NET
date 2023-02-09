@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,11 +23,11 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT17 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT21 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT18 value)
+      public async Task<bool> SetCandidates(BoundedVecT22 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }

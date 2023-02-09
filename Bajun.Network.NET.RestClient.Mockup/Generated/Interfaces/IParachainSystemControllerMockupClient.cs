@@ -19,6 +19,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Bajun.Network.NET.NetApiExt.Generated.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types;
    
    public interface IParachainSystemControllerMockupClient
@@ -40,8 +41,8 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetUpwardMessages(BaseVec<BaseVec<U8>> value);
       Task<bool> SetPendingUpwardMessages(BaseVec<BaseVec<U8>> value);
       Task<bool> SetAnnouncedHrmpMessagesPerCandidate(U32 value);
-      Task<bool> SetReservedXcmpWeightOverride(U64 value);
-      Task<bool> SetReservedDmpWeightOverride(U64 value);
+      Task<bool> SetReservedXcmpWeightOverride(Weight value);
+      Task<bool> SetReservedDmpWeightOverride(Weight value);
       Task<bool> SetAuthorizedUpgrade(H256 value);
       Task<bool> SetCustomValidationHeadData(BaseVec<U8> value);
    }

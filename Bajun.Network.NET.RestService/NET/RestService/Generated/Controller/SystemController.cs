@@ -66,7 +66,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The current weight for the block.
         /// </summary>
         [HttpGet("BlockWeight")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.SystemStorage), "BlockWeightParams")]
         public IActionResult GetBlockWeight()
         {

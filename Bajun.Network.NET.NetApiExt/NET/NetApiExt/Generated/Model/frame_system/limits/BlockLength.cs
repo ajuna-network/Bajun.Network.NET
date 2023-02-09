@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 130 - Composite[frame_system.limits.BlockLength]
+    /// >> 135 - Composite[frame_system.limits.BlockLength]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class BlockLength : BaseType
@@ -27,9 +27,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
         /// <summary>
         /// >> max
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT3 _max;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT3 _max;
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT3 Max
+        public Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT3 Max
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Max = new Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT3();
+            Max = new Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT3();
             Max.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

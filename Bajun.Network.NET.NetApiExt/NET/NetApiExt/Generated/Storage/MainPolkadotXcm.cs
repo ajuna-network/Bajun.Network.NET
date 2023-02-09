@@ -164,6 +164,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
     }
     
+    public sealed class PolkadotXcmConstants
+    {
+    }
+    
     public enum PolkadotXcmErrors
     {
         

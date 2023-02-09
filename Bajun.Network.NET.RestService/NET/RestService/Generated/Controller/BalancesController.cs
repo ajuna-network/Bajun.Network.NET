@@ -50,6 +50,18 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> InactiveIssuance
+        ///  The total units of outstanding deactivated balance in the system.
+        /// </summary>
+        [HttpGet("InactiveIssuance")]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage), "InactiveIssuanceParams")]
+        public IActionResult GetInactiveIssuance()
+        {
+            return this.Ok(_balancesStorage.GetInactiveIssuance());
+        }
+        
+        /// <summary>
         /// >> Account
         ///  The Balances pallet example of storing the balance of an account.
         /// 
@@ -90,7 +102,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
         [HttpGet("Locks")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage), "LocksParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLocks(string key)
         {
@@ -102,25 +114,11 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage), "ReservesParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {
             return this.Ok(_balancesStorage.GetReserves(key));
-        }
-        
-        /// <summary>
-        /// >> StorageVersion
-        ///  Storage version of the pallet.
-        /// 
-        ///  This is set to v2.0.0 for new networks.
-        /// </summary>
-        [HttpGet("StorageVersion")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage), "StorageVersionParams")]
-        public IActionResult GetStorageVersion()
-        {
-            return this.Ok(_balancesStorage.GetStorageVersion());
         }
     }
 }

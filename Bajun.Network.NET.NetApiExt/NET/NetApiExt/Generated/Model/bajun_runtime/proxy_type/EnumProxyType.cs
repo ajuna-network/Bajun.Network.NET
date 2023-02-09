@@ -19,10 +19,20 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type
     {
         
         Any = 0,
+        
+        NonTransfer = 1,
+        
+        Governance = 2,
+        
+        Staking = 3,
+        
+        IdentityJudgement = 4,
+        
+        CancelProxy = 5,
     }
     
     /// <summary>
-    /// >> 35 - Variant[bajun_runtime.proxy_type.ProxyType]
+    /// >> 37 - Variant[bajun_runtime.proxy_type.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

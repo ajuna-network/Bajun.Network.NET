@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime
     }
     
     /// <summary>
-    /// >> 175 - Variant[bajun_runtime.OriginCaller]
+    /// >> 178 - Variant[bajun_runtime.OriginCaller]
     /// </summary>
     public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, Ajuna.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin>
     {

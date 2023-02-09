@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
     
     
     /// <summary>
-    /// >> 142 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 147 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType
@@ -27,9 +27,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
         /// <summary>
         /// >> trie_nodes
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet _trieNodes;
+        private Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 _trieNodes;
         
-        public Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet TrieNodes
+        public Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            TrieNodes = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+            TrieNodes = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
             TrieNodes.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

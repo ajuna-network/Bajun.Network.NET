@@ -26,7 +26,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     }
     
     /// <summary>
-    /// >> 96 - Variant[pallet_sudo.pallet.Event]
+    /// >> 104 - Variant[pallet_sudo.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

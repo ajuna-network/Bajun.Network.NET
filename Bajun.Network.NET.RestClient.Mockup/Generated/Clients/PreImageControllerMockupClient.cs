@@ -13,7 +13,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class PreImageControllerMockupClient : MockupBaseClient, IPreImageControllerMockupClient
@@ -27,7 +27,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PreImage/StatusFor", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage.StatusForParams(key));
       }
-      public async Task<bool> SetPreimageFor(BoundedVecT13 value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetPreimageFor(BoundedVecT17 value, Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "PreImage/PreimageFor", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage.PreimageForParams(key));
       }

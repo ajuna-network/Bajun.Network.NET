@@ -15,7 +15,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Clients;
    using Bajun.Network.NET.RestClient.Generated.Clients;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective;
    using Ajuna.NetApi.Model.Types.Primitive;
@@ -30,10 +30,10 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 GetTestValue2()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetTestValue2()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue3()});
@@ -90,7 +90,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CouncilControllerClient rpcClient = new CouncilControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 mockupValue = this.GetTestValue2();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeProposals());
@@ -103,16 +103,16 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 rpcResult = await rpcClient.GetProposals();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 rpcResult = await rpcClient.GetProposals();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall GetTestValue5()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall GetTestValue5()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall();
-         result.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.Call>(), this.GetTestValue6());
+         Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall();
+         result.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.RuntimeCall>(), this.GetTestValue6());
          return result;
       }
       public Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall GetTestValue6()
@@ -122,11 +122,12 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          result.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.pallet.Call>(), this.GetTestValue7());
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue7()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue7()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.Value = this.GetTestValueU32();
+         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> result;
+         result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
+         result.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8()});
          return result;
       }
       public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue8()
@@ -180,7 +181,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CouncilControllerClient rpcClient = new CouncilControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall mockupValue = this.GetTestValue5();
+         Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall mockupValue = this.GetTestValue5();
          Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue8();
 
          Assert.IsTrue(await rpcClient.SubscribeProposalOf(mockupKey));
@@ -193,7 +194,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall rpcResult = await rpcClient.GetProposalOf(mockupKey);
+         Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall rpcResult = await rpcClient.GetProposalOf(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

@@ -13,7 +13,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Bajun.Network.NET.NetApiExt.Generated.Model.frame_system;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch;
    using Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types;
    using Ajuna.NetApi.Model.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest;

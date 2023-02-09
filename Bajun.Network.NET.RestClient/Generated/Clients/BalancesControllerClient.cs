@@ -14,8 +14,8 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
    public sealed class BalancesControllerClient : BaseClient, IBalancesControllerClient
@@ -35,6 +35,14 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.TotalIssuance");
       }
+      public async Task<U128> GetInactiveIssuance()
+      {
+         return await SendRequestAsync<U128>(_httpClient, "balances/inactiveissuance");
+      }
+      public async Task<bool> SubscribeInactiveIssuance()
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.InactiveIssuance");
+      }
       public async Task<AccountData> GetAccount(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendRequestAsync<AccountData>(_httpClient, "balances/account", Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.AccountParams(key));
@@ -51,21 +59,13 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Locks", Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT14> GetReserves(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT18> GetReserves(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT14>(_httpClient, "balances/reserves", Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "balances/reserves", Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
       public async Task<bool> SubscribeReserves(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Reserves", Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
-      }
-      public async Task<EnumReleases> GetStorageVersion()
-      {
-         return await SendRequestAsync<EnumReleases>(_httpClient, "balances/storageversion");
-      }
-      public async Task<bool> SubscribeStorageVersion()
-      {
-         return await _subscriptionClient.SubscribeAsync("Balances.StorageVersion");
       }
    }
 }

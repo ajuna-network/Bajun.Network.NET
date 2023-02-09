@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_transaction_payment
     }
     
     /// <summary>
-    /// >> 320 - Variant[pallet_transaction_payment.Releases]
+    /// >> 339 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

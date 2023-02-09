@@ -14,7 +14,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
    public sealed class TreasuryControllerClient : BaseClient, ITreasuryControllerClient
@@ -42,9 +42,17 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Proposals", Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalsParams(key));
       }
-      public async Task<BoundedVecT20> GetApprovals()
+      public async Task<U128> GetInactive()
       {
-         return await SendRequestAsync<BoundedVecT20>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<U128>(_httpClient, "treasury/inactive");
+      }
+      public async Task<bool> SubscribeInactive()
+      {
+         return await _subscriptionClient.SubscribeAsync("Treasury.Inactive");
+      }
+      public async Task<BoundedVecT24> GetApprovals()
+      {
+         return await SendRequestAsync<BoundedVecT24>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

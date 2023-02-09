@@ -23,6 +23,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
    using Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Bajun.Network.NET.NetApiExt.Generated.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types;
    
    public class ParachainSystemControllerClientTest : ClientTestBase
@@ -302,14 +303,14 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
-         result.TrieNodes = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+         result.TrieNodes = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
          result.TrieNodes = this.GetTestValue16();
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet GetTestValue16()
+      public Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 GetTestValue16()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+         Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>[] {
                   this.GetTestValue17()});
@@ -1024,6 +1025,16 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue54()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
       [Test()]
       public async System.Threading.Tasks.Task TestReservedXcmpWeightOverride()
       {
@@ -1035,7 +1046,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Primitive.U64 mockupValue = this.GetTestValueU64();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight mockupValue = this.GetTestValue54();
 
 
          Assert.IsTrue(await rpcClient.SubscribeReservedXcmpWeightOverride());
@@ -1048,10 +1059,20 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Primitive.U64 rpcResult = await rpcClient.GetReservedXcmpWeightOverride();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight rpcResult = await rpcClient.GetReservedXcmpWeightOverride();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue56()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
       }
       [Test()]
       public async System.Threading.Tasks.Task TestReservedDmpWeightOverride()
@@ -1064,7 +1085,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Primitive.U64 mockupValue = this.GetTestValueU64();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight mockupValue = this.GetTestValue56();
 
 
          Assert.IsTrue(await rpcClient.SubscribeReservedDmpWeightOverride());
@@ -1077,12 +1098,12 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Primitive.U64 rpcResult = await rpcClient.GetReservedDmpWeightOverride();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight rpcResult = await rpcClient.GetReservedDmpWeightOverride();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue56()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue58()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1133,7 +1154,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue56();
+         Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue58();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorizedUpgrade());
@@ -1151,7 +1172,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue58()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue60()
       {
          Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
@@ -1170,7 +1191,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue58();
+         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue60();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCustomValidationHeadData());

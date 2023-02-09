@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system
     
     
     /// <summary>
-    /// >> 16 - Composite[frame_system.EventRecord]
+    /// >> 18 - Composite[frame_system.EventRecord]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class EventRecord : BaseType
@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> event
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumEvent _event;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeEvent _event;
         
         /// <summary>
         /// >> topics
@@ -51,7 +51,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumEvent Event
+        public Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeEvent Event
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system
             var start = p;
             Phase = new Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
             Phase.Decode(byteArray, ref p);
-            Event = new Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumEvent();
+            Event = new Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeEvent();
             Event.Decode(byteArray, ref p);
             Topics = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             Topics.Decode(byteArray, ref p);

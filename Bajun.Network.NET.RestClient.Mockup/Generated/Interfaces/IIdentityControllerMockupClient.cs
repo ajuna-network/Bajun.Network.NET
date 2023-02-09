@@ -15,13 +15,13 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using Ajuna.NetApi.Model.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public interface IIdentityControllerMockupClient
    {
       Task<bool> SetIdentityOf(Registration value, AccountId32 key);
       Task<bool> SetSuperOf(BaseTuple<AccountId32, EnumData> value, AccountId32 key);
-      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT9> value, AccountId32 key);
-      Task<bool> SetRegistrars(BoundedVecT10 value);
+      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT11> value, AccountId32 key);
+      Task<bool> SetRegistrars(BoundedVecT12 value);
    }
 }

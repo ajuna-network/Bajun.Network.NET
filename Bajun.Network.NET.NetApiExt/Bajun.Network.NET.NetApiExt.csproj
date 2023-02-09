@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<PackageId>Bajun.Network.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.0.1</Version>
+		<Version>1.0.19</Version>
 		<Company>BloGa Tech AG</Company>
 		<Authors>Cedric Decoster</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 30 - Variant[Result]
+    /// >> 32 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Ajuna.NetApi.Model.Types.Base.BaseTuple, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
     {

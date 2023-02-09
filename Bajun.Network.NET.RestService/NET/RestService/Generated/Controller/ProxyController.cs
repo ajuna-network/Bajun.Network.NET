@@ -43,7 +43,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  which are being delegated to, together with the amount held on deposit.
         /// </summary>
         [HttpGet("Proxies")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT11, Ajuna.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13, Ajuna.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.ProxyStorage), "ProxiesParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetProxies(string key)
         {
@@ -55,7 +55,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The announcements made by the proxy (key).
         /// </summary>
         [HttpGet("Announcements")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT12, Ajuna.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14, Ajuna.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.ProxyStorage), "AnnouncementsParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetAnnouncements(string key)
         {

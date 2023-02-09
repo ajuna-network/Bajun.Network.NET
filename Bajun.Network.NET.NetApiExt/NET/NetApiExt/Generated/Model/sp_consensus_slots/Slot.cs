@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots
     
     
     /// <summary>
-    /// >> 340 - Composite[sp_consensus_slots.Slot]
+    /// >> 358 - Composite[sp_consensus_slots.Slot]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Slot : BaseType

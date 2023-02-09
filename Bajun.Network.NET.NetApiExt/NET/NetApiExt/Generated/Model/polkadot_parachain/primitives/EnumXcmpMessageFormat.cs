@@ -26,7 +26,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primiti
     }
     
     /// <summary>
-    /// >> 346 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
+    /// >> 364 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
     /// </summary>
     public sealed class EnumXcmpMessageFormat : BaseEnum<XcmpMessageFormat>
     {

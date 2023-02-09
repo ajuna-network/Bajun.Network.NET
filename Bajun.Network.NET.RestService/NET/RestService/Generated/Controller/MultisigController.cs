@@ -48,16 +48,5 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         {
             return this.Ok(_multisigStorage.GetMultisigs(key));
         }
-        
-        /// <summary>
-        /// >> Calls
-        /// </summary>
-        [HttpGet("Calls")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperKeepOpaque, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128>), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.MultisigStorage), "CallsParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8))]
-        public IActionResult GetCalls(string key)
-        {
-            return this.Ok(_multisigStorage.GetCalls(key));
-        }
     }
 }

@@ -19,6 +19,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    using Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Bajun.Network.NET.NetApiExt.Generated.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types;
    
    public interface IParachainSystemControllerClient
@@ -57,9 +58,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribePendingUpwardMessages();
       Task<U32> GetAnnouncedHrmpMessagesPerCandidate();
       Task<bool> SubscribeAnnouncedHrmpMessagesPerCandidate();
-      Task<U64> GetReservedXcmpWeightOverride();
+      Task<Weight> GetReservedXcmpWeightOverride();
       Task<bool> SubscribeReservedXcmpWeightOverride();
-      Task<U64> GetReservedDmpWeightOverride();
+      Task<Weight> GetReservedDmpWeightOverride();
       Task<bool> SubscribeReservedDmpWeightOverride();
       Task<H256> GetAuthorizedUpgrade();
       Task<bool> SubscribeAuthorizedUpgrade();

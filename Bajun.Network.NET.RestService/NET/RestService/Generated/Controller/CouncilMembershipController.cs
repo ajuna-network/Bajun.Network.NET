@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
         [HttpGet("Members")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilMembershipStorage), "MembersParams")]
         public IActionResult GetMembers()
         {

@@ -40,7 +40,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> batch
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Batch(Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall> calls)
+        public static Method Batch(Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall> calls)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(calls.Encode());
@@ -51,7 +51,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> as_derivative
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method AsDerivative(Ajuna.NetApi.Model.Types.Primitive.U16 index, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall call)
+        public static Method AsDerivative(Ajuna.NetApi.Model.Types.Primitive.U16 index, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());
@@ -63,7 +63,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> batch_all
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method BatchAll(Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall> calls)
+        public static Method BatchAll(Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall> calls)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(calls.Encode());
@@ -74,7 +74,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> dispatch_as
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method DispatchAs(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller as_origin, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall call)
+        public static Method DispatchAs(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller as_origin, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(as_origin.Encode());
@@ -86,11 +86,38 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> force_batch
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ForceBatch(Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall> calls)
+        public static Method ForceBatch(Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall> calls)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(calls.Encode());
             return new Method(5, "Utility", 4, "force_batch", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> with_weight
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method WithWeight(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(call.Encode());
+            byteArray.AddRange(weight.Encode());
+            return new Method(5, "Utility", 5, "with_weight", byteArray.ToArray());
+        }
+    }
+    
+    public sealed class UtilityConstants
+    {
+        
+        /// <summary>
+        /// >> batched_calls_limit
+        ///  The limit on the number of batched calls.
+        /// </summary>
+        public Ajuna.NetApi.Model.Types.Primitive.U32 batched_calls_limit()
+        {
+            var result = new Ajuna.NetApi.Model.Types.Primitive.U32();
+            result.Create("0xAA2A0000");
+            return result;
         }
     }
     

@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
    public sealed class VestingControllerClient : BaseClient, IVestingControllerClient
@@ -24,9 +24,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT15> GetVestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT19> GetVestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT15>(_httpClient, "vesting/vestingschedules", Bajun.Network.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
+         return await SendRequestAsync<BoundedVecT19>(_httpClient, "vesting/vestingschedules", Bajun.Network.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
       }
       public async Task<bool> SubscribeVestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

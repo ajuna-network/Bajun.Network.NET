@@ -43,13 +43,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> KeyDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string KeyDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Key
         ///  The `AccountId` of the sudo key.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(CancellationToken token)
         {
             string parameters = SudoStorage.KeyParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            return result;
         }
     }
     
@@ -60,7 +70,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> sudo
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Sudo(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall call)
+        public static Method Sudo(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(call.Encode());
@@ -71,7 +81,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> sudo_unchecked_weight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SudoUncheckedWeight(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall call, Ajuna.NetApi.Model.Types.Primitive.U64 weight)
+        public static Method SudoUncheckedWeight(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(call.Encode());
@@ -94,13 +104,17 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> sudo_as
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SudoAs(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall call)
+        public static Method SudoAs(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
             byteArray.AddRange(call.Encode());
             return new Method(40, "Sudo", 3, "sudo_as", byteArray.ToArray());
         }
+    }
+    
+    public sealed class SudoConstants
+    {
     }
     
     public enum SudoErrors

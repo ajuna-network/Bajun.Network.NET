@@ -30,8 +30,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT17)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT18)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LastAuthoredBlock"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "DesiredCandidates"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
@@ -48,13 +48,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> InvulnerablesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string InvulnerablesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT17> Invulnerables(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21> Invulnerables(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT17>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -67,13 +77,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> CandidatesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CandidatesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT18> Candidates(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> Candidates(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidatesParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT18>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -88,13 +108,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> LastAuthoredBlockDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LastAuthoredBlockDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> LastAuthoredBlock
         ///  Last block authored by collator.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.LastAuthoredBlockParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -109,6 +139,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> DesiredCandidatesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string DesiredCandidatesDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> DesiredCandidates
         ///  Desired number of candidates.
         /// 
@@ -117,7 +156,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> DesiredCandidates(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.DesiredCandidatesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -132,6 +172,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> CandidacyBondDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CandidacyBondDefault()
+        {
+            return "0x00000000000000000000000000000000";
+        }
+        
+        /// <summary>
         /// >> CandidacyBond
         ///  Fixed amount to deposit to become a collator.
         /// 
@@ -140,7 +189,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U128> CandidacyBond(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidacyBondParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            return result;
         }
     }
     
@@ -199,6 +249,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             return new Method(21, "CollatorSelection", 4, "leave_intent", byteArray.ToArray());
         }
+    }
+    
+    public sealed class CollatorSelectionConstants
+    {
     }
     
     public enum CollatorSelectionErrors

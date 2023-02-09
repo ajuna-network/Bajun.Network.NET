@@ -3,7 +3,7 @@
       <TargetFramework>netstandard2.1</TargetFramework>
    </PropertyGroup>
    <ItemGroup>
-      <PackageReference Include="Ajuna.ServiceLayer.Model" Version="0.2.0" />
+      <PackageReference Include="Ajuna.ServiceLayer.Model" Version="0.2.3" />
    </ItemGroup>
    <ItemGroup>      
       <ProjectReference Include="..\Bajun.Network.NET.RestClient\Bajun.Network.NET.RestClient.csproj" />

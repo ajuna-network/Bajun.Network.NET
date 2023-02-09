@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 182 - Composite[pallet_identity.types.IdentityInfo]
+    /// >> 187 - Composite[pallet_identity.types.IdentityInfo]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class IdentityInfo : BaseType
@@ -27,7 +27,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> additional
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT5 _additional;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 _additional;
         
         /// <summary>
         /// >> display
@@ -69,7 +69,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// </summary>
         private Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _twitter;
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT5 Additional
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 Additional
         {
             get
             {
@@ -200,7 +200,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Additional = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT5();
+            Additional = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9();
             Additional.Decode(byteArray, ref p);
             Display = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
             Display.Decode(byteArray, ref p);

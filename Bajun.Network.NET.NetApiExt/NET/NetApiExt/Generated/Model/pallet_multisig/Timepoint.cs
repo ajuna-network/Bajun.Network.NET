@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 29 - Composite[pallet_multisig.Timepoint]
+    /// >> 31 - Composite[pallet_multisig.Timepoint]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Timepoint : BaseType

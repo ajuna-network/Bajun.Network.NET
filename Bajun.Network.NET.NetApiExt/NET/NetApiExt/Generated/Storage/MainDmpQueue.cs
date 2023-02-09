@@ -48,13 +48,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ConfigurationDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ConfigurationDefault()
+        {
+            return "0x0700E40B540202000400";
+        }
+        
+        /// <summary>
         /// >> Configuration
         ///  The configuration.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData> Configuration(CancellationToken token)
         {
             string parameters = DmpQueueStorage.ConfigurationParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -67,13 +77,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> PageIndexDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PageIndexDefault()
+        {
+            return "0x00000000000000000000000000000000";
+        }
+        
+        /// <summary>
         /// >> PageIndex
         ///  The page index.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData> PageIndex(CancellationToken token)
         {
             string parameters = DmpQueueStorage.PageIndexParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -88,13 +108,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> PagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Pages
         ///  The queue pages.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>> Pages(Ajuna.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = DmpQueueStorage.PagesParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -109,13 +139,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> OverweightDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string OverweightDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Overweight
         ///  The overweight messages.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> Overweight(Ajuna.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
         {
             string parameters = DmpQueueStorage.OverweightParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            return result;
         }
     }
     
@@ -133,6 +173,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(weight_limit.Encode());
             return new Method(33, "DmpQueue", 0, "service_overweight", byteArray.ToArray());
         }
+    }
+    
+    public sealed class DmpQueueConstants
+    {
     }
     
     public enum DmpQueueErrors

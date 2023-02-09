@@ -41,6 +41,7 @@ namespace Bajun.Network.NET.RestClient.Mockup
       public ITimestampControllerMockupClient TimestampControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
+      public IUniquesControllerMockupClient UniquesControllerClient;
       public IVestingControllerMockupClient VestingControllerClient;
       public IXcmpQueueControllerMockupClient XcmpQueueControllerClient;
       public MockupClient(HttpClient httpClient)
@@ -69,6 +70,7 @@ namespace Bajun.Network.NET.RestClient.Mockup
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
+         UniquesControllerClient = new UniquesControllerMockupClient(_httpClient);
          VestingControllerClient = new VestingControllerMockupClient(_httpClient);
          XcmpQueueControllerClient = new XcmpQueueControllerMockupClient(_httpClient);
       }

@@ -49,10 +49,14 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         NotSub = 14,
         
         NotOwned = 15,
+        
+        JudgementForDifferentIdentity = 16,
+        
+        JudgementPaymentFailed = 17,
     }
     
     /// <summary>
-    /// >> 291 - Variant[pallet_identity.pallet.Error]
+    /// >> 297 - Variant[pallet_identity.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

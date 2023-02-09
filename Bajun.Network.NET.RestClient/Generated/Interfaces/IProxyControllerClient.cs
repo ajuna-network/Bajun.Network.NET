@@ -12,14 +12,14 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT11, U128>> GetProxies(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT13, U128>> GetProxies(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT12, U128>> GetAnnouncements(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT14, U128>> GetAnnouncements(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

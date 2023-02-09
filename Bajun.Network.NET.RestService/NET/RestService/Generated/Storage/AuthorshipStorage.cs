@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Uncles
         ///  Uncles
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT16 GetUncles();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20 GetUncles();
         
         /// <summary>
         /// >> Author
@@ -52,7 +52,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _unclesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT16> _unclesTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20> _unclesTypedStorage;
         
         /// <summary>
         /// _authorTypedStorage typed storage field
@@ -69,7 +69,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// </summary>
         public AuthorshipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.UnclesTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT16>("Authorship.Uncles", storageDataProvider, storageChangeDelegates);
+            this.UnclesTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20>("Authorship.Uncles", storageDataProvider, storageChangeDelegates);
             this.AuthorTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Authorship.Author", storageDataProvider, storageChangeDelegates);
             this.DidSetUnclesTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.Bool>("Authorship.DidSetUncles", storageDataProvider, storageChangeDelegates);
         }
@@ -77,7 +77,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _unclesTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT16> UnclesTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20> UnclesTypedStorage
         {
             get
             {
@@ -142,7 +142,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Uncles
         ///  Uncles
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT16 GetUncles()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20 GetUncles()
         {
             return UnclesTypedStorage.Get();
         }

@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_s
     }
     
     /// <summary>
-    /// >> 155 - Variant[cumulus_pallet_parachain_system.pallet.Call]
+    /// >> 160 - Variant[cumulus_pallet_parachain_system.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.ParachainInherentData, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>

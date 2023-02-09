@@ -295,7 +295,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  overrides the amount set in the Config trait.
         /// </summary>
         [HttpGet("ReservedXcmpWeightOverride")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U64), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ReservedXcmpWeightOverrideParams")]
         public IActionResult GetReservedXcmpWeightOverride()
         {
@@ -308,7 +308,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  overrides the amount set in the Config trait.
         /// </summary>
         [HttpGet("ReservedDmpWeightOverride")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U64), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ReservedDmpWeightOverrideParams")]
         public IActionResult GetReservedDmpWeightOverride()
         {

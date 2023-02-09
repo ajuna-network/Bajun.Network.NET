@@ -14,9 +14,12 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
    using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class AwesomeAvatarsControllerMockupClient : MockupBaseClient, IAwesomeAvatarsControllerMockupClient
@@ -30,17 +33,25 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Organizer", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OrganizerParams());
       }
+      public async Task<bool> SetTreasurer(AccountId32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Treasurer", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams());
+      }
       public async Task<bool> SetCurrentSeasonId(U16 value)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/CurrentSeasonId", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.CurrentSeasonIdParams());
       }
-      public async Task<bool> SetIsSeasonActive(Bool value)
+      public async Task<bool> SetCurrentSeasonStatus(SeasonStatus value)
       {
-         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/IsSeasonActive", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.IsSeasonActiveParams());
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/CurrentSeasonStatus", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.CurrentSeasonStatusParams());
       }
       public async Task<bool> SetSeasons(Season value, U16 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Seasons", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonsParams(key));
+      }
+      public async Task<bool> SetTreasury(U128 value, U16 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Treasury", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasuryParams(key));
       }
       public async Task<bool> SetGlobalConfigs(GlobalConfig value)
       {
@@ -50,17 +61,17 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Avatars", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<bool> SetOwners(BoundedVecT6 value, AccountId32 key)
+      public async Task<bool> SetOwners(BoundedVecT28 value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Owners", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
-      public async Task<bool> SetLastMintedBlockNumbers(U32 value, AccountId32 key)
+      public async Task<bool> SetAccounts(AccountInfo value, AccountId32 key)
       {
-         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/LastMintedBlockNumbers", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.LastMintedBlockNumbersParams(key));
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Accounts", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AccountsParams(key));
       }
-      public async Task<bool> SetFreeMints(U16 value, AccountId32 key)
+      public async Task<bool> SetSeasonStats(SeasonInfo value, BaseTuple<U16, AccountId32> key)
       {
-         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/FreeMints", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.FreeMintsParams(key));
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/SeasonStats", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonStatsParams(key));
       }
       public async Task<bool> SetTrade(U128 value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {

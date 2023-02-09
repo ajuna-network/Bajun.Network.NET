@@ -14,8 +14,8 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class BalancesControllerMockupClient : MockupBaseClient, IBalancesControllerMockupClient
@@ -29,6 +29,10 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/TotalIssuance", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.TotalIssuanceParams());
       }
+      public async Task<bool> SetInactiveIssuance(U128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Balances/InactiveIssuance", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.InactiveIssuanceParams());
+      }
       public async Task<bool> SetAccount(AccountData value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Account", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.AccountParams(key));
@@ -37,13 +41,9 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Locks", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT14 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT18 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Reserves", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
-      }
-      public async Task<bool> SetStorageVersion(EnumReleases value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "Balances/StorageVersion", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.BalancesStorage.StorageVersionParams());
       }
    }
 }

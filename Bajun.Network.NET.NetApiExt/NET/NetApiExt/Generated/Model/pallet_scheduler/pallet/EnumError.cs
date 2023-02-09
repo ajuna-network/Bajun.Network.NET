@@ -25,10 +25,12 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet
         TargetBlockNumberInPast = 2,
         
         RescheduleNoChange = 3,
+        
+        Named = 4,
     }
     
     /// <summary>
-    /// >> 304 - Variant[pallet_scheduler.pallet.Error]
+    /// >> 313 - Variant[pallet_scheduler.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective;
    using Ajuna.NetApi.Model.Types.Primitive;
@@ -27,11 +27,11 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProposals(BoundedVecT21 value)
+      public async Task<bool> SetProposals(BoundedVecT25 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/Proposals", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalsParams());
       }
-      public async Task<bool> SetProposalOf(EnumCall value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetProposalOf(EnumRuntimeCall value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/ProposalOf", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalOfParams(key));
       }

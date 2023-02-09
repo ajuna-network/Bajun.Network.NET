@@ -62,11 +62,23 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> Inactive
+        ///  The amount which has been reported as inactive to Currency.
+        /// </summary>
+        [HttpGet("Inactive")]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage), "InactiveParams")]
+        public IActionResult GetInactive()
+        {
+            return this.Ok(_treasuryStorage.GetInactive());
+        }
+        
+        /// <summary>
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
         [HttpGet("Approvals")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT20), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage), "ApprovalsParams")]
         public IActionResult GetApprovals()
         {

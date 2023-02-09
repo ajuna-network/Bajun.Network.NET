@@ -17,9 +17,12 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
    using Bajun.Network.NET.RestClient.Generated.Clients;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
    using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
    
    public class AwesomeAvatarsControllerClientTest : ClientTestBase
    {
@@ -98,252 +101,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      [Test()]
-      public async System.Threading.Tasks.Task TestCurrentSeasonId()
-      {
-         // Construct new Mockup client to test with.
-         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Primitive.U16 mockupValue = this.GetTestValueU16();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeCurrentSeasonId());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetCurrentSeasonId(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Ajuna.NetApi.Model.Types.Primitive.U16 rpcResult = await rpcClient.GetCurrentSeasonId();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestIsSeasonActive()
-      {
-         // Construct new Mockup client to test with.
-         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Primitive.Bool mockupValue = this.GetTestValueBool();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeIsSeasonActive());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetIsSeasonActive(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Ajuna.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetIsSeasonActive();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season GetTestValue6()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season();
-         result.Name = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1();
-         result.Name = this.GetTestValue7();
-         result.Description = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT2();
-         result.Description = this.GetTestValue8();
-         result.EarlyStart = this.GetTestValueU32();
-         result.Start = this.GetTestValueU32();
-         result.End = this.GetTestValueU32();
-         result.MaxVariations = this.GetTestValueU8();
-         result.MaxComponents = this.GetTestValueU8();
-         result.Tiers = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT3();
-         result.Tiers = this.GetTestValue9();
-         result.PSingleMint = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4();
-         result.PSingleMint = this.GetTestValue11();
-         result.PBatchMint = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4();
-         result.PBatchMint = this.GetTestValue12();
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1 GetTestValue7()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
-         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT2 GetTestValue8()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT2 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT2();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
-         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT3 GetTestValue9()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT3 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT3();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.EnumRarityTier>();
-         result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.EnumRarityTier[] {
-                  this.GetTestValue10()});
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.EnumRarityTier GetTestValue10()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.EnumRarityTier result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.EnumRarityTier();
-         result.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.RarityTier>());
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4 GetTestValue11()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U16>();
-         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U16[] {
-                  this.GetTestValueU16()});
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4 GetTestValue12()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT4();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U16>();
-         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U16[] {
-                  this.GetTestValueU16()});
-         return result;
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestSeasons()
-      {
-         // Construct new Mockup client to test with.
-         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season mockupValue = this.GetTestValue6();
-         Ajuna.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
-
-         Assert.IsTrue(await rpcClient.SubscribeSeasons(mockupKey));
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetSeasons(mockupValue, mockupKey);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season rpcResult = await rpcClient.GetSeasons(mockupKey);
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig GetTestValue14()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig();
-         result.MaxAvatarsPerPlayer = this.GetTestValueU32();
-         result.Mint = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintConfig();
-         result.Mint = this.GetTestValue15();
-         result.Forge = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.ForgeConfig();
-         result.Forge = this.GetTestValue17();
-         result.Trade = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.TradeConfig();
-         result.Trade = this.GetTestValue18();
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintConfig GetTestValue15()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintConfig result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintConfig();
-         result.Open = this.GetTestValueBool();
-         result.Fees = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintFees();
-         result.Fees = this.GetTestValue16();
-         result.Cooldown = this.GetTestValueU32();
-         result.FreeMintTransferFee = this.GetTestValueU16();
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintFees GetTestValue16()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintFees result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintFees();
-         result.One = this.GetTestValueU128();
-         result.Three = this.GetTestValueU128();
-         result.Six = this.GetTestValueU128();
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.ForgeConfig GetTestValue17()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.ForgeConfig result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.ForgeConfig();
-         result.Open = this.GetTestValueBool();
-         result.MinSacrifices = this.GetTestValueU8();
-         result.MaxSacrifices = this.GetTestValueU8();
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.TradeConfig GetTestValue18()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.TradeConfig result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.TradeConfig();
-         result.Open = this.GetTestValueBool();
-         return result;
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestGlobalConfigs()
-      {
-         // Construct new Mockup client to test with.
-         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig mockupValue = this.GetTestValue14();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeGlobalConfigs());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetGlobalConfigs(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig rpcResult = await rpcClient.GetGlobalConfigs();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar> GetTestValue20()
-      {
-         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar> result;
-         result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar>();
-         result.Create(this.GetTestValue21(), this.GetTestValue22());
-         return result;
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue21()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -383,26 +141,394 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar GetTestValue22()
+      [Test()]
+      public async System.Threading.Tasks.Task TestTreasurer()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar();
-         result.SeasonId = this.GetTestValueU16();
-         result.Dna = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1();
-         result.Dna = this.GetTestValue23();
-         result.Souls = this.GetTestValueU32();
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue4();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeTreasurer());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetTreasurer(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 rpcResult = await rpcClient.GetTreasurer();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestCurrentSeasonId()
+      {
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Ajuna.NetApi.Model.Types.Primitive.U16 mockupValue = this.GetTestValueU16();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeCurrentSeasonId());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetCurrentSeasonId(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Ajuna.NetApi.Model.Types.Primitive.U16 rpcResult = await rpcClient.GetCurrentSeasonId();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus GetTestValue7()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus();
+         result.Early = this.GetTestValueBool();
+         result.Active = this.GetTestValueBool();
+         result.EarlyEnded = this.GetTestValueBool();
+         result.MaxTierAvatars = this.GetTestValueU32();
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1 GetTestValue23()
+      [Test()]
+      public async System.Threading.Tasks.Task TestCurrentSeasonStatus()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT1();
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus mockupValue = this.GetTestValue7();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeCurrentSeasonStatus());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetCurrentSeasonStatus(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus rpcResult = await rpcClient.GetCurrentSeasonStatus();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season GetTestValue9()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season();
+         result.Name = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+         result.Name = this.GetTestValue10();
+         result.Description = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5();
+         result.Description = this.GetTestValue11();
+         result.EarlyStart = this.GetTestValueU32();
+         result.Start = this.GetTestValueU32();
+         result.End = this.GetTestValueU32();
+         result.MaxTierForges = this.GetTestValueU32();
+         result.MaxVariations = this.GetTestValueU8();
+         result.MaxComponents = this.GetTestValueU8();
+         result.MinSacrifices = this.GetTestValueU8();
+         result.MaxSacrifices = this.GetTestValueU8();
+         result.Tiers = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+         result.Tiers = this.GetTestValue12();
+         result.SingleMintProbs = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+         result.SingleMintProbs = this.GetTestValue14();
+         result.BatchMintProbs = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+         result.BatchMintProbs = this.GetTestValue15();
+         result.BaseProb = this.GetTestValueU8();
+         result.PerPeriod = this.GetTestValueU32();
+         result.Periods = this.GetTestValueU16();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetTestValue10()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue24()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetTestValue11()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetTestValue12()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.EnumRarityTier>();
+         result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.EnumRarityTier[] {
+                  this.GetTestValue13()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.EnumRarityTier GetTestValue13()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.EnumRarityTier result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.EnumRarityTier();
+         result.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.RarityTier>());
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetTestValue14()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetTestValue15()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestSeasons()
+      {
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season mockupValue = this.GetTestValue9();
+         Ajuna.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
+
+         Assert.IsTrue(await rpcClient.SubscribeSeasons(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetSeasons(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season rpcResult = await rpcClient.GetSeasons(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestTreasury()
+      {
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Ajuna.NetApi.Model.Types.Primitive.U128 mockupValue = this.GetTestValueU128();
+         Ajuna.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
+
+         Assert.IsTrue(await rpcClient.SubscribeTreasury(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetTreasury(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Ajuna.NetApi.Model.Types.Primitive.U128 rpcResult = await rpcClient.GetTreasury(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig GetTestValue18()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig();
+         result.Mint = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig();
+         result.Mint = this.GetTestValue19();
+         result.Forge = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig();
+         result.Forge = this.GetTestValue21();
+         result.Trade = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
+         result.Trade = this.GetTestValue22();
+         result.Account = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();
+         result.Account = this.GetTestValue23();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig GetTestValue19()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig();
+         result.Open = this.GetTestValueBool();
+         result.Fees = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees();
+         result.Fees = this.GetTestValue20();
+         result.Cooldown = this.GetTestValueU32();
+         result.FreeMintFeeMultiplier = this.GetTestValueU16();
+         result.FreeMintTransferFee = this.GetTestValueU16();
+         result.MinFreeMintTransfer = this.GetTestValueU16();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees GetTestValue20()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees();
+         result.One = this.GetTestValueU128();
+         result.Three = this.GetTestValueU128();
+         result.Six = this.GetTestValueU128();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig GetTestValue21()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig();
+         result.Open = this.GetTestValueBool();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig GetTestValue22()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
+         result.Open = this.GetTestValueBool();
+         result.BuyFee = this.GetTestValueU128();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig GetTestValue23()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();
+         result.StorageUpgradeFee = this.GetTestValueU128();
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestGlobalConfigs()
+      {
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig mockupValue = this.GetTestValue18();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeGlobalConfigs());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetGlobalConfigs(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig rpcResult = await rpcClient.GetGlobalConfigs();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar> GetTestValue25()
+      {
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar> result;
+         result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>();
+         result.Create(this.GetTestValue26(), this.GetTestValue27());
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue26()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar GetTestValue27()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar();
+         result.SeasonId = this.GetTestValueU16();
+         result.Dna = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+         result.Dna = this.GetTestValue28();
+         result.Souls = this.GetTestValueU32();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetTestValue28()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue29()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -453,8 +579,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar> mockupValue = this.GetTestValue20();
-         Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue24();
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar> mockupValue = this.GetTestValue25();
+         Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue29();
 
          Assert.IsTrue(await rpcClient.SubscribeAvatars(mockupKey));
 
@@ -466,21 +592,21 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar> rpcResult = await rpcClient.GetAvatars(mockupKey);
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar> rpcResult = await rpcClient.GetAvatars(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6 GetTestValue26()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 GetTestValue31()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
-                  this.GetTestValue27()});
+                  this.GetTestValue32()});
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue27()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue32()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -520,7 +646,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue28()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue33()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -571,8 +697,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6 mockupValue = this.GetTestValue26();
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue28();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 mockupValue = this.GetTestValue31();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue33();
 
          Assert.IsTrue(await rpcClient.SubscribeOwners(mockupKey));
 
@@ -584,12 +710,97 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6 rpcResult = await rpcClient.GetOwners(mockupKey);
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 rpcResult = await rpcClient.GetOwners(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue30()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo GetTestValue35()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo();
+         result.FreeMints = this.GetTestValueU16();
+         result.StorageTier = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.EnumStorageTier();
+         result.StorageTier.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.StorageTier>());
+         result.Stats = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
+         result.Stats = this.GetTestValue36();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats GetTestValue36()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
+         result.Mint = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.Mint = this.GetTestValue37();
+         result.Forge = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.Forge = this.GetTestValue40();
+         result.Trade = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
+         result.Trade = this.GetTestValue43();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats GetTestValue37()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.First = this.GetTestValueU32();
+         result.Last = this.GetTestValueU32();
+         result.SeasonsParticipated = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet();
+         result.SeasonsParticipated = this.GetTestValue38();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet GetTestValue38()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet();
+         result.Value = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = this.GetTestValue39();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue39()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U16>();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U16[] {
+                  this.GetTestValueU16()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats GetTestValue40()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.First = this.GetTestValueU32();
+         result.Last = this.GetTestValueU32();
+         result.SeasonsParticipated = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet();
+         result.SeasonsParticipated = this.GetTestValue41();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet GetTestValue41()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet();
+         result.Value = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = this.GetTestValue42();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue42()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U16>();
+         result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U16[] {
+                  this.GetTestValueU16()});
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats GetTestValue43()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
+         result.Bought = this.GetTestValueU32();
+         result.Sold = this.GetTestValueU32();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue44()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -630,7 +841,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          return result;
       }
       [Test()]
-      public async System.Threading.Tasks.Task TestLastMintedBlockNumbers()
+      public async System.Threading.Tasks.Task TestAccounts()
       {
          // Construct new Mockup client to test with.
          AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
@@ -640,25 +851,40 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue30();
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo mockupValue = this.GetTestValue35();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue44();
 
-         Assert.IsTrue(await rpcClient.SubscribeLastMintedBlockNumbers(mockupKey));
+         Assert.IsTrue(await rpcClient.SubscribeAccounts(mockupKey));
 
          // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetLastMintedBlockNumbers(mockupValue, mockupKey);
+         bool mockupSetResult = await mockupClient.SetAccounts(mockupValue, mockupKey);
 
          // Test that the expected mockup value was handled successfully from RPC service.
          Assert.IsTrue(mockupSetResult);
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetLastMintedBlockNumbers(mockupKey);
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo rpcResult = await rpcClient.GetAccounts(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue32()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo GetTestValue46()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo();
+         result.Minted = this.GetTestValueU32();
+         result.Forged = this.GetTestValueU32();
+         return result;
+      }
+      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue47()
+      {
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
+         result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+         result.Create(this.GetTestValueU16(), this.GetTestValue48());
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue48()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -699,7 +925,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          return result;
       }
       [Test()]
-      public async System.Threading.Tasks.Task TestFreeMints()
+      public async System.Threading.Tasks.Task TestSeasonStats()
       {
          // Construct new Mockup client to test with.
          AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
@@ -709,25 +935,25 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Primitive.U16 mockupValue = this.GetTestValueU16();
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue32();
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo mockupValue = this.GetTestValue46();
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue47();
 
-         Assert.IsTrue(await rpcClient.SubscribeFreeMints(mockupKey));
+         Assert.IsTrue(await rpcClient.SubscribeSeasonStats(mockupKey));
 
          // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetFreeMints(mockupValue, mockupKey);
+         bool mockupSetResult = await mockupClient.SetSeasonStats(mockupValue, mockupKey);
 
          // Test that the expected mockup value was handled successfully from RPC service.
          Assert.IsTrue(mockupSetResult);
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Primitive.U16 rpcResult = await rpcClient.GetFreeMints(mockupKey);
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo rpcResult = await rpcClient.GetSeasonStats(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue34()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue50()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -779,7 +1005,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
          Ajuna.NetApi.Model.Types.Primitive.U128 mockupValue = this.GetTestValueU128();
-         Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue34();
+         Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue50();
 
          Assert.IsTrue(await rpcClient.SubscribeTrade(mockupKey));
 

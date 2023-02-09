@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetUncles(BoundedVecT16 value)
+      public async Task<bool> SetUncles(BoundedVecT20 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Authorship/Uncles", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AuthorshipStorage.UnclesParams());
       }
