@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public AuraStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT19)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "CurrentSlot"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
         }
         
@@ -44,13 +44,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> AuthoritiesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AuthoritiesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT19> Authorities(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23> Authorities(CancellationToken token)
         {
             string parameters = AuraStorage.AuthoritiesParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT19>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -65,6 +75,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> CurrentSlotDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CurrentSlotDefault()
+        {
+            return "0x0000000000000000";
+        }
+        
+        /// <summary>
         /// >> CurrentSlot
         ///  The current slot of this block.
         /// 
@@ -73,11 +92,16 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(CancellationToken token)
         {
             string parameters = AuraStorage.CurrentSlotParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, token);
+            return result;
         }
     }
     
     public sealed class AuraCalls
+    {
+    }
+    
+    public sealed class AuraConstants
     {
     }
 }

@@ -34,7 +34,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset
     }
     
     /// <summary>
-    /// >> 75 - Variant[xcm.v1.multiasset.AssetInstance]
+    /// >> 83 - Variant[xcm.v1.multiasset.AssetInstance]
     /// </summary>
     public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U128>, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr4U8, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr8U8, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr16U8, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>
     {

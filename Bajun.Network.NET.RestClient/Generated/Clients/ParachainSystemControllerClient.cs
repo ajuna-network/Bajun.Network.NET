@@ -20,6 +20,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Bajun.Network.NET.NetApiExt.Generated.Types.Base;
    using Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
@@ -168,17 +169,17 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.AnnouncedHrmpMessagesPerCandidate");
       }
-      public async Task<U64> GetReservedXcmpWeightOverride()
+      public async Task<Weight> GetReservedXcmpWeightOverride()
       {
-         return await SendRequestAsync<U64>(_httpClient, "parachainsystem/reservedxcmpweightoverride");
+         return await SendRequestAsync<Weight>(_httpClient, "parachainsystem/reservedxcmpweightoverride");
       }
       public async Task<bool> SubscribeReservedXcmpWeightOverride()
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.ReservedXcmpWeightOverride");
       }
-      public async Task<U64> GetReservedDmpWeightOverride()
+      public async Task<Weight> GetReservedDmpWeightOverride()
       {
-         return await SendRequestAsync<U64>(_httpClient, "parachainsystem/reserveddmpweightoverride");
+         return await SendRequestAsync<Weight>(_httpClient, "parachainsystem/reserveddmpweightoverride");
       }
       public async Task<bool> SubscribeReservedDmpWeightOverride()
       {

@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1
     }
     
     /// <summary>
-    /// >> 253 - Variant[xcm.v1.Response]
+    /// >> 259 - Variant[xcm.v1.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumExt<Response, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset.MultiAssets, Ajuna.NetApi.Model.Types.Primitive.U32>
     {

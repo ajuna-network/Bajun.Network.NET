@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
@@ -25,9 +25,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT22> GetMembers()
+      public async Task<BoundedVecT26> GetMembers()
       {
-         return await SendRequestAsync<BoundedVecT22>(_httpClient, "councilmembership/members");
+         return await SendRequestAsync<BoundedVecT26>(_httpClient, "councilmembership/members");
       }
       public async Task<bool> SubscribeMembers()
       {

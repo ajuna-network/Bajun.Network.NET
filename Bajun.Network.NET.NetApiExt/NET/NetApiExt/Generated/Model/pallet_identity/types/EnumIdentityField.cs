@@ -36,7 +36,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
     }
     
     /// <summary>
-    /// >> 219 - Variant[pallet_identity.types.IdentityField]
+    /// >> 224 - Variant[pallet_identity.types.IdentityField]
     /// </summary>
     public sealed class EnumIdentityField : BaseEnum<IdentityField>
     {

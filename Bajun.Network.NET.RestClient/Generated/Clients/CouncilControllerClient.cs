@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective;
    using Ajuna.NetApi.Model.Types.Primitive;
@@ -29,17 +29,17 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT21> GetProposals()
+      public async Task<BoundedVecT25> GetProposals()
       {
-         return await SendRequestAsync<BoundedVecT21>(_httpClient, "council/proposals");
+         return await SendRequestAsync<BoundedVecT25>(_httpClient, "council/proposals");
       }
       public async Task<bool> SubscribeProposals()
       {
          return await _subscriptionClient.SubscribeAsync("Council.Proposals");
       }
-      public async Task<EnumCall> GetProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<EnumRuntimeCall> GetProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<EnumCall>(_httpClient, "council/proposalof", Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalOfParams(key));
+         return await SendRequestAsync<EnumRuntimeCall>(_httpClient, "council/proposalof", Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalOfParams(key));
       }
       public async Task<bool> SubscribeProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {

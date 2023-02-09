@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     }
     
     /// <summary>
-    /// >> 279 - Variant[pallet_utility.pallet.Error]
+    /// >> 286 - Variant[pallet_utility.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

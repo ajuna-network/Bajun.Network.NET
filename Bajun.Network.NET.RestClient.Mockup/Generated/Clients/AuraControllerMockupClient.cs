@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,7 +23,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT19 value)
+      public async Task<bool> SetAuthorities(BoundedVecT23 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Aura/Authorities", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AuraStorage.AuthoritiesParams());
       }

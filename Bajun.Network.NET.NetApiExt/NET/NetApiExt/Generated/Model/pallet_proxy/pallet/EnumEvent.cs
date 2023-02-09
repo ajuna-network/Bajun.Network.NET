@@ -20,7 +20,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
         
         ProxyExecuted = 0,
         
-        AnonymousCreated = 1,
+        PureCreated = 1,
         
         Announced = 2,
         
@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     }
     
     /// <summary>
-    /// >> 34 - Variant[pallet_proxy.pallet.Event]
+    /// >> 36 - Variant[pallet_proxy.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 194 - Array
+    /// >> 199 - Array
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Array)]
     public sealed class Arr10U8 : BaseType

@@ -13,7 +13,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public interface ITreasuryControllerClient
    {
@@ -21,7 +21,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposalCount();
       Task<Proposal> GetProposals(U32 key);
       Task<bool> SubscribeProposals(U32 key);
-      Task<BoundedVecT20> GetApprovals();
+      Task<U128> GetInactive();
+      Task<bool> SubscribeInactive();
+      Task<BoundedVecT24> GetApprovals();
       Task<bool> SubscribeApprovals();
    }
 }

@@ -36,13 +36,13 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.
     }
     
     /// <summary>
-    /// >> 51 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// >> 60 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Primitive.U64>, BaseTuple<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError, Ajuna.NetApi.Model.Types.Primitive.U64>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U64, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

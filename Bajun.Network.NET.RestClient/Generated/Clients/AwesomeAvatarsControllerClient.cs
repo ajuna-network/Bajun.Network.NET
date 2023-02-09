@@ -14,9 +14,12 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
    using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
    public sealed class AwesomeAvatarsControllerClient : BaseClient, IAwesomeAvatarsControllerClient
@@ -36,6 +39,14 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Organizer");
       }
+      public async Task<AccountId32> GetTreasurer()
+      {
+         return await SendRequestAsync<AccountId32>(_httpClient, "awesomeavatars/treasurer");
+      }
+      public async Task<bool> SubscribeTreasurer()
+      {
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Treasurer");
+      }
       public async Task<U16> GetCurrentSeasonId()
       {
          return await SendRequestAsync<U16>(_httpClient, "awesomeavatars/currentseasonid");
@@ -44,13 +55,13 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.CurrentSeasonId");
       }
-      public async Task<Bool> GetIsSeasonActive()
+      public async Task<SeasonStatus> GetCurrentSeasonStatus()
       {
-         return await SendRequestAsync<Bool>(_httpClient, "awesomeavatars/isseasonactive");
+         return await SendRequestAsync<SeasonStatus>(_httpClient, "awesomeavatars/currentseasonstatus");
       }
-      public async Task<bool> SubscribeIsSeasonActive()
+      public async Task<bool> SubscribeCurrentSeasonStatus()
       {
-         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.IsSeasonActive");
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.CurrentSeasonStatus");
       }
       public async Task<Season> GetSeasons(U16 key)
       {
@@ -59,6 +70,14 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeSeasons(U16 key)
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Seasons", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonsParams(key));
+      }
+      public async Task<U128> GetTreasury(U16 key)
+      {
+         return await SendRequestAsync<U128>(_httpClient, "awesomeavatars/treasury", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasuryParams(key));
+      }
+      public async Task<bool> SubscribeTreasury(U16 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Treasury", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasuryParams(key));
       }
       public async Task<GlobalConfig> GetGlobalConfigs()
       {
@@ -76,29 +95,29 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Avatars", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<BoundedVecT6> GetOwners(AccountId32 key)
+      public async Task<BoundedVecT28> GetOwners(AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT6>(_httpClient, "awesomeavatars/owners", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
+         return await SendRequestAsync<BoundedVecT28>(_httpClient, "awesomeavatars/owners", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
       public async Task<bool> SubscribeOwners(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Owners", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
-      public async Task<U32> GetLastMintedBlockNumbers(AccountId32 key)
+      public async Task<AccountInfo> GetAccounts(AccountId32 key)
       {
-         return await SendRequestAsync<U32>(_httpClient, "awesomeavatars/lastmintedblocknumbers", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.LastMintedBlockNumbersParams(key));
+         return await SendRequestAsync<AccountInfo>(_httpClient, "awesomeavatars/accounts", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AccountsParams(key));
       }
-      public async Task<bool> SubscribeLastMintedBlockNumbers(AccountId32 key)
+      public async Task<bool> SubscribeAccounts(AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.LastMintedBlockNumbers", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.LastMintedBlockNumbersParams(key));
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Accounts", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AccountsParams(key));
       }
-      public async Task<U16> GetFreeMints(AccountId32 key)
+      public async Task<SeasonInfo> GetSeasonStats(BaseTuple<U16, AccountId32> key)
       {
-         return await SendRequestAsync<U16>(_httpClient, "awesomeavatars/freemints", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.FreeMintsParams(key));
+         return await SendRequestAsync<SeasonInfo>(_httpClient, "awesomeavatars/seasonstats", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonStatsParams(key));
       }
-      public async Task<bool> SubscribeFreeMints(AccountId32 key)
+      public async Task<bool> SubscribeSeasonStats(BaseTuple<U16, AccountId32> key)
       {
-         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.FreeMints", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.FreeMintsParams(key));
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.SeasonStats", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonStatsParams(key));
       }
       public async Task<U128> GetTrade(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {

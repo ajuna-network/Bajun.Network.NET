@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 86 - Variant[xcm.v2.WeightLimit]
+    /// >> 94 - Variant[xcm.v2.WeightLimit]
     /// </summary>
     public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>>
     {

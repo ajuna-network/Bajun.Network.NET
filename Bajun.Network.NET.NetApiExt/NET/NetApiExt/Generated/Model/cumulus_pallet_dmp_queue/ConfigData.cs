@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     
     
     /// <summary>
-    /// >> 357 - Composite[cumulus_pallet_dmp_queue.ConfigData]
+    /// >> 375 - Composite[cumulus_pallet_dmp_queue.ConfigData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ConfigData : BaseType
@@ -27,9 +27,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         /// <summary>
         /// >> max_individual
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U64 _maxIndividual;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxIndividual;
         
-        public Ajuna.NetApi.Model.Types.Primitive.U64 MaxIndividual
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxIndividual
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            MaxIndividual = new Ajuna.NetApi.Model.Types.Primitive.U64();
+            MaxIndividual = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             MaxIndividual.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

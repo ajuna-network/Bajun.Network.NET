@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective
     
     
     /// <summary>
-    /// >> 370 - Composite[pallet_collective.Votes]
+    /// >> 387 - Composite[pallet_collective.Votes]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Votes : BaseType

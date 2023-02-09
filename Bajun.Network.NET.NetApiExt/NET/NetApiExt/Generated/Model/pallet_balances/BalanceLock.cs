@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances
     
     
     /// <summary>
-    /// >> 311 - Composite[pallet_balances.BalanceLock]
+    /// >> 331 - Composite[pallet_balances.BalanceLock]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class BalanceLock : BaseType

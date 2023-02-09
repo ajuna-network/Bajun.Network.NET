@@ -73,7 +73,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
         [HttpGet("SubsOf")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT9>), 200)]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11>), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage), "SubsOfParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetSubsOf(string key)
         {
@@ -88,7 +88,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
         [HttpGet("Registrars")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage), "RegistrarsParams")]
         public IActionResult GetRegistrars()
         {

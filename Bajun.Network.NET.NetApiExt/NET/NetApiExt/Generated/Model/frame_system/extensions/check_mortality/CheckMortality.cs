@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.extensions.ch
     
     
     /// <summary>
-    /// >> 389 - Composite[frame_system.extensions.check_mortality.CheckMortality]
+    /// >> 419 - Composite[frame_system.extensions.check_mortality.CheckMortality]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMortality : BaseType

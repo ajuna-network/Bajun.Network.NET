@@ -11,12 +11,12 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    
    public interface ICouncilMembershipControllerMockupClient
    {
-      Task<bool> SetMembers(BoundedVecT22 value);
+      Task<bool> SetMembers(BoundedVecT26 value);
       Task<bool> SetPrime(AccountId32 value);
    }
 }

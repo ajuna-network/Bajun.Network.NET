@@ -15,7 +15,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Clients;
    using Bajun.Network.NET.RestClient.Generated.Clients;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    
    public class CouncilMembershipControllerClientTest : ClientTestBase
@@ -26,10 +26,10 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22 GetTestValue2()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26 GetTestValue2()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue3()});
@@ -86,7 +86,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CouncilMembershipControllerClient rpcClient = new CouncilMembershipControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22 mockupValue = this.GetTestValue2();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeMembers());
@@ -99,7 +99,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22 rpcResult = await rpcClient.GetMembers();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26 rpcResult = await rpcClient.GetMembers();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

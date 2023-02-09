@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     public enum Error
     {
         
-        TooLarge = 0,
+        TooBig = 0,
         
         AlreadyNoted = 1,
         
@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     }
     
     /// <summary>
-    /// >> 309 - Variant[pallet_preimage.pallet.Error]
+    /// >> 319 - Variant[pallet_preimage.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

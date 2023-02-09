@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
    public sealed class RandomnessControllerClient : BaseClient, IRandomnessControllerClient
@@ -24,9 +24,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT7> GetRandomMaterial()
+      public async Task<BoundedVecT27> GetRandomMaterial()
       {
-         return await SendRequestAsync<BoundedVecT7>(_httpClient, "randomness/randommaterial");
+         return await SendRequestAsync<BoundedVecT27>(_httpClient, "randomness/randommaterial");
       }
       public async Task<bool> SubscribeRandomMaterial()
       {

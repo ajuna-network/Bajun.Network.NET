@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The hashes of the active proposals.
         /// </summary>
         [HttpGet("Proposals")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage), "ProposalsParams")]
         public IActionResult GetProposals()
         {
@@ -54,7 +54,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  Actual proposal for a given hash, if it's current.
         /// </summary>
         [HttpGet("ProposalOf")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage), "ProposalOfParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetProposalOf(string key)
         {

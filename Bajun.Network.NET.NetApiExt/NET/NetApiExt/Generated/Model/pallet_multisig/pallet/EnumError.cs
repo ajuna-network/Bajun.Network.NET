@@ -48,7 +48,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 278 - Variant[pallet_multisig.pallet.Error]
+    /// >> 285 - Variant[pallet_multisig.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

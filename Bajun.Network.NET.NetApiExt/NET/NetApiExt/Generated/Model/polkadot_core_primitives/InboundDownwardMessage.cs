@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives
     
     
     /// <summary>
-    /// >> 158 - Composite[polkadot_core_primitives.InboundDownwardMessage]
+    /// >> 163 - Composite[polkadot_core_primitives.InboundDownwardMessage]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class InboundDownwardMessage : BaseType

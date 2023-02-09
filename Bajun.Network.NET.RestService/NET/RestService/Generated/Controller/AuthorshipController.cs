@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  Uncles
         /// </summary>
         [HttpGet("Uncles")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT16), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AuthorshipStorage), "UnclesParams")]
         public IActionResult GetUncles()
         {

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 298 - Composite[pallet_proxy.Announcement]
+    /// >> 304 - Composite[pallet_proxy.Announcement]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Announcement : BaseType

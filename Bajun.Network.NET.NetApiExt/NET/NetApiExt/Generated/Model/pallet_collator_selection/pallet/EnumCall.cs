@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collator_selection.
     }
     
     /// <summary>
-    /// >> 236 - Variant[pallet_collator_selection.pallet.Call]
+    /// >> 242 - Variant[pallet_collator_selection.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseVoid>

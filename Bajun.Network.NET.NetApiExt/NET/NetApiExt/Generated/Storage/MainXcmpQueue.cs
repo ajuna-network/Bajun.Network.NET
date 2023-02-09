@@ -57,13 +57,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> InboundXcmpStatusDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string InboundXcmpStatusDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> InboundXcmpStatus
         ///  Status of the inbound XCMP channels.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>> InboundXcmpStatus(CancellationToken token)
         {
             string parameters = XcmpQueueStorage.InboundXcmpStatusParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -78,13 +88,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> InboundXcmpMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string InboundXcmpMessagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> InboundXcmpMessages
         ///  Inbound aggregate XCMP messages. It can only be one per ParaId/block.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> InboundXcmpMessages(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
         {
             string parameters = XcmpQueueStorage.InboundXcmpMessagesParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -102,6 +122,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> OutboundXcmpStatusDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string OutboundXcmpStatusDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> OutboundXcmpStatus
         ///  The non-empty XCMP channels in order of becoming non-empty, and the index of the first
         ///  and last outbound message. If the two indices are equal, then it indicates an empty
@@ -113,7 +142,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>> OutboundXcmpStatus(CancellationToken token)
         {
             string parameters = XcmpQueueStorage.OutboundXcmpStatusParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -128,13 +158,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> OutboundXcmpMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string OutboundXcmpMessagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> OutboundXcmpMessages
         ///  The messages outbound in a given XCMP channel.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> OutboundXcmpMessages(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U16> key, CancellationToken token)
         {
             string parameters = XcmpQueueStorage.OutboundXcmpMessagesParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -149,13 +189,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> SignalMessagesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SignalMessagesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> SignalMessages
         ///  Any signal messages waiting to be sent.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> SignalMessages(Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
         {
             string parameters = XcmpQueueStorage.SignalMessagesParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -168,13 +218,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> QueueConfigDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string QueueConfigDefault()
+        {
+            return "0x020000000500000001000000821A06000008000700C817A80402000400";
+        }
+        
+        /// <summary>
         /// >> QueueConfig
         ///  The configuration which controls the dynamics of the outbound queue.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData> QueueConfig(CancellationToken token)
         {
             string parameters = XcmpQueueStorage.QueueConfigParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -192,6 +252,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> OverweightDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string OverweightDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Overweight
         ///  The messages that exceeded max individual message weight budget.
         /// 
@@ -201,7 +270,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> Overweight(Ajuna.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
         {
             string parameters = XcmpQueueStorage.OverweightParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -215,6 +285,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> OverweightCountDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string OverweightCountDefault()
+        {
+            return "0x0000000000000000";
+        }
+        
+        /// <summary>
         /// >> OverweightCount
         ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
         ///  available free overweight index.
@@ -222,7 +301,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U64> OverweightCount(CancellationToken token)
         {
             string parameters = XcmpQueueStorage.OverweightCountParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -235,13 +315,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> QueueSuspendedDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string QueueSuspendedDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> QueueSuspended
         ///  Whether or not the XCMP queue is suspended from executing incoming XCMs or not.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Primitive.Bool> QueueSuspended(CancellationToken token)
         {
             string parameters = XcmpQueueStorage.QueueSuspendedParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            return result;
         }
     }
     
@@ -345,6 +435,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(@new.Encode());
             return new Method(30, "XcmpQueue", 8, "update_xcmp_max_individual_weight", byteArray.ToArray());
         }
+    }
+    
+    public sealed class XcmpQueueConstants
+    {
     }
     
     public enum XcmpQueueErrors

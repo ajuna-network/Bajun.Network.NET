@@ -26,7 +26,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 254 - Variant[xcm.VersionedXcm]
+    /// >> 260 - Variant[xcm.VersionedXcm]
     /// </summary>
     public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.EnumXcm, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.EnumXcm, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2>
     {

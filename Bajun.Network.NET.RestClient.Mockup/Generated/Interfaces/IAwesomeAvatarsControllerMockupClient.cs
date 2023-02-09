@@ -13,21 +13,26 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
    using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
    
    public interface IAwesomeAvatarsControllerMockupClient
    {
       Task<bool> SetOrganizer(AccountId32 value);
+      Task<bool> SetTreasurer(AccountId32 value);
       Task<bool> SetCurrentSeasonId(U16 value);
-      Task<bool> SetIsSeasonActive(Bool value);
+      Task<bool> SetCurrentSeasonStatus(SeasonStatus value);
       Task<bool> SetSeasons(Season value, U16 key);
+      Task<bool> SetTreasury(U128 value, U16 key);
       Task<bool> SetGlobalConfigs(GlobalConfig value);
       Task<bool> SetAvatars(BaseTuple<AccountId32, Avatar> value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetOwners(BoundedVecT6 value, AccountId32 key);
-      Task<bool> SetLastMintedBlockNumbers(U32 value, AccountId32 key);
-      Task<bool> SetFreeMints(U16 value, AccountId32 key);
+      Task<bool> SetOwners(BoundedVecT28 value, AccountId32 key);
+      Task<bool> SetAccounts(AccountInfo value, AccountId32 key);
+      Task<bool> SetSeasonStats(SeasonInfo value, BaseTuple<U16, AccountId32> key);
       Task<bool> SetTrade(U128 value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
    }
 }

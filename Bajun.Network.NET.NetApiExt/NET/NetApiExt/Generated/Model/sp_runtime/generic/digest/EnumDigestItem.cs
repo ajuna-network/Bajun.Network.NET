@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest
     }
     
     /// <summary>
-    /// >> 13 - Variant[sp_runtime.generic.digest.DigestItem]
+    /// >> 15 - Variant[sp_runtime.generic.digest.DigestItem]
     /// </summary>
     public sealed class EnumDigestItem : BaseEnumExt<DigestItem, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>, BaseVoid, BaseVoid, BaseVoid, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>, BaseVoid, BaseVoid>
     {

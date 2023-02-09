@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22 GetMembers();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26 GetMembers();
         
         /// <summary>
         /// >> Prime
@@ -46,7 +46,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _membersTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22> _membersTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26> _membersTypedStorage;
         
         /// <summary>
         /// _primeTypedStorage typed storage field
@@ -58,14 +58,14 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// </summary>
         public CouncilMembershipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.MembersTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22>("CouncilMembership.Members", storageDataProvider, storageChangeDelegates);
+            this.MembersTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26>("CouncilMembership.Members", storageDataProvider, storageChangeDelegates);
             this.PrimeTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("CouncilMembership.Prime", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _membersTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22> MembersTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26> MembersTypedStorage
         {
             get
             {
@@ -114,7 +114,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT22 GetMembers()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26 GetMembers()
         {
             return MembersTypedStorage.Get();
         }

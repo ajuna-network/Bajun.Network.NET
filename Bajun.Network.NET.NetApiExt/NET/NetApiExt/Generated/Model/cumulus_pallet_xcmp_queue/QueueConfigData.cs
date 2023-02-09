@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
     
     
     /// <summary>
-    /// >> 352 - Composite[cumulus_pallet_xcmp_queue.QueueConfigData]
+    /// >> 370 - Composite[cumulus_pallet_xcmp_queue.QueueConfigData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class QueueConfigData : BaseType
@@ -42,17 +42,17 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
         /// <summary>
         /// >> threshold_weight
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U64 _thresholdWeight;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _thresholdWeight;
         
         /// <summary>
         /// >> weight_restrict_decay
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U64 _weightRestrictDecay;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _weightRestrictDecay;
         
         /// <summary>
         /// >> xcmp_max_individual_weight
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U64 _xcmpMaxIndividualWeight;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _xcmpMaxIndividualWeight;
         
         public Ajuna.NetApi.Model.Types.Primitive.U32 SuspendThreshold
         {
@@ -90,7 +90,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Primitive.U64 ThresholdWeight
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight ThresholdWeight
         {
             get
             {
@@ -102,7 +102,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Primitive.U64 WeightRestrictDecay
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight WeightRestrictDecay
         {
             get
             {
@@ -114,7 +114,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Primitive.U64 XcmpMaxIndividualWeight
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight XcmpMaxIndividualWeight
         {
             get
             {
@@ -152,11 +152,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
             DropThreshold.Decode(byteArray, ref p);
             ResumeThreshold = new Ajuna.NetApi.Model.Types.Primitive.U32();
             ResumeThreshold.Decode(byteArray, ref p);
-            ThresholdWeight = new Ajuna.NetApi.Model.Types.Primitive.U64();
+            ThresholdWeight = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             ThresholdWeight.Decode(byteArray, ref p);
-            WeightRestrictDecay = new Ajuna.NetApi.Model.Types.Primitive.U64();
+            WeightRestrictDecay = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             WeightRestrictDecay.Decode(byteArray, ref p);
-            XcmpMaxIndividualWeight = new Ajuna.NetApi.Model.Types.Primitive.U64();
+            XcmpMaxIndividualWeight = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             XcmpMaxIndividualWeight.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

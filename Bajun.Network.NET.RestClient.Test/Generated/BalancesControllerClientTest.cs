@@ -17,8 +17,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
    using Bajun.Network.NET.RestClient.Generated.Clients;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public class BalancesControllerClientTest : ClientTestBase
    {
@@ -57,7 +57,36 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetTestValue3()
+      [Test()]
+      public async System.Threading.Tasks.Task TestInactiveIssuance()
+      {
+         // Construct new Mockup client to test with.
+         BalancesControllerMockupClient mockupClient = new BalancesControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
+         Ajuna.NetApi.Model.Types.Primitive.U128 mockupValue = this.GetTestValueU128();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeInactiveIssuance());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetInactiveIssuance(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Ajuna.NetApi.Model.Types.Primitive.U128 rpcResult = await rpcClient.GetInactiveIssuance();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetTestValue4()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData();
@@ -67,7 +96,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          result.FeeFrozen = this.GetTestValueU128();
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue5()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -118,8 +147,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData mockupValue = this.GetTestValue3();
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue4();
+         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData mockupValue = this.GetTestValue4();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue5();
 
          Assert.IsTrue(await rpcClient.SubscribeAccount(mockupKey));
 
@@ -136,16 +165,16 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 GetTestValue6()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetTestValue7()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock>();
          result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock[] {
-                  this.GetTestValue7()});
+                  this.GetTestValue8()});
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock GetTestValue7()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock GetTestValue8()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock();
@@ -164,7 +193,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          result.Reasons.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.Reasons>());
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue8()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue9()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -215,8 +244,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue6();
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue8();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue7();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue9();
 
          Assert.IsTrue(await rpcClient.SubscribeLocks(mockupKey));
 
@@ -228,21 +257,21 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 rpcResult = await rpcClient.GetLocks(mockupKey);
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 rpcResult = await rpcClient.GetLocks(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 GetTestValue10()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 GetTestValue11()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData>();
          result.Value.Create(new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData[] {
-                  this.GetTestValue11()});
+                  this.GetTestValue12()});
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData GetTestValue11()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData GetTestValue12()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData();
@@ -259,7 +288,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue12()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue13()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -310,8 +339,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 mockupValue = this.GetTestValue10();
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue12();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 mockupValue = this.GetTestValue11();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue13();
 
          Assert.IsTrue(await rpcClient.SubscribeReserves(mockupKey));
 
@@ -323,43 +352,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 rpcResult = await rpcClient.GetReserves(mockupKey);
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases GetTestValue14()
-      {
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases();
-         result.Create(this.GetTestValueEnum<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.Releases>());
-         return result;
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestStorageVersion()
-      {
-         // Construct new Mockup client to test with.
-         BalancesControllerMockupClient mockupClient = new BalancesControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases mockupValue = this.GetTestValue14();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeStorageVersion());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetStorageVersion(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases rpcResult = await rpcClient.GetStorageVersion();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 rpcResult = await rpcClient.GetReserves(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

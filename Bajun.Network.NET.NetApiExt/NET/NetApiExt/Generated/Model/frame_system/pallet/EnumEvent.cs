@@ -32,10 +32,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.pallet
     }
     
     /// <summary>
-    /// >> 18 - Variant[frame_system.pallet.Event]
+    /// >> 20 - Variant[frame_system.pallet.Event]
     /// Event for the System pallet.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.DispatchInfo, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.DispatchInfo>, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>>
     {
     }
 }

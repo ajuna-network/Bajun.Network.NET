@@ -11,14 +11,14 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT17> GetInvulnerables();
+      Task<BoundedVecT21> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT18> GetCandidates();
+      Task<BoundedVecT22> GetCandidates();
       Task<bool> SubscribeCandidates();
       Task<U32> GetLastAuthoredBlock(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

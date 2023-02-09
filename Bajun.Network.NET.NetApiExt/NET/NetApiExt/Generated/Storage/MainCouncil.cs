@@ -30,9 +30,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public CouncilStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "ProposalOf"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Voting"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.Votes)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "ProposalCount"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
@@ -50,13 +50,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ProposalsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ProposalsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21> Proposals(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> Proposals(CancellationToken token)
         {
             string parameters = CouncilStorage.ProposalsParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -71,13 +81,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ProposalOfDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ProposalOfDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> ProposalOf
         ///  Actual proposal for a given hash, if it's current.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall> ProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall> ProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
         {
             string parameters = CouncilStorage.ProposalOfParams(key);
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -92,13 +112,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> VotingDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string VotingDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Voting
         ///  Votes on a given proposal, if it is ongoing.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.Votes> Voting(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
         {
             string parameters = CouncilStorage.VotingParams(key);
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.Votes>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.Votes>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -111,13 +141,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> ProposalCountDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ProposalCountDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
         /// >> ProposalCount
         ///  Proposals so far.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Primitive.U32> ProposalCount(CancellationToken token)
         {
             string parameters = CouncilStorage.ProposalCountParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -130,13 +170,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> MembersDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string MembersDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Members
         ///  The current members of the collective. This is stored sorted (just by value).
         /// </summary>
         public async Task<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Members(CancellationToken token)
         {
             string parameters = CouncilStorage.MembersParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, token);
+            return result;
         }
         
         /// <summary>
@@ -149,13 +199,23 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> PrimeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PrimeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> Prime
         ///  The prime member that helps determine the default vote behavior in case of absentations.
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(CancellationToken token)
         {
             string parameters = CouncilStorage.PrimeParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            return result;
         }
     }
     
@@ -179,7 +239,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> execute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Execute(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall proposal, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
+        public static Method Execute(Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall proposal, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(proposal.Encode());
@@ -191,7 +251,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// >> propose
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Propose(Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> threshold, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumCall proposal, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
+        public static Method Propose(Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> threshold, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall proposal, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(threshold.Encode());
@@ -214,17 +274,17 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> close
+        /// >> close_old_weight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Close(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 proposal_hash, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> index, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64> proposal_weight_bound, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
+        public static Method CloseOldWeight(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 proposal_hash, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> index, Ajuna.NetApi.Model.Types.Base.BaseCom<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.OldWeight> proposal_weight_bound, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(proposal_hash.Encode());
             byteArray.AddRange(index.Encode());
             byteArray.AddRange(proposal_weight_bound.Encode());
             byteArray.AddRange(length_bound.Encode());
-            return new Method(42, "Council", 4, "close", byteArray.ToArray());
+            return new Method(42, "Council", 4, "close_old_weight", byteArray.ToArray());
         }
         
         /// <summary>
@@ -237,6 +297,24 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(proposal_hash.Encode());
             return new Method(42, "Council", 5, "disapprove_proposal", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> close
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method Close(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 proposal_hash, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> index, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight proposal_weight_bound, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> length_bound)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(proposal_hash.Encode());
+            byteArray.AddRange(index.Encode());
+            byteArray.AddRange(proposal_weight_bound.Encode());
+            byteArray.AddRange(length_bound.Encode());
+            return new Method(42, "Council", 6, "close", byteArray.ToArray());
+        }
+    }
+    
+    public sealed class CouncilConstants
+    {
     }
     
     public enum CouncilErrors

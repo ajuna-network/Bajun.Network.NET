@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset
     }
     
     /// <summary>
-    /// >> 85 - Variant[xcm.v1.multiasset.WildFungibility]
+    /// >> 93 - Variant[xcm.v1.multiasset.WildFungibility]
     /// </summary>
     public sealed class EnumWildFungibility : BaseEnum<WildFungibility>
     {

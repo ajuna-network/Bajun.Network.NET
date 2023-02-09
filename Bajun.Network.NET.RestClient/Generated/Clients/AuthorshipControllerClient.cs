@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
@@ -26,9 +26,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT16> GetUncles()
+      public async Task<BoundedVecT20> GetUncles()
       {
-         return await SendRequestAsync<BoundedVecT16>(_httpClient, "authorship/uncles");
+         return await SendRequestAsync<BoundedVecT20>(_httpClient, "authorship/uncles");
       }
       public async Task<bool> SubscribeUncles()
       {

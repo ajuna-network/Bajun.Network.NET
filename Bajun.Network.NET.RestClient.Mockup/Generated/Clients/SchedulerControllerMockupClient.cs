@@ -12,8 +12,9 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.NetApi.Model.Types.Base;
    using Ajuna.NetApi.Model.Types.Primitive;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Ajuna.NetApi.Model.Types.Base;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class SchedulerControllerMockupClient : MockupBaseClient, ISchedulerControllerMockupClient
@@ -23,11 +24,15 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAgenda(BaseVec<BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler.ScheduledV3>> value, U32 key)
+      public async Task<bool> SetIncompleteSince(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
+      }
+      public async Task<bool> SetAgenda(BoundedVecT15 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
-      public async Task<bool> SetLookup(BaseTuple<U32, U32> value, BaseVec<U8> key)
+      public async Task<bool> SetLookup(BaseTuple<U32, U32> value, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Lookup", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.LookupParams(key));
       }

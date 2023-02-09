@@ -20,37 +20,41 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         
         OrganizerSet = 0,
         
-        UpdatedSeason = 1,
+        TreasurerSet = 1,
         
-        UpdatedGlobalConfig = 2,
+        UpdatedSeason = 2,
         
-        AvatarsMinted = 3,
+        UpdatedGlobalConfig = 3,
         
-        AvatarForged = 4,
+        AvatarsMinted = 4,
         
-        SeasonStarted = 5,
+        AvatarForged = 5,
         
-        SeasonFinished = 6,
+        SeasonStarted = 6,
         
-        FreeMintsTransferred = 7,
+        SeasonFinished = 7,
         
-        FreeMintsIssued = 8,
+        FreeMintsTransferred = 8,
         
-        AvatarPriceSet = 9,
+        FreeMintsIssued = 9,
         
-        AvatarPriceUnset = 10,
+        AvatarPriceSet = 10,
         
-        AvatarTraded = 11,
+        AvatarPriceUnset = 11,
+        
+        AvatarTraded = 12,
+        
+        StorageTierUpgraded = 13,
     }
     
     /// <summary>
-    /// >> 102 - Variant[pallet_ajuna_awesome_avatars.pallet.Event]
+    /// >> 108 - Variant[pallet_ajuna_awesome_avatars.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season>, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U8>, Ajuna.NetApi.Model.Types.Primitive.U16, Ajuna.NetApi.Model.Types.Primitive.U16, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U128>, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U8>, Ajuna.NetApi.Model.Types.Primitive.U16, Ajuna.NetApi.Model.Types.Primitive.U16, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U128>, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseVoid>
     {
     }
 }

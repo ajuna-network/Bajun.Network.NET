@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.ed25519
     
     
     /// <summary>
-    /// >> 379 - Composite[sp_core.ed25519.Signature]
+    /// >> 409 - Composite[sp_core.ed25519.Signature]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

@@ -11,13 +11,13 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerMockupClient
    {
-      Task<bool> SetInvulnerables(BoundedVecT17 value);
-      Task<bool> SetCandidates(BoundedVecT18 value);
+      Task<bool> SetInvulnerables(BoundedVecT21 value);
+      Task<bool> SetCandidates(BoundedVecT22 value);
       Task<bool> SetLastAuthoredBlock(U32 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetDesiredCandidates(U32 value);
       Task<bool> SetCandidacyBond(U128 value);

@@ -31,7 +31,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Vesting", "VestingSchedules"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT15)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19)));
         }
         
         /// <summary>
@@ -48,15 +48,25 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> VestingSchedulesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string VestingSchedulesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> VestingSchedules
         ///  Vesting schedules of an account.
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT15> VestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19> VestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = VestingStorage.VestingSchedulesParams(key);
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT15>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19>(parameters, token);
+            return result;
         }
     }
     
@@ -106,6 +116,21 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
             return new Method(17, "Vesting", 3, "claim_for", byteArray.ToArray());
+        }
+    }
+    
+    public sealed class VestingConstants
+    {
+        
+        /// <summary>
+        /// >> MinVestedTransfer
+        ///  The minimum amount transferred to call `vested_transfer`.
+        /// </summary>
+        public Ajuna.NetApi.Model.Types.Primitive.U128 MinVestedTransfer()
+        {
+            var result = new Ajuna.NetApi.Model.Types.Primitive.U128();
+            result.Create("0x00E1F505000000000000000000000000");
+            return result;
         }
     }
     

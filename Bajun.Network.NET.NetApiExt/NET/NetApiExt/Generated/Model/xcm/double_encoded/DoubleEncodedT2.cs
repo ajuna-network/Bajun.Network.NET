@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.double_encoded
     
     
     /// <summary>
-    /// >> 259 - Composite[xcm.double_encoded.DoubleEncodedT2]
+    /// >> 265 - Composite[xcm.double_encoded.DoubleEncodedT2]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class DoubleEncodedT2 : BaseType

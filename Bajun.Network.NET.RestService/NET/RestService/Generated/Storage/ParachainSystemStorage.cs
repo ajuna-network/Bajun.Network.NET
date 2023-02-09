@@ -179,14 +179,14 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         ///  The weight we reserve at the beginning of the block for processing XCMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        Ajuna.NetApi.Model.Types.Primitive.U64 GetReservedXcmpWeightOverride();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetReservedXcmpWeightOverride();
         
         /// <summary>
         /// >> ReservedDmpWeightOverride
         ///  The weight we reserve at the beginning of the block for processing DMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        Ajuna.NetApi.Model.Types.Primitive.U64 GetReservedDmpWeightOverride();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetReservedDmpWeightOverride();
         
         /// <summary>
         /// >> AuthorizedUpgrade
@@ -297,12 +297,12 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservedXcmpWeightOverrideTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U64> _reservedXcmpWeightOverrideTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> _reservedXcmpWeightOverrideTypedStorage;
         
         /// <summary>
         /// _reservedDmpWeightOverrideTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U64> _reservedDmpWeightOverrideTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> _reservedDmpWeightOverrideTypedStorage;
         
         /// <summary>
         /// _authorizedUpgradeTypedStorage typed storage field
@@ -336,8 +336,8 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
             this.UpwardMessagesTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>("ParachainSystem.UpwardMessages", storageDataProvider, storageChangeDelegates);
             this.PendingUpwardMessagesTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>("ParachainSystem.PendingUpwardMessages", storageDataProvider, storageChangeDelegates);
             this.AnnouncedHrmpMessagesPerCandidateTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("ParachainSystem.AnnouncedHrmpMessagesPerCandidate", storageDataProvider, storageChangeDelegates);
-            this.ReservedXcmpWeightOverrideTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U64>("ParachainSystem.ReservedXcmpWeightOverride", storageDataProvider, storageChangeDelegates);
-            this.ReservedDmpWeightOverrideTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U64>("ParachainSystem.ReservedDmpWeightOverride", storageDataProvider, storageChangeDelegates);
+            this.ReservedXcmpWeightOverrideTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>("ParachainSystem.ReservedXcmpWeightOverride", storageDataProvider, storageChangeDelegates);
+            this.ReservedDmpWeightOverrideTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>("ParachainSystem.ReservedDmpWeightOverride", storageDataProvider, storageChangeDelegates);
             this.AuthorizedUpgradeTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>("ParachainSystem.AuthorizedUpgrade", storageDataProvider, storageChangeDelegates);
             this.CustomValidationHeadDataTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>("ParachainSystem.CustomValidationHeadData", storageDataProvider, storageChangeDelegates);
         }
@@ -600,7 +600,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservedXcmpWeightOverrideTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U64> ReservedXcmpWeightOverrideTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedXcmpWeightOverrideTypedStorage
         {
             get
             {
@@ -615,7 +615,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservedDmpWeightOverrideTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U64> ReservedDmpWeightOverrideTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedDmpWeightOverrideTypedStorage
         {
             get
             {
@@ -1053,7 +1053,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         ///  The weight we reserve at the beginning of the block for processing XCMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        public Ajuna.NetApi.Model.Types.Primitive.U64 GetReservedXcmpWeightOverride()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetReservedXcmpWeightOverride()
         {
             return ReservedXcmpWeightOverrideTypedStorage.Get();
         }
@@ -1072,7 +1072,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         ///  The weight we reserve at the beginning of the block for processing DMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        public Ajuna.NetApi.Model.Types.Primitive.U64 GetReservedDmpWeightOverride()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetReservedDmpWeightOverride()
         {
             return ReservedDmpWeightOverrideTypedStorage.Get();
         }

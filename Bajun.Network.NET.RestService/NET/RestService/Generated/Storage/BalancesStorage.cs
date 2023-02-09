@@ -31,6 +31,12 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         Ajuna.NetApi.Model.Types.Primitive.U128 GetTotalIssuance();
         
         /// <summary>
+        /// >> InactiveIssuance
+        ///  The total units of outstanding deactivated balance in the system.
+        /// </summary>
+        Ajuna.NetApi.Model.Types.Primitive.U128 GetInactiveIssuance();
+        
+        /// <summary>
         /// >> Account
         ///  The Balances pallet example of storing the balance of an account.
         /// 
@@ -64,21 +70,13 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key);
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key);
         
         /// <summary>
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 GetReserves(string key);
-        
-        /// <summary>
-        /// >> StorageVersion
-        ///  Storage version of the pallet.
-        /// 
-        ///  This is set to v2.0.0 for new networks.
-        /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases GetStorageVersion();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 GetReserves(string key);
     }
     
     /// <summary>
@@ -93,6 +91,11 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         private TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> _totalIssuanceTypedStorage;
         
         /// <summary>
+        /// _inactiveIssuanceTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> _inactiveIssuanceTypedStorage;
+        
+        /// <summary>
         /// _accountTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> _accountTypedStorage;
@@ -100,17 +103,12 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2> _locksTypedStorage;
+        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> _locksTypedStorage;
         
         /// <summary>
         /// _reservesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14> _reservesTypedStorage;
-        
-        /// <summary>
-        /// _storageVersionTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases> _storageVersionTypedStorage;
+        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18> _reservesTypedStorage;
         
         /// <summary>
         /// BalancesStorage constructor.
@@ -118,10 +116,10 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         public BalancesStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.TotalIssuanceTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("Balances.TotalIssuance", storageDataProvider, storageChangeDelegates);
+            this.InactiveIssuanceTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("Balances.InactiveIssuance", storageDataProvider, storageChangeDelegates);
             this.AccountTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.AccountData>("Balances.Account", storageDataProvider, storageChangeDelegates);
-            this.LocksTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
-            this.ReservesTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
-            this.StorageVersionTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases>("Balances.StorageVersion", storageDataProvider, storageChangeDelegates);
+            this.LocksTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
+            this.ReservesTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -136,6 +134,21 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
             set
             {
                 _totalIssuanceTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _inactiveIssuanceTypedStorage property
+        /// </summary>
+        public TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> InactiveIssuanceTypedStorage
+        {
+            get
+            {
+                return _inactiveIssuanceTypedStorage;
+            }
+            set
+            {
+                _inactiveIssuanceTypedStorage = value;
             }
         }
         
@@ -157,7 +170,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage property
         /// </summary>
-        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2> LocksTypedStorage
+        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> LocksTypedStorage
         {
             get
             {
@@ -172,7 +185,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14> ReservesTypedStorage
+        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18> ReservesTypedStorage
         {
             get
             {
@@ -185,30 +198,15 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _storageVersionTypedStorage property
-        /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases> StorageVersionTypedStorage
-        {
-            get
-            {
-                return _storageVersionTypedStorage;
-            }
-            set
-            {
-                _storageVersionTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Ajuna.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await TotalIssuanceTypedStorage.InitializeAsync("Balances", "TotalIssuance");
+            await InactiveIssuanceTypedStorage.InitializeAsync("Balances", "InactiveIssuance");
             await AccountTypedStorage.InitializeAsync("Balances", "Account");
             await LocksTypedStorage.InitializeAsync("Balances", "Locks");
             await ReservesTypedStorage.InitializeAsync("Balances", "Reserves");
-            await StorageVersionTypedStorage.InitializeAsync("Balances", "StorageVersion");
         }
         
         /// <summary>
@@ -227,6 +225,24 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         public Ajuna.NetApi.Model.Types.Primitive.U128 GetTotalIssuance()
         {
             return TotalIssuanceTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Balances.InactiveIssuance
+        /// </summary>
+        [StorageChange("Balances", "InactiveIssuance")]
+        public void OnUpdateInactiveIssuance(string data)
+        {
+            InactiveIssuanceTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> InactiveIssuance
+        ///  The total units of outstanding deactivated balance in the system.
+        /// </summary>
+        public Ajuna.NetApi.Model.Types.Primitive.U128 GetInactiveIssuance()
+        {
+            return InactiveIssuanceTypedStorage.Get();
         }
         
         /// <summary>
@@ -295,13 +311,13 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key)
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 result))
+            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 result))
             {
                 return result;
             }
@@ -324,13 +340,13 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 GetReserves(string key)
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 GetReserves(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT14 result))
+            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 result))
             {
                 return result;
             }
@@ -338,26 +354,6 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
             {
                 return null;
             }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for Balances.StorageVersion
-        /// </summary>
-        [StorageChange("Balances", "StorageVersion")]
-        public void OnUpdateStorageVersion(string data)
-        {
-            StorageVersionTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> StorageVersion
-        ///  Storage version of the pallet.
-        /// 
-        ///  This is set to v2.0.0 for new networks.
-        /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases GetStorageVersion()
-        {
-            return StorageVersionTypedStorage.Get();
         }
     }
 }

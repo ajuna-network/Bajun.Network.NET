@@ -34,9 +34,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.junction
     }
     
     /// <summary>
-    /// >> 65 - Variant[xcm.v0.junction.BodyId]
+    /// >> 73 - Variant[xcm.v0.junction.BodyId]
     /// </summary>
-    public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT1, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

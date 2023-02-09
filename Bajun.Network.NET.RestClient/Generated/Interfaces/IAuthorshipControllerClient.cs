@@ -11,13 +11,13 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerClient
    {
-      Task<BoundedVecT16> GetUncles();
+      Task<BoundedVecT20> GetUncles();
       Task<bool> SubscribeUncles();
       Task<AccountId32> GetAuthor();
       Task<bool> SubscribeAuthor();

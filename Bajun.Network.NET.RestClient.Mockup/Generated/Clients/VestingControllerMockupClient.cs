@@ -12,7 +12,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class VestingControllerMockupClient : MockupBaseClient, IVestingControllerMockupClient
@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetVestingSchedules(BoundedVecT15 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetVestingSchedules(BoundedVecT19 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Vesting/VestingSchedules", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
       }

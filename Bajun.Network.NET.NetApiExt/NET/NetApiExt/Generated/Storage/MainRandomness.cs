@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public RandomnessStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Randomness", "RandomMaterial"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT7)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Randomness", "RandomMaterial"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27)));
         }
         
         /// <summary>
@@ -45,19 +45,33 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> RandomMaterialDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RandomMaterialDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
         /// >> RandomMaterial
         ///  Series of block headers from the last 81 blocks that acts as random seed material. This
         ///  is arranged as a ring buffer with `block_number % 81` being the index into the `Vec` of
         ///  the oldest hash.
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT7> RandomMaterial(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27> RandomMaterial(CancellationToken token)
         {
             string parameters = RandomnessStorage.RandomMaterialParams();
-            return await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT7>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27>(parameters, token);
+            return result;
         }
     }
     
     public sealed class RandomnessCalls
+    {
+    }
+    
+    public sealed class RandomnessConstants
     {
     }
 }

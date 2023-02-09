@@ -49,7 +49,19 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> Treasurer
+        /// </summary>
+        [HttpGet("Treasurer")]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "TreasurerParams")]
+        public IActionResult GetTreasurer()
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetTreasurer());
+        }
+        
+        /// <summary>
         /// >> CurrentSeasonId
+        ///  Contains the identifier of the current season.
         /// </summary>
         [HttpGet("CurrentSeasonId")]
         [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U16), 200)]
@@ -60,14 +72,14 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> IsSeasonActive
+        /// >> CurrentSeasonStatus
         /// </summary>
-        [HttpGet("IsSeasonActive")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.Bool), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "IsSeasonActiveParams")]
-        public IActionResult GetIsSeasonActive()
+        [HttpGet("CurrentSeasonStatus")]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "CurrentSeasonStatusParams")]
+        public IActionResult GetCurrentSeasonStatus()
         {
-            return this.Ok(_awesomeAvatarsStorage.GetIsSeasonActive());
+            return this.Ok(_awesomeAvatarsStorage.GetCurrentSeasonStatus());
         }
         
         /// <summary>
@@ -75,7 +87,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  Storage for the seasons.
         /// </summary>
         [HttpGet("Seasons")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "SeasonsParams", typeof(Ajuna.NetApi.Model.Types.Primitive.U16))]
         public IActionResult GetSeasons(string key)
         {
@@ -83,10 +95,21 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> Treasury
+        /// </summary>
+        [HttpGet("Treasury")]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "TreasuryParams", typeof(Ajuna.NetApi.Model.Types.Primitive.U16))]
+        public IActionResult GetTreasury(string key)
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetTreasury(key));
+        }
+        
+        /// <summary>
         /// >> GlobalConfigs
         /// </summary>
         [HttpGet("GlobalConfigs")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "GlobalConfigsParams")]
         public IActionResult GetGlobalConfigs()
         {
@@ -97,7 +120,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         /// >> Avatars
         /// </summary>
         [HttpGet("Avatars")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Avatar>), 200)]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "AvatarsParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetAvatars(string key)
         {
@@ -108,7 +131,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         /// >> Owners
         /// </summary>
         [HttpGet("Owners")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "OwnersParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetOwners(string key)
         {
@@ -116,25 +139,25 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> LastMintedBlockNumbers
+        /// >> Accounts
         /// </summary>
-        [HttpGet("LastMintedBlockNumbers")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "LastMintedBlockNumbersParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
-        public IActionResult GetLastMintedBlockNumbers(string key)
+        [HttpGet("Accounts")]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "AccountsParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetAccounts(string key)
         {
-            return this.Ok(_awesomeAvatarsStorage.GetLastMintedBlockNumbers(key));
+            return this.Ok(_awesomeAvatarsStorage.GetAccounts(key));
         }
         
         /// <summary>
-        /// >> FreeMints
+        /// >> SeasonStats
         /// </summary>
-        [HttpGet("FreeMints")]
-        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U16), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "FreeMintsParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
-        public IActionResult GetFreeMints(string key)
+        [HttpGet("SeasonStats")]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "SeasonStatsParams", typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
+        public IActionResult GetSeasonStats(string key)
         {
-            return this.Ok(_awesomeAvatarsStorage.GetFreeMints(key));
+            return this.Ok(_awesomeAvatarsStorage.GetSeasonStats(key));
         }
         
         /// <summary>

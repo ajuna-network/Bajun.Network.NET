@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 126 - Composite[frame_system.limits.BlockWeights]
+    /// >> 131 - Composite[frame_system.limits.BlockWeights]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class BlockWeights : BaseType
@@ -27,19 +27,19 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
         /// <summary>
         /// >> base_block
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U64 _baseBlock;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _baseBlock;
         
         /// <summary>
         /// >> max_block
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U64 _maxBlock;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxBlock;
         
         /// <summary>
         /// >> per_class
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT2 _perClass;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 _perClass;
         
-        public Ajuna.NetApi.Model.Types.Primitive.U64 BaseBlock
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseBlock
         {
             get
             {
@@ -51,7 +51,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Primitive.U64 MaxBlock
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxBlock
         {
             get
             {
@@ -63,7 +63,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT2 PerClass
+        public Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 PerClass
         {
             get
             {
@@ -92,11 +92,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            BaseBlock = new Ajuna.NetApi.Model.Types.Primitive.U64();
+            BaseBlock = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             BaseBlock.Decode(byteArray, ref p);
-            MaxBlock = new Ajuna.NetApi.Model.Types.Primitive.U64();
+            MaxBlock = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             MaxBlock.Decode(byteArray, ref p);
-            PerClass = new Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT2();
+            PerClass = new Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2();
             PerClass.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

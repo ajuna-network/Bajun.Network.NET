@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The invulnerable, fixed collators.
         /// </summary>
         [HttpGet("Invulnerables")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT17), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "InvulnerablesParams")]
         public IActionResult GetInvulnerables()
         {
@@ -54,7 +54,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The (community, limited) collation candidates.
         /// </summary>
         [HttpGet("Candidates")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT18), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "CandidatesParams")]
         public IActionResult GetCandidates()
         {

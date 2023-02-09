@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 138 - Composite[polkadot_primitives.v2.PersistedValidationData]
+    /// >> 143 - Composite[polkadot_primitives.v2.PersistedValidationData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class PersistedValidationData : BaseType

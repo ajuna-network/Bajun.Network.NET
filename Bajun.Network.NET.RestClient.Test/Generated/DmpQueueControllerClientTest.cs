@@ -31,7 +31,18 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData();
-         result.MaxIndividual = this.GetTestValueU64();
+         result.MaxIndividual = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.MaxIndividual = this.GetTestValue3();
+         return result;
+      }
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue3()
+      {
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU64().Value));
          return result;
       }
       [Test()]
@@ -63,7 +74,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData GetTestValue4()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData GetTestValue5()
       {
          Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData();
@@ -83,7 +94,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          DmpQueueControllerClient rpcClient = new DmpQueueControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData mockupValue = this.GetTestValue4();
+         Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData mockupValue = this.GetTestValue5();
 
 
          Assert.IsTrue(await rpcClient.SubscribePageIndex());
@@ -101,22 +112,22 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> GetTestValue6()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> GetTestValue7()
       {
          Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>>();
          result.Create(new Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>[] {
-                  this.GetTestValue7()});
+                  this.GetTestValue8()});
          return result;
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue7()
+      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue8()
       {
          Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue8());
+         result.Create(this.GetTestValueU32(), this.GetTestValue9());
          return result;
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue8()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue9()
       {
          Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
@@ -135,7 +146,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          DmpQueueControllerClient rpcClient = new DmpQueueControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> mockupValue = this.GetTestValue6();
+         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>> mockupValue = this.GetTestValue7();
          Ajuna.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribePages(mockupKey));
@@ -153,14 +164,14 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue10()
+      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue11()
       {
          Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue11());
+         result.Create(this.GetTestValueU32(), this.GetTestValue12());
          return result;
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue11()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> GetTestValue12()
       {
          Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> result;
          result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
@@ -179,7 +190,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          DmpQueueControllerClient rpcClient = new DmpQueueControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue10();
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue11();
          Ajuna.NetApi.Model.Types.Primitive.U64 mockupKey = this.GetTestValueU64();
 
          Assert.IsTrue(await rpcClient.SubscribeOverweight(mockupKey));

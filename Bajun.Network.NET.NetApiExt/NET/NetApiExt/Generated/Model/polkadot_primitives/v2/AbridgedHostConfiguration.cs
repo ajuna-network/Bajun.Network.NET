@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 148 - Composite[polkadot_primitives.v2.AbridgedHostConfiguration]
+    /// >> 153 - Composite[polkadot_primitives.v2.AbridgedHostConfiguration]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHostConfiguration : BaseType

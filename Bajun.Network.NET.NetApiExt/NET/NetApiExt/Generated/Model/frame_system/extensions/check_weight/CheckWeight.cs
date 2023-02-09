@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.extensions.ch
     
     
     /// <summary>
-    /// >> 392 - Composite[frame_system.extensions.check_weight.CheckWeight]
+    /// >> 422 - Composite[frame_system.extensions.check_weight.CheckWeight]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class CheckWeight : BaseType

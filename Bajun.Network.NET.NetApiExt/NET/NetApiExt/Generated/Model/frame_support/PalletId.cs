@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_support
     
     
     /// <summary>
-    /// >> 367 - Composite[frame_support.PalletId]
+    /// >> 384 - Composite[frame_support.PalletId]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class PalletId : BaseType

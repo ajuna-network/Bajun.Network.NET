@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.traits
     
     
     /// <summary>
-    /// >> 235 - Composite[sp_runtime.traits.BlakeTwo256]
+    /// >> 241 - Composite[sp_runtime.traits.BlakeTwo256]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class BlakeTwo256 : BaseType

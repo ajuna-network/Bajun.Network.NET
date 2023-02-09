@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 159 - Composite[BTreeMapT2]
+    /// >> 164 - Composite[BTreeMapT2]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class BTreeMapT2 : BaseType

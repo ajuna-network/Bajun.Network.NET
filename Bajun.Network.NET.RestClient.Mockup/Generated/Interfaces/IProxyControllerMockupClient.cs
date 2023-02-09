@@ -12,12 +12,12 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Base;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface IProxyControllerMockupClient
    {
-      Task<bool> SetProxies(BaseTuple<BoundedVecT11, U128> value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT12, U128> value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetProxies(BaseTuple<BoundedVecT13, U128> value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT14, U128> value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

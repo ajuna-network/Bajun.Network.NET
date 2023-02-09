@@ -11,7 +11,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime;
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective;
    using Ajuna.NetApi.Model.Types.Primitive;
@@ -20,8 +20,8 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICouncilControllerMockupClient
    {
-      Task<bool> SetProposals(BoundedVecT21 value);
-      Task<bool> SetProposalOf(EnumCall value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SetProposals(BoundedVecT25 value);
+      Task<bool> SetProposalOf(EnumRuntimeCall value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetVoting(Votes value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetMembers(BaseVec<AccountId32> value);

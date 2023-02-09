@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types
     
     
     /// <summary>
-    /// >> 9 - Composite[primitive_types.H256]
+    /// >> 11 - Composite[primitive_types.H256]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class H256 : BaseType

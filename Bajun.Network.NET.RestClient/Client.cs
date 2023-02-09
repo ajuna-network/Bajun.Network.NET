@@ -42,6 +42,7 @@ namespace Bajun.Network.NET.RestClient
       public ITimestampControllerClient TimestampControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
       public ITreasuryControllerClient TreasuryControllerClient;
+      public IUniquesControllerClient UniquesControllerClient;
       public IVestingControllerClient VestingControllerClient;
       public IXcmpQueueControllerClient XcmpQueueControllerClient;
       public Client(HttpClient httpClient, BaseSubscriptionClient subscriptionClient)
@@ -71,6 +72,7 @@ namespace Bajun.Network.NET.RestClient
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);
          TreasuryControllerClient = new TreasuryControllerClient(_httpClient, _subscriptionClient);
+         UniquesControllerClient = new UniquesControllerClient(_httpClient, _subscriptionClient);
          VestingControllerClient = new VestingControllerClient(_httpClient, _subscriptionClient);
          XcmpQueueControllerClient = new XcmpQueueControllerClient(_httpClient, _subscriptionClient);
       }

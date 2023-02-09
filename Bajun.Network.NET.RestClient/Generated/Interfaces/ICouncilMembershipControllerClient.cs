@@ -11,12 +11,12 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec;
+   using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto;
    
    public interface ICouncilMembershipControllerClient
    {
-      Task<BoundedVecT22> GetMembers();
+      Task<BoundedVecT26> GetMembers();
       Task<bool> SubscribeMembers();
       Task<AccountId32> GetPrime();
       Task<bool> SubscribePrime();

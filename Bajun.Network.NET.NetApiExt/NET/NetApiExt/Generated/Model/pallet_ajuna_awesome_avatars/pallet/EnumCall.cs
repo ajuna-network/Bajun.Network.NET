@@ -30,20 +30,24 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         
         buy = 5,
         
-        set_organizer = 6,
+        upgrade_storage = 6,
         
-        upsert_season = 7,
+        set_organizer = 7,
         
-        update_global_config = 8,
+        set_treasurer = 8,
         
-        issue_free_mints = 9,
+        set_season = 9,
+        
+        update_global_config = 10,
+        
+        issue_free_mints = 11,
     }
     
     /// <summary>
-    /// >> 273 - Variant[pallet_ajuna_awesome_avatars.pallet.Call]
+    /// >> 280 - Variant[pallet_ajuna_awesome_avatars.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.MintOption, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT6>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U128>>, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.Season>, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.GlobalConfig, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>>
+    public sealed class EnumCall : BaseEnumExt<Call, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintOption, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256>>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U128>>, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U16>>
     {
     }
 }

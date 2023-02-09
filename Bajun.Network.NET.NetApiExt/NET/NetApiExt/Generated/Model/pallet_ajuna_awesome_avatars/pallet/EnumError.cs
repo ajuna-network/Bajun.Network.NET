@@ -28,63 +28,77 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         
         SeasonEndTooLate = 4,
         
-        UnknownSeason = 5,
+        PeriodConfigOverflow = 5,
         
-        UnknownAvatar = 6,
+        PeriodsIndivisible = 6,
         
-        UnknownAvatarForSale = 7,
+        UnknownSeason = 7,
         
-        UnknownTier = 8,
+        UnknownAvatar = 8,
         
-        NonSequentialSeasonId = 9,
+        UnknownAvatarForSale = 9,
         
-        IncorrectRarityPercentages = 10,
+        UnknownTier = 10,
         
-        TooManyRarityPercentages = 11,
+        NonSequentialSeasonId = 11,
         
-        DuplicatedRarityTier = 12,
+        IncorrectRarityPercentages = 12,
         
-        MintClosed = 13,
+        TooManyRarityPercentages = 13,
         
-        ForgeClosed = 14,
+        DuplicatedRarityTier = 14,
         
-        TradeClosed = 15,
+        MintClosed = 15,
         
-        OutOfSeason = 16,
+        ForgeClosed = 16,
         
-        MaxOwnershipReached = 17,
+        TradeClosed = 17,
         
-        Ownership = 18,
+        SeasonClosed = 18,
         
-        IncorrectDna = 19,
+        PrematureSeasonEnd = 19,
         
-        IncorrectAvatarId = 20,
+        MaxOwnershipReached = 20,
         
-        MintCooldown = 21,
+        MaxStorageTierReached = 21,
         
-        InsufficientFunds = 22,
+        Ownership = 22,
         
-        MaxComponentsTooLow = 23,
+        AlreadyOwned = 23,
         
-        MaxComponentsTooHigh = 24,
+        IncorrectDna = 24,
         
-        MaxVariationsTooLow = 25,
+        IncorrectAvatarId = 25,
         
-        MaxVariationsTooHigh = 26,
+        IncorrectSeasonId = 26,
         
-        InsufficientFreeMints = 27,
+        MintCooldown = 27,
         
-        TooFewSacrifices = 28,
+        MaxComponentsTooLow = 28,
         
-        TooManySacrifices = 29,
+        MaxComponentsTooHigh = 29,
         
-        LeaderSacrificed = 30,
+        MaxVariationsTooLow = 30,
         
-        AvatarInTrade = 31,
+        MaxVariationsTooHigh = 31,
+        
+        InsufficientFreeMints = 32,
+        
+        TooLowFreeMintTransfer = 33,
+        
+        TooFewSacrifices = 34,
+        
+        TooManySacrifices = 35,
+        
+        LeaderSacrificed = 36,
+        
+        AvatarInTrade = 37,
+        
+        IncorrectAvatarSeason = 38,
     }
     
     /// <summary>
-    /// >> 376 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 406 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

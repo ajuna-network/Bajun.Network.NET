@@ -44,7 +44,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
         [HttpGet("VestingSchedules")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT15), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.VestingStorage), "VestingSchedulesParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetVestingSchedules(string key)
         {

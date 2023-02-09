@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime
     
     
     /// <summary>
-    /// >> 238 - Composite[bajun_runtime.SessionKeys]
+    /// >> 244 - Composite[bajun_runtime.SessionKeys]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType
