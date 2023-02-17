@@ -1,7 +1,7 @@
 # Bajun.Network .NET API
 *Ajuna.NET API Extensions for the Bajun Network*  
 ![Build](https://github.com/ajuna-network/Bajun.Network.NET/actions/workflows/build.yml/badge.svg)
-[![Nuget](https://img.shields.io/nuget/v/Bajun.Network.NET)](https://www.nuget.org/packages/Bajun.Network.NET/)
+[![Nuget](https://img.shields.io/nuget/v/Bajun.Network.NET.Extension)](https://www.nuget.org/packages/Bajun.Network.NET.Extension/)
 [![GitHub issues](https://img.shields.io/github/issues/ajuna-network/Bajun.Network.NET.svg)](https://github.com/ajuna-network/Bajun.Network.NET/issues)
 [![license](https://img.shields.io/github/license/ajuna-network/Bajun.Network.NET)](https://github.com/ajuna-network/Bajun.Network.NET/blob/origin/LICENSE)
 [![contributors](https://img.shields.io/github/contributors/ajuna-network/Bajun.Network.NET)](https://github.com/ajuna-network/Bajun.Network.NET/graphs/contributors)  
