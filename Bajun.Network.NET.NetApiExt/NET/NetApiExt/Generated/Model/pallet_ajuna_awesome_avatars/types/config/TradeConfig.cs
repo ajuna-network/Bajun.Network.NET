@@ -30,9 +30,14 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         private Ajuna.NetApi.Model.Types.Primitive.Bool _open;
         
         /// <summary>
-        /// >> buy_fee
+        /// >> min_fee
         /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U128 _buyFee;
+        private Ajuna.NetApi.Model.Types.Primitive.U128 _minFee;
+        
+        /// <summary>
+        /// >> percent_fee
+        /// </summary>
+        private Ajuna.NetApi.Model.Types.Primitive.U8 _percentFee;
         
         public Ajuna.NetApi.Model.Types.Primitive.Bool Open
         {
@@ -46,15 +51,27 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Primitive.U128 BuyFee
+        public Ajuna.NetApi.Model.Types.Primitive.U128 MinFee
         {
             get
             {
-                return this._buyFee;
+                return this._minFee;
             }
             set
             {
-                this._buyFee = value;
+                this._minFee = value;
+            }
+        }
+        
+        public Ajuna.NetApi.Model.Types.Primitive.U8 PercentFee
+        {
+            get
+            {
+                return this._percentFee;
+            }
+            set
+            {
+                this._percentFee = value;
             }
         }
         
@@ -67,7 +84,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         {
             var result = new List<byte>();
             result.AddRange(Open.Encode());
-            result.AddRange(BuyFee.Encode());
+            result.AddRange(MinFee.Encode());
+            result.AddRange(PercentFee.Encode());
             return result.ToArray();
         }
         
@@ -76,8 +94,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             var start = p;
             Open = new Ajuna.NetApi.Model.Types.Primitive.Bool();
             Open.Decode(byteArray, ref p);
-            BuyFee = new Ajuna.NetApi.Model.Types.Primitive.U128();
-            BuyFee.Decode(byteArray, ref p);
+            MinFee = new Ajuna.NetApi.Model.Types.Primitive.U128();
+            MinFee.Decode(byteArray, ref p);
+            PercentFee = new Ajuna.NetApi.Model.Types.Primitive.U8();
+            PercentFee.Decode(byteArray, ref p);
             TypeSize = p - start;
         }
     }

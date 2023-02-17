@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<PackageId>Bajun.Network.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.0.19</Version>
+		<Version>1.0.110</Version>
 		<Company>BloGa Tech AG</Company>
 		<Authors>Cedric Decoster</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -14,7 +14,7 @@
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Ajuna.NetApi" Version="0.3.3" />
+		<PackageReference Include="Ajuna.NetApi" Version="0.3.4" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\LICENSE">

@@ -423,7 +423,8 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig result;
          result = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
          result.Open = this.GetTestValueBool();
-         result.BuyFee = this.GetTestValueU128();
+         result.MinFee = this.GetTestValueU128();
+         result.PercentFee = this.GetTestValueU8();
          return result;
       }
       public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig GetTestValue23()

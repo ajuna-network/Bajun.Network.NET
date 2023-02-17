@@ -7320,9 +7320,14 @@
             "TypeId": 45
           },
           {
-            "Name": "buy_fee",
+            "Name": "min_fee",
             "TypeName": "Balance",
             "TypeId": 6
+          },
+          {
+            "Name": "percent_fee",
+            "TypeName": "u8",
+            "TypeId": 2
           }
         ],
         "Path": [
@@ -20891,6 +20896,14 @@
             "Docs": [
               "Tried to forge avatars from different seasons."
             ]
+          },
+          {
+            "Name": "CannotSendToSelf",
+            "TypeFields": null,
+            "Index": 39,
+            "Docs": [
+              "Tried sending free mints to his or her own account."
+            ]
           }
         ],
         "Path": [
@@ -23789,7 +23802,7 @@
           {
             "Name": "Version",
             "TypeId": 138,
-            "Value": "FGJhanVuFGJhanVuAQAAABMAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAQAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoAgAAAOqT4/FvPWliAgAAAAEAAAAB",
+            "Value": "FGJhanVuFGJhanVuAQAAAG4AAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAQAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoAgAAAOqT4/FvPWliAgAAAAEAAAAB",
             "Docs": [
               " Get the chain's current version."
             ]
@@ -26383,7 +26396,7 @@
                 "Item1": 116,
                 "Item2": null
               },
-              "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Docs": []
             },
             {

@@ -95,6 +95,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         AvatarInTrade = 37,
         
         IncorrectAvatarSeason = 38,
+        
+        CannotSendToSelf = 39,
     }
     
     /// <summary>

@@ -238,7 +238,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             return "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000" +
                 "00000000000000000000000000000000000000000000000000000000000000000000000000000000" +
-                "000000000000000000000000000";
+                "00000000000000000000000000000";
         }
         
         /// <summary>
@@ -778,5 +778,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// Tried to forge avatars from different seasons.
         /// </summary>
         IncorrectAvatarSeason,
+        
+        /// <summary>
+        /// >> CannotSendToSelf
+        /// Tried sending free mints to his or her own account.
+        /// </summary>
+        CannotSendToSelf,
     }
 }
