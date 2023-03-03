@@ -31,7 +31,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Organizer"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Treasurer"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Treasurer"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Ajuna.NetApi.Model.Types.Primitive.U16), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "CurrentSeasonId"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U16)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "CurrentSeasonStatus"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Seasons"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
@@ -42,7 +43,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Avatars"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Owners"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "LockedAvatars"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Ajuna.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Accounts"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonStats"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
@@ -82,9 +85,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> TreasurerParams
         /// </summary>
-        public static string TreasurerParams()
+        public static string TreasurerParams(Ajuna.NetApi.Model.Types.Primitive.U16 key)
         {
-            return RequestGenerator.GetStorage("AwesomeAvatars", "Treasurer", Ajuna.NetApi.Model.Meta.Storage.Type.Plain);
+            return RequestGenerator.GetStorage("AwesomeAvatars", "Treasurer", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+                        Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, new Ajuna.NetApi.Model.Types.IType[] {
+                        key});
         }
         
         /// <summary>
@@ -99,9 +104,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Treasurer
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Treasurer(CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Treasurer(Ajuna.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
         {
-            string parameters = AwesomeAvatarsStorage.TreasurerParams();
+            string parameters = AwesomeAvatarsStorage.TreasurerParams(key);
             var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
             return result;
         }
@@ -238,7 +243,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             return "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000" +
                 "00000000000000000000000000000000000000000000000000000000000000000000000000000000" +
-                "00000000000000000000000000000";
+                "000000000000000000000000000000000000000000000000000000000000000";
         }
         
         /// <summary>
@@ -302,10 +307,39 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28> Owners(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> Owners(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.OwnersParams(key);
-            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28>(parameters, token);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> LockedAvatarsParams
+        /// </summary>
+        public static string LockedAvatarsParams(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "LockedAvatars", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+                        Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, new Ajuna.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> LockedAvatarsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LockedAvatarsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> LockedAvatars
+        /// </summary>
+        public async Task<Ajuna.NetApi.Model.Types.Primitive.U128> LockedAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.LockedAvatarsParams(key);
+            var result = await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U128>(parameters, token);
             return result;
         }
         
@@ -424,6 +458,18 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> transfer_avatar
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method TransferAvatar(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 to, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(to.Encode());
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 2, "transfer_avatar", byteArray.ToArray());
+        }
+        
+        /// <summary>
         /// >> transfer_free_mints
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -432,7 +478,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(to.Encode());
             byteArray.AddRange(how_many.Encode());
-            return new Method(51, "AwesomeAvatars", 2, "transfer_free_mints", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 3, "transfer_free_mints", byteArray.ToArray());
         }
         
         /// <summary>
@@ -444,7 +490,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(avatar_id.Encode());
             byteArray.AddRange(price.Encode());
-            return new Method(51, "AwesomeAvatars", 3, "set_price", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 4, "set_price", byteArray.ToArray());
         }
         
         /// <summary>
@@ -455,7 +501,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(avatar_id.Encode());
-            return new Method(51, "AwesomeAvatars", 4, "remove_price", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 5, "remove_price", byteArray.ToArray());
         }
         
         /// <summary>
@@ -466,7 +512,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(avatar_id.Encode());
-            return new Method(51, "AwesomeAvatars", 5, "buy", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 6, "buy", byteArray.ToArray());
         }
         
         /// <summary>
@@ -476,7 +522,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         public static Method UpgradeStorage()
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            return new Method(51, "AwesomeAvatars", 6, "upgrade_storage", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 7, "upgrade_storage", byteArray.ToArray());
         }
         
         /// <summary>
@@ -487,18 +533,30 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(organizer.Encode());
-            return new Method(51, "AwesomeAvatars", 7, "set_organizer", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 8, "set_organizer", byteArray.ToArray());
         }
         
         /// <summary>
         /// >> set_treasurer
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetTreasurer(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 treasurer)
+        public static Method SetTreasurer(Ajuna.NetApi.Model.Types.Primitive.U16 season_id, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 treasurer)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
             byteArray.AddRange(treasurer.Encode());
-            return new Method(51, "AwesomeAvatars", 8, "set_treasurer", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 9, "set_treasurer", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_treasury
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ClaimTreasury(Ajuna.NetApi.Model.Types.Primitive.U16 season_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
+            return new Method(51, "AwesomeAvatars", 10, "claim_treasury", byteArray.ToArray());
         }
         
         /// <summary>
@@ -510,7 +568,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(season_id.Encode());
             byteArray.AddRange(season.Encode());
-            return new Method(51, "AwesomeAvatars", 9, "set_season", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 11, "set_season", byteArray.ToArray());
         }
         
         /// <summary>
@@ -521,24 +579,56 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(new_global_config.Encode());
-            return new Method(51, "AwesomeAvatars", 10, "update_global_config", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 12, "update_global_config", byteArray.ToArray());
         }
         
         /// <summary>
-        /// >> issue_free_mints
+        /// >> set_free_mints
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method IssueFreeMints(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 to, Ajuna.NetApi.Model.Types.Primitive.U16 how_many)
+        public static Method SetFreeMints(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 target, Ajuna.NetApi.Model.Types.Primitive.U16 how_many)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(to.Encode());
+            byteArray.AddRange(target.Encode());
             byteArray.AddRange(how_many.Encode());
-            return new Method(51, "AwesomeAvatars", 11, "issue_free_mints", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 13, "set_free_mints", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> lock_avatar
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method LockAvatar(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 14, "lock_avatar", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> unlock_avatar
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method UnlockAvatar(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 15, "unlock_avatar", byteArray.ToArray());
         }
     }
     
     public sealed class AwesomeAvatarsConstants
     {
+        
+        /// <summary>
+        /// >> NftCollectionId
+        /// </summary>
+        public Ajuna.NetApi.Model.Types.Primitive.U32 NftCollectionId()
+        {
+            var result = new Ajuna.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x00000000");
+            return result;
+        }
     }
     
     public enum AwesomeAvatarsErrors
@@ -611,6 +701,12 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         UnknownTier,
         
         /// <summary>
+        /// >> UnknownTreasurer
+        /// The treasurer doesn't exist.
+        /// </summary>
+        UnknownTreasurer,
+        
+        /// <summary>
         /// >> NonSequentialSeasonId
         /// The season ID of a season to create is not sequential.
         /// </summary>
@@ -646,6 +742,12 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// Forging is not available at the moment.
         /// </summary>
         ForgeClosed,
+        
+        /// <summary>
+        /// >> TransferClosed
+        /// Transfer is not available at the moment.
+        /// </summary>
+        TransferClosed,
         
         /// <summary>
         /// >> TradeClosed
@@ -744,10 +846,10 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         InsufficientFreeMints,
         
         /// <summary>
-        /// >> TooLowFreeMintTransfer
-        /// Attempt to transfer free mints lower than the minimum allowed.
+        /// >> TooLowFreeMints
+        /// Attempt to transfer, issue or withdraw free mints lower than the minimum allowed.
         /// </summary>
-        TooLowFreeMintTransfer,
+        TooLowFreeMints,
         
         /// <summary>
         /// >> TooFewSacrifices
@@ -774,15 +876,39 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         AvatarInTrade,
         
         /// <summary>
+        /// >> AvatarLocked
+        /// The avatar is currently locked and cannot be used.
+        /// </summary>
+        AvatarLocked,
+        
+        /// <summary>
+        /// >> AvatarUnlocked
+        /// The avatar is currently unlocked and cannot be locked again.
+        /// </summary>
+        AvatarUnlocked,
+        
+        /// <summary>
         /// >> IncorrectAvatarSeason
         /// Tried to forge avatars from different seasons.
         /// </summary>
         IncorrectAvatarSeason,
         
         /// <summary>
-        /// >> CannotSendToSelf
-        /// Tried sending free mints to his or her own account.
+        /// >> CannotTransferToSelf
+        /// Tried transferring to his or her own account.
         /// </summary>
-        CannotSendToSelf,
+        CannotTransferToSelf,
+        
+        /// <summary>
+        /// >> CannotClaimDuringSeason
+        /// Tried claiming treasury during a season.
+        /// </summary>
+        CannotClaimDuringSeason,
+        
+        /// <summary>
+        /// >> CannotClaimZero
+        /// Tried claiming treasury which is zero.
+        /// </summary>
+        CannotClaimZero,
     }
 }

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_primitives_paracha
     
     
     /// <summary>
-    /// >> 161 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 173 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType

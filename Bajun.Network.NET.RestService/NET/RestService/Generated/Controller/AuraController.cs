@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  The current authority set.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT26), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AuraStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {

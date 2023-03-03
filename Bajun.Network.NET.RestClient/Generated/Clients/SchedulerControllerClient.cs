@@ -34,9 +34,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.IncompleteSince");
       }
-      public async Task<BoundedVecT15> GetAgenda(U32 key)
+      public async Task<BoundedVecT18> GetAgenda(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT15>(_httpClient, "scheduler/agenda", Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "scheduler/agenda", Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
       public async Task<bool> SubscribeAgenda(U32 key)
       {

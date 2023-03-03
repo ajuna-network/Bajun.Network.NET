@@ -46,7 +46,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 373 - Variant[pallet_xcm.pallet.Error]
+    /// >> 397 - Variant[pallet_xcm.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -37,16 +37,16 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal GetProposals(string key);
         
         /// <summary>
-        /// >> Inactive
+        /// >> Deactivated
         ///  The amount which has been reported as inactive to Currency.
         /// </summary>
-        Ajuna.NetApi.Model.Types.Primitive.U128 GetInactive();
+        Ajuna.NetApi.Model.Types.Primitive.U128 GetDeactivated();
         
         /// <summary>
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 GetApprovals();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 GetApprovals();
     }
     
     /// <summary>
@@ -66,14 +66,14 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal> _proposalsTypedStorage;
         
         /// <summary>
-        /// _inactiveTypedStorage typed storage field
+        /// _deactivatedTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> _inactiveTypedStorage;
+        private TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> _deactivatedTypedStorage;
         
         /// <summary>
         /// _approvalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24> _approvalsTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27> _approvalsTypedStorage;
         
         /// <summary>
         /// TreasuryStorage constructor.
@@ -82,8 +82,8 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         {
             this.ProposalCountTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("Treasury.ProposalCount", storageDataProvider, storageChangeDelegates);
             this.ProposalsTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>("Treasury.Proposals", storageDataProvider, storageChangeDelegates);
-            this.InactiveTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("Treasury.Inactive", storageDataProvider, storageChangeDelegates);
-            this.ApprovalsTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
+            this.DeactivatedTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("Treasury.Deactivated", storageDataProvider, storageChangeDelegates);
+            this.ApprovalsTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -117,24 +117,24 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _inactiveTypedStorage property
+        /// _deactivatedTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> InactiveTypedStorage
+        public TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128> DeactivatedTypedStorage
         {
             get
             {
-                return _inactiveTypedStorage;
+                return _deactivatedTypedStorage;
             }
             set
             {
-                _inactiveTypedStorage = value;
+                _deactivatedTypedStorage = value;
             }
         }
         
         /// <summary>
         /// _approvalsTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24> ApprovalsTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27> ApprovalsTypedStorage
         {
             get
             {
@@ -153,7 +153,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         {
             await ProposalCountTypedStorage.InitializeAsync("Treasury", "ProposalCount");
             await ProposalsTypedStorage.InitializeAsync("Treasury", "Proposals");
-            await InactiveTypedStorage.InitializeAsync("Treasury", "Inactive");
+            await DeactivatedTypedStorage.InitializeAsync("Treasury", "Deactivated");
             await ApprovalsTypedStorage.InitializeAsync("Treasury", "Approvals");
         }
         
@@ -205,21 +205,21 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for Treasury.Inactive
+        /// Implements any storage change for Treasury.Deactivated
         /// </summary>
-        [StorageChange("Treasury", "Inactive")]
-        public void OnUpdateInactive(string data)
+        [StorageChange("Treasury", "Deactivated")]
+        public void OnUpdateDeactivated(string data)
         {
-            InactiveTypedStorage.Update(data);
+            DeactivatedTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> Inactive
+        /// >> Deactivated
         ///  The amount which has been reported as inactive to Currency.
         /// </summary>
-        public Ajuna.NetApi.Model.Types.Primitive.U128 GetInactive()
+        public Ajuna.NetApi.Model.Types.Primitive.U128 GetDeactivated()
         {
-            return InactiveTypedStorage.Get();
+            return DeactivatedTypedStorage.Get();
         }
         
         /// <summary>
@@ -235,7 +235,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 GetApprovals()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 GetApprovals()
         {
             return ApprovalsTypedStorage.Get();
         }

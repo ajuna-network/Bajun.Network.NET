@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_support.dispatch
     
     
     /// <summary>
-    /// >> 136 - Composite[frame_support.dispatch.PerDispatchClassT3]
+    /// >> 148 - Composite[frame_support.dispatch.PerDispatchClassT3]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class PerDispatchClassT3 : BaseType

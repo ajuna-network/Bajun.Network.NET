@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler
     
     
     /// <summary>
-    /// >> 309 - Composite[pallet_scheduler.Scheduled]
+    /// >> 342 - Composite[pallet_scheduler.Scheduled]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Scheduled : BaseType

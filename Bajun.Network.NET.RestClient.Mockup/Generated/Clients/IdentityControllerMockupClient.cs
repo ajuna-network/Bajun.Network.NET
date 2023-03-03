@@ -34,11 +34,11 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SuperOf", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT11> value, AccountId32 key)
+      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT14> value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SubsOf", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<bool> SetRegistrars(BoundedVecT12 value)
+      public async Task<bool> SetRegistrars(BoundedVecT15 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/Registrars", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.IdentityStorage.RegistrarsParams());
       }

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
-   public class PreImageControllerClientTest : ClientTestBase
+   public class PreimageControllerClientTest : ClientTestBase
    {
       private System.Net.Http.HttpClient _httpClient;
       [SetUp()]
@@ -131,13 +131,13 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
       public async System.Threading.Tasks.Task TestStatusFor()
       {
          // Construct new Mockup client to test with.
-         PreImageControllerMockupClient mockupClient = new PreImageControllerMockupClient(_httpClient);
+         PreimageControllerMockupClient mockupClient = new PreimageControllerMockupClient(_httpClient);
 
          // Construct new subscription client to test with.
          var subscriptionClient = CreateSubscriptionClient();
 
          // Construct new RPC client to test with.
-         PreImageControllerClient rpcClient = new PreImageControllerClient(_httpClient, subscriptionClient);
+         PreimageControllerClient rpcClient = new PreimageControllerClient(_httpClient, subscriptionClient);
          Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus mockupValue = this.GetTestValue2();
          Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue6();
 
@@ -156,10 +156,10 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 GetTestValue8()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20 GetTestValue8()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -216,14 +216,14 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
       public async System.Threading.Tasks.Task TestPreimageFor()
       {
          // Construct new Mockup client to test with.
-         PreImageControllerMockupClient mockupClient = new PreImageControllerMockupClient(_httpClient);
+         PreimageControllerMockupClient mockupClient = new PreimageControllerMockupClient(_httpClient);
 
          // Construct new subscription client to test with.
          var subscriptionClient = CreateSubscriptionClient();
 
          // Construct new RPC client to test with.
-         PreImageControllerClient rpcClient = new PreImageControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 mockupValue = this.GetTestValue8();
+         PreimageControllerClient rpcClient = new PreimageControllerClient(_httpClient, subscriptionClient);
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20 mockupValue = this.GetTestValue8();
          Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue9();
 
          Assert.IsTrue(await rpcClient.SubscribePreimageFor(mockupKey));
@@ -236,7 +236,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 rpcResult = await rpcClient.GetPreimageFor(mockupKey);
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20 rpcResult = await rpcClient.GetPreimageFor(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

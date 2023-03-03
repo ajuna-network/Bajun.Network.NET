@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 116 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
+    /// >> 110 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class GlobalConfig : BaseType
@@ -33,6 +33,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// >> forge
         /// </summary>
         private Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig _forge;
+        
+        /// <summary>
+        /// >> transfer
+        /// </summary>
+        private Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig _transfer;
         
         /// <summary>
         /// >> trade
@@ -65,6 +70,18 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             set
             {
                 this._forge = value;
+            }
+        }
+        
+        public Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig Transfer
+        {
+            get
+            {
+                return this._transfer;
+            }
+            set
+            {
+                this._transfer = value;
             }
         }
         
@@ -102,6 +119,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             var result = new List<byte>();
             result.AddRange(Mint.Encode());
             result.AddRange(Forge.Encode());
+            result.AddRange(Transfer.Encode());
             result.AddRange(Trade.Encode());
             result.AddRange(Account.Encode());
             return result.ToArray();
@@ -114,6 +132,8 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             Mint.Decode(byteArray, ref p);
             Forge = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig();
             Forge.Decode(byteArray, ref p);
+            Transfer = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig();
+            Transfer.Decode(byteArray, ref p);
             Trade = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
             Trade.Decode(byteArray, ref p);
             Account = new Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();

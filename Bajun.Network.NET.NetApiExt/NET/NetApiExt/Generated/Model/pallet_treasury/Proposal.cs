@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury
     
     
     /// <summary>
-    /// >> 381 - Composite[pallet_treasury.Proposal]
+    /// >> 405 - Composite[pallet_treasury.Proposal]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Proposal : BaseType

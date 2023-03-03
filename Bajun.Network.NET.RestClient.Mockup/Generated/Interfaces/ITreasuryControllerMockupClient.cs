@@ -19,7 +19,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetProposals(Proposal value, U32 key);
-      Task<bool> SetInactive(U128 value);
-      Task<bool> SetApprovals(BoundedVecT24 value);
+      Task<bool> SetDeactivated(U128 value);
+      Task<bool> SetApprovals(BoundedVecT27 value);
    }
 }

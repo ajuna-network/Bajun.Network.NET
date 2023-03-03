@@ -21,9 +21,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposalCount();
       Task<Proposal> GetProposals(U32 key);
       Task<bool> SubscribeProposals(U32 key);
-      Task<U128> GetInactive();
-      Task<bool> SubscribeInactive();
-      Task<BoundedVecT24> GetApprovals();
+      Task<U128> GetDeactivated();
+      Task<bool> SubscribeDeactivated();
+      Task<BoundedVecT27> GetApprovals();
       Task<bool> SubscribeApprovals();
    }
 }

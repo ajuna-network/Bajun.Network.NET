@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset
     }
     
     /// <summary>
-    /// >> 82 - Variant[xcm.v1.multiasset.Fungibility]
+    /// >> 74 - Variant[xcm.v1.multiasset.Fungibility]
     /// </summary>
     public sealed class EnumFungibility : BaseEnumExt<Fungibility, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U128>, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset.EnumAssetInstance>
     {

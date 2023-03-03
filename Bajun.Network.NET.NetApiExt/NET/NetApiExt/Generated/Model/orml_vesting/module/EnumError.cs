@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 341 - Variant[orml_vesting.module.Error]
+    /// >> 364 - Variant[orml_vesting.module.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

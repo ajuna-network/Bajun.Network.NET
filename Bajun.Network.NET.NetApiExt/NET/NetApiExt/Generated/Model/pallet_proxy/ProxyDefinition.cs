@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 300 - Composite[pallet_proxy.ProxyDefinition]
+    /// >> 333 - Composite[pallet_proxy.ProxyDefinition]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ProxyDefinition : BaseType

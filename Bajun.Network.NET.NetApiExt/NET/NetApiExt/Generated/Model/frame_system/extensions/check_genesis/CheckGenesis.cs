@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.extensions.ch
     
     
     /// <summary>
-    /// >> 418 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
+    /// >> 470 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class CheckGenesis : BaseType

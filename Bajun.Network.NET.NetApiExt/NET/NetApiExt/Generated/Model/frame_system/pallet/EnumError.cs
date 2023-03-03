@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.pallet
     }
     
     /// <summary>
-    /// >> 142 - Variant[frame_system.pallet.Error]
+    /// >> 154 - Variant[frame_system.pallet.Error]
     /// Error for the System pallet
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

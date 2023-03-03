@@ -38,7 +38,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.
     }
     
     /// <summary>
-    /// >> 247 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
+    /// >> 255 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>, BaseVoid, BaseVoid, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>

@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Treasurer
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTreasurer();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTreasurer(string key);
         
         /// <summary>
         /// >> CurrentSeasonId
@@ -69,7 +69,12 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 GetOwners(string key);
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetOwners(string key);
+        
+        /// <summary>
+        /// >> LockedAvatars
+        /// </summary>
+        Ajuna.NetApi.Model.Types.Primitive.U128 GetLockedAvatars(string key);
         
         /// <summary>
         /// >> Accounts
@@ -101,7 +106,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _treasurerTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _treasurerTypedStorage;
+        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _treasurerTypedStorage;
         
         /// <summary>
         /// _currentSeasonIdTypedStorage typed storage field
@@ -136,7 +141,12 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28> _ownersTypedStorage;
+        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> _ownersTypedStorage;
+        
+        /// <summary>
+        /// _lockedAvatarsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Ajuna.NetApi.Model.Types.Primitive.U128> _lockedAvatarsTypedStorage;
         
         /// <summary>
         /// _accountsTypedStorage typed storage field
@@ -159,14 +169,15 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         public AwesomeAvatarsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.OrganizerTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Organizer", storageDataProvider, storageChangeDelegates);
-            this.TreasurerTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Treasurer", storageDataProvider, storageChangeDelegates);
+            this.TreasurerTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Treasurer", storageDataProvider, storageChangeDelegates);
             this.CurrentSeasonIdTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U16>("AwesomeAvatars.CurrentSeasonId", storageDataProvider, storageChangeDelegates);
             this.CurrentSeasonStatusTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus>("AwesomeAvatars.CurrentSeasonStatus", storageDataProvider, storageChangeDelegates);
             this.SeasonsTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>("AwesomeAvatars.Seasons", storageDataProvider, storageChangeDelegates);
             this.TreasuryTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Treasury", storageDataProvider, storageChangeDelegates);
             this.GlobalConfigsTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig>("AwesomeAvatars.GlobalConfigs", storageDataProvider, storageChangeDelegates);
             this.AvatarsTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>("AwesomeAvatars.Avatars", storageDataProvider, storageChangeDelegates);
-            this.OwnersTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
+            this.OwnersTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
+            this.LockedAvatarsTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.LockedAvatars", storageDataProvider, storageChangeDelegates);
             this.AccountsTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo>("AwesomeAvatars.Accounts", storageDataProvider, storageChangeDelegates);
             this.SeasonStatsTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo>("AwesomeAvatars.SeasonStats", storageDataProvider, storageChangeDelegates);
             this.TradeTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Trade", storageDataProvider, storageChangeDelegates);
@@ -190,7 +201,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _treasurerTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> TreasurerTypedStorage
+        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> TreasurerTypedStorage
         {
             get
             {
@@ -295,7 +306,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage property
         /// </summary>
-        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28> OwnersTypedStorage
+        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> OwnersTypedStorage
         {
             get
             {
@@ -304,6 +315,21 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
             set
             {
                 _ownersTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _lockedAvatarsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Ajuna.NetApi.Model.Types.Primitive.U128> LockedAvatarsTypedStorage
+        {
+            get
+            {
+                return _lockedAvatarsTypedStorage;
+            }
+            set
+            {
+                _lockedAvatarsTypedStorage = value;
             }
         }
         
@@ -366,6 +392,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
             await GlobalConfigsTypedStorage.InitializeAsync("AwesomeAvatars", "GlobalConfigs");
             await AvatarsTypedStorage.InitializeAsync("AwesomeAvatars", "Avatars");
             await OwnersTypedStorage.InitializeAsync("AwesomeAvatars", "Owners");
+            await LockedAvatarsTypedStorage.InitializeAsync("AwesomeAvatars", "LockedAvatars");
             await AccountsTypedStorage.InitializeAsync("AwesomeAvatars", "Accounts");
             await SeasonStatsTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonStats");
             await TradeTypedStorage.InitializeAsync("AwesomeAvatars", "Trade");
@@ -392,17 +419,28 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// Implements any storage change for AwesomeAvatars.Treasurer
         /// </summary>
         [StorageChange("AwesomeAvatars", "Treasurer")]
-        public void OnUpdateTreasurer(string data)
+        public void OnUpdateTreasurer(string key, string data)
         {
-            TreasurerTypedStorage.Update(data);
+            TreasurerTypedStorage.Update(key, data);
         }
         
         /// <summary>
         /// >> Treasurer
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTreasurer()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTreasurer(string key)
         {
-            return TreasurerTypedStorage.Get();
+            if ((key == null))
+            {
+                return null;
+            }
+            if (TreasurerTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
         
         /// <summary>
@@ -554,13 +592,41 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 GetOwners(string key)
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetOwners(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 result))
+            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.LockedAvatars
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "LockedAvatars")]
+        public void OnUpdateLockedAvatars(string key, string data)
+        {
+            LockedAvatarsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> LockedAvatars
+        /// </summary>
+        public Ajuna.NetApi.Model.Types.Primitive.U128 GetLockedAvatars(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (LockedAvatarsTypedStorage.Dictionary.TryGetValue(key, out Ajuna.NetApi.Model.Types.Primitive.U128 result))
             {
                 return result;
             }

@@ -17,7 +17,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface IAuthorshipControllerClient
    {
-      Task<BoundedVecT20> GetUncles();
+      Task<BoundedVecT23> GetUncles();
       Task<bool> SubscribeUncles();
       Task<AccountId32> GetAuthor();
       Task<bool> SubscribeAuthor();

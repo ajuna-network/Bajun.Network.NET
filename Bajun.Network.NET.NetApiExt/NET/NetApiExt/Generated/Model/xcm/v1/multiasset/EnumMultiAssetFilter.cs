@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset
     }
     
     /// <summary>
-    /// >> 91 - Variant[xcm.v1.multiasset.MultiAssetFilter]
+    /// >> 83 - Variant[xcm.v1.multiasset.MultiAssetFilter]
     /// </summary>
     public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset.MultiAssets, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset.EnumWildMultiAsset>
     {

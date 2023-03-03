@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.p
     }
     
     /// <summary>
-    /// >> 379 - Variant[cumulus_pallet_dmp_queue.pallet.Error]
+    /// >> 403 - Variant[cumulus_pallet_dmp_queue.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

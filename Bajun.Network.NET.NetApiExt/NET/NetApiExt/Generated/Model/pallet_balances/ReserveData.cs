@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances
     
     
     /// <summary>
-    /// >> 335 - Composite[pallet_balances.ReserveData]
+    /// >> 358 - Composite[pallet_balances.ReserveData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ReserveData : BaseType

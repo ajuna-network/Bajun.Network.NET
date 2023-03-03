@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 152 - Composite[polkadot_primitives.v2.AbridgedHrmpChannel]
+    /// >> 164 - Composite[polkadot_primitives.v2.AbridgedHrmpChannel]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHrmpChannel : BaseType

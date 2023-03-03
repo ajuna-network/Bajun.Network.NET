@@ -42,17 +42,17 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Proposals", Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalsParams(key));
       }
-      public async Task<U128> GetInactive()
+      public async Task<U128> GetDeactivated()
       {
-         return await SendRequestAsync<U128>(_httpClient, "treasury/inactive");
+         return await SendRequestAsync<U128>(_httpClient, "treasury/deactivated");
       }
-      public async Task<bool> SubscribeInactive()
+      public async Task<bool> SubscribeDeactivated()
       {
-         return await _subscriptionClient.SubscribeAsync("Treasury.Inactive");
+         return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT24> GetApprovals()
+      public async Task<BoundedVecT27> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT24>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT27>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_s
     
     
     /// <summary>
-    /// >> 149 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot]
+    /// >> 161 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class MessagingStateSnapshot : BaseType

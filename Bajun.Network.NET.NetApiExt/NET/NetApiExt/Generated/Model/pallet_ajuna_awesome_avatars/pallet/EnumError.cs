@@ -40,67 +40,79 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         
         UnknownTier = 10,
         
-        NonSequentialSeasonId = 11,
+        UnknownTreasurer = 11,
         
-        IncorrectRarityPercentages = 12,
+        NonSequentialSeasonId = 12,
         
-        TooManyRarityPercentages = 13,
+        IncorrectRarityPercentages = 13,
         
-        DuplicatedRarityTier = 14,
+        TooManyRarityPercentages = 14,
         
-        MintClosed = 15,
+        DuplicatedRarityTier = 15,
         
-        ForgeClosed = 16,
+        MintClosed = 16,
         
-        TradeClosed = 17,
+        ForgeClosed = 17,
         
-        SeasonClosed = 18,
+        TransferClosed = 18,
         
-        PrematureSeasonEnd = 19,
+        TradeClosed = 19,
         
-        MaxOwnershipReached = 20,
+        SeasonClosed = 20,
         
-        MaxStorageTierReached = 21,
+        PrematureSeasonEnd = 21,
         
-        Ownership = 22,
+        MaxOwnershipReached = 22,
         
-        AlreadyOwned = 23,
+        MaxStorageTierReached = 23,
         
-        IncorrectDna = 24,
+        Ownership = 24,
         
-        IncorrectAvatarId = 25,
+        AlreadyOwned = 25,
         
-        IncorrectSeasonId = 26,
+        IncorrectDna = 26,
         
-        MintCooldown = 27,
+        IncorrectAvatarId = 27,
         
-        MaxComponentsTooLow = 28,
+        IncorrectSeasonId = 28,
         
-        MaxComponentsTooHigh = 29,
+        MintCooldown = 29,
         
-        MaxVariationsTooLow = 30,
+        MaxComponentsTooLow = 30,
         
-        MaxVariationsTooHigh = 31,
+        MaxComponentsTooHigh = 31,
         
-        InsufficientFreeMints = 32,
+        MaxVariationsTooLow = 32,
         
-        TooLowFreeMintTransfer = 33,
+        MaxVariationsTooHigh = 33,
         
-        TooFewSacrifices = 34,
+        InsufficientFreeMints = 34,
         
-        TooManySacrifices = 35,
+        TooLowFreeMints = 35,
         
-        LeaderSacrificed = 36,
+        TooFewSacrifices = 36,
         
-        AvatarInTrade = 37,
+        TooManySacrifices = 37,
         
-        IncorrectAvatarSeason = 38,
+        LeaderSacrificed = 38,
         
-        CannotSendToSelf = 39,
+        AvatarInTrade = 39,
+        
+        AvatarLocked = 40,
+        
+        AvatarUnlocked = 41,
+        
+        IncorrectAvatarSeason = 42,
+        
+        CannotTransferToSelf = 43,
+        
+        CannotClaimDuringSeason = 44,
+        
+        CannotClaimZero = 45,
     }
     
     /// <summary>
-    /// >> 406 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 430 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

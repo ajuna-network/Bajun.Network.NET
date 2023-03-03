@@ -24,8 +24,8 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    {
       Task<AccountId32> GetOrganizer();
       Task<bool> SubscribeOrganizer();
-      Task<AccountId32> GetTreasurer();
-      Task<bool> SubscribeTreasurer();
+      Task<AccountId32> GetTreasurer(U16 key);
+      Task<bool> SubscribeTreasurer(U16 key);
       Task<U16> GetCurrentSeasonId();
       Task<bool> SubscribeCurrentSeasonId();
       Task<SeasonStatus> GetCurrentSeasonStatus();
@@ -38,8 +38,10 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeGlobalConfigs();
       Task<BaseTuple<AccountId32, Avatar>> GetAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT28> GetOwners(AccountId32 key);
+      Task<BoundedVecT31> GetOwners(AccountId32 key);
       Task<bool> SubscribeOwners(AccountId32 key);
+      Task<U128> GetLockedAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SubscribeLockedAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<AccountInfo> GetAccounts(AccountId32 key);
       Task<bool> SubscribeAccounts(AccountId32 key);
       Task<SeasonInfo> GetSeasonStats(BaseTuple<U16, AccountId32> key);

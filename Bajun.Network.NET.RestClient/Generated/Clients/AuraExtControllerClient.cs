@@ -24,9 +24,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT23> GetAuthorities()
+      public async Task<BoundedVecT26> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT23>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT26>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {

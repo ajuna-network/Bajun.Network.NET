@@ -15,6 +15,6 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IAuraExtControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT23 value);
+      Task<bool> SetAuthorities(BoundedVecT26 value);
    }
 }

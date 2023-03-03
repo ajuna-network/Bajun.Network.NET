@@ -17,9 +17,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT13, U128>> GetProxies(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT16, U128>> GetProxies(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT14, U128>> GetAnnouncements(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT17, U128>> GetAnnouncements(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

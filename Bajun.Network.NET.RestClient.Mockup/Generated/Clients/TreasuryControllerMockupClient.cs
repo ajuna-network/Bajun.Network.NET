@@ -32,11 +32,11 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Proposals", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalsParams(key));
       }
-      public async Task<bool> SetInactive(U128 value)
+      public async Task<bool> SetDeactivated(U128 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "Treasury/Inactive", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.InactiveParams());
+         return await SendMockupRequestAsync(_httpClient, "Treasury/Deactivated", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.DeactivatedParams());
       }
-      public async Task<bool> SetApprovals(BoundedVecT24 value)
+      public async Task<bool> SetApprovals(BoundedVecT27 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
       }

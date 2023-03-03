@@ -34,7 +34,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
     }
     
     /// <summary>
-    /// >> 225 - Variant[pallet_identity.types.Judgement]
+    /// >> 237 - Variant[pallet_identity.types.Judgement]
     /// </summary>
     public sealed class EnumJudgement : BaseEnumExt<Judgement, BaseVoid, Ajuna.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {

@@ -53,7 +53,7 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
         [HttpGet("Agenda")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage), "AgendaParams", typeof(Ajuna.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetAgenda(string key)
         {

@@ -48,7 +48,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime
     /// <summary>
     /// >> 24 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumArithmeticError, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Bajun.Network.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

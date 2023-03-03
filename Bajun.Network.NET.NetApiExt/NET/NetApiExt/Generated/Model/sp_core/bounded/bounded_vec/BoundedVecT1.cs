@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_ve
     
     
     /// <summary>
-    /// >> 44 - Composite[sp_core.bounded.bounded_vec.BoundedVecT1]
+    /// >> 104 - Composite[sp_core.bounded.bounded_vec.BoundedVecT1]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT1 : BaseType

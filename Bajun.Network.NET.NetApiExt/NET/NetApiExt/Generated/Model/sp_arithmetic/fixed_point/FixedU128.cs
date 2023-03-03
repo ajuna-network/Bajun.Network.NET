@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point
     
     
     /// <summary>
-    /// >> 338 - Composite[sp_arithmetic.fixed_point.FixedU128]
+    /// >> 361 - Composite[sp_arithmetic.fixed_point.FixedU128]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class FixedU128 : BaseType

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2
     
     
     /// <summary>
-    /// >> 270 - Composite[xcm.v2.XcmT2]
+    /// >> 278 - Composite[xcm.v2.XcmT2]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT2 : BaseType

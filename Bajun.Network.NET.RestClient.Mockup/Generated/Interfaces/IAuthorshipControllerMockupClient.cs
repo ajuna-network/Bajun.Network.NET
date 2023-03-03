@@ -17,7 +17,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IAuthorshipControllerMockupClient
    {
-      Task<bool> SetUncles(BoundedVecT20 value);
+      Task<bool> SetUncles(BoundedVecT23 value);
       Task<bool> SetAuthor(AccountId32 value);
       Task<bool> SetDidSetUncles(Bool value);
    }

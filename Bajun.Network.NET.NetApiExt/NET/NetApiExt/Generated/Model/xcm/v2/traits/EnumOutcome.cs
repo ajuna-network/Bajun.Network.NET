@@ -26,7 +26,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits
     }
     
     /// <summary>
-    /// >> 65 - Variant[xcm.v2.traits.Outcome]
+    /// >> 57 - Variant[xcm.v2.traits.Outcome]
     /// </summary>
     public sealed class EnumOutcome : BaseEnumExt<Outcome, Ajuna.NetApi.Model.Types.Primitive.U64, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError>, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError>
     {

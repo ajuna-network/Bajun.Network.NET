@@ -72,14 +72,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated
         public SchedulerStorage SchedulerStorage;
         
         /// <summary>
-        /// PreImageStorage storage calls.
+        /// PreimageStorage storage calls.
         /// </summary>
-        public PreImageStorage PreImageStorage;
-        
-        /// <summary>
-        /// UniquesStorage storage calls.
-        /// </summary>
-        public UniquesStorage UniquesStorage;
+        public PreimageStorage PreimageStorage;
         
         /// <summary>
         /// BalancesStorage storage calls.
@@ -171,6 +166,21 @@ namespace Bajun.Network.NET.NetApiExt.Generated
         /// </summary>
         public AwesomeAvatarsStorage AwesomeAvatarsStorage;
         
+        /// <summary>
+        /// NftStorage storage calls.
+        /// </summary>
+        public NftStorage NftStorage;
+        
+        /// <summary>
+        /// NftTransferStorage storage calls.
+        /// </summary>
+        public NftTransferStorage NftTransferStorage;
+        
+        /// <summary>
+        /// NftStakeStorage storage calls.
+        /// </summary>
+        public NftStakeStorage NftStakeStorage;
+        
         public SubstrateClientExt(System.Uri uri, Ajuna.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -184,8 +194,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated
             this.IdentityStorage = new IdentityStorage(this);
             this.ProxyStorage = new ProxyStorage(this);
             this.SchedulerStorage = new SchedulerStorage(this);
-            this.PreImageStorage = new PreImageStorage(this);
-            this.UniquesStorage = new UniquesStorage(this);
+            this.PreimageStorage = new PreimageStorage(this);
             this.BalancesStorage = new BalancesStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
             this.VestingStorage = new VestingStorage(this);
@@ -204,6 +213,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated
             this.CouncilMembershipStorage = new CouncilMembershipStorage(this);
             this.RandomnessStorage = new RandomnessStorage(this);
             this.AwesomeAvatarsStorage = new AwesomeAvatarsStorage(this);
+            this.NftStorage = new NftStorage(this);
+            this.NftTransferStorage = new NftTransferStorage(this);
+            this.NftStakeStorage = new NftStakeStorage(this);
         }
     }
 }

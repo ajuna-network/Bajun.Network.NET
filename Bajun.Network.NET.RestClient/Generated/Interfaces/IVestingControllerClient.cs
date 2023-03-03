@@ -15,7 +15,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface IVestingControllerClient
    {
-      Task<BoundedVecT19> GetVestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT22> GetVestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeVestingSchedules(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

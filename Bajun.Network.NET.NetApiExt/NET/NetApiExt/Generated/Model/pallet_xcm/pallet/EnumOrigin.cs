@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 180 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 192 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multilocation.MultiLocation, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multilocation.MultiLocation>
     {

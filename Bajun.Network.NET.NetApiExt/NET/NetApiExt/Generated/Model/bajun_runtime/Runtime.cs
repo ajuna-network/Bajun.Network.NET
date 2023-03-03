@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime
     
     
     /// <summary>
-    /// >> 424 - Composite[bajun_runtime.Runtime]
+    /// >> 476 - Composite[bajun_runtime.Runtime]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

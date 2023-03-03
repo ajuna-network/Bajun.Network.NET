@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     }
     
     /// <summary>
-    /// >> 397 - Variant[pallet_ajuna_awesome_avatars.types.account.StorageTier]
+    /// >> 421 - Variant[pallet_ajuna_awesome_avatars.types.account.StorageTier]
     /// </summary>
     public sealed class EnumStorageTier : BaseEnum<StorageTier>
     {

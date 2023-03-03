@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetRandomMaterial(BoundedVecT27 value)
+      public async Task<bool> SetRandomMaterial(BoundedVecT30 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Randomness/RandomMaterial", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.RandomnessStorage.RandomMaterialParams());
       }

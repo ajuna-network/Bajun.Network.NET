@@ -27,7 +27,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProposals(BoundedVecT25 value)
+      public async Task<bool> SetProposals(BoundedVecT28 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/Proposals", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalsParams());
       }

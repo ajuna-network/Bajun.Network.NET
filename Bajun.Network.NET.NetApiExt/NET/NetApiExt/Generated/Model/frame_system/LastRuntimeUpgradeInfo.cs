@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system
     
     
     /// <summary>
-    /// >> 125 - Composite[frame_system.LastRuntimeUpgradeInfo]
+    /// >> 137 - Composite[frame_system.LastRuntimeUpgradeInfo]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class LastRuntimeUpgradeInfo : BaseType

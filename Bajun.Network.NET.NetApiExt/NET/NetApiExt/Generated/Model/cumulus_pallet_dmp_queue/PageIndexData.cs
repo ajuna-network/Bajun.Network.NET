@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     
     
     /// <summary>
-    /// >> 376 - Composite[cumulus_pallet_dmp_queue.PageIndexData]
+    /// >> 400 - Composite[cumulus_pallet_dmp_queue.PageIndexData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class PageIndexData : BaseType

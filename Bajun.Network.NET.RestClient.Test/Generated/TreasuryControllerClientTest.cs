@@ -178,7 +178,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
       [Test()]
-      public async System.Threading.Tasks.Task TestInactive()
+      public async System.Threading.Tasks.Task TestDeactivated()
       {
          // Construct new Mockup client to test with.
          TreasuryControllerMockupClient mockupClient = new TreasuryControllerMockupClient(_httpClient);
@@ -191,25 +191,25 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          Ajuna.NetApi.Model.Types.Primitive.U128 mockupValue = this.GetTestValueU128();
 
 
-         Assert.IsTrue(await rpcClient.SubscribeInactive());
+         Assert.IsTrue(await rpcClient.SubscribeDeactivated());
 
          // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetInactive(mockupValue);
+         bool mockupSetResult = await mockupClient.SetDeactivated(mockupValue);
 
          // Test that the expected mockup value was handled successfully from RPC service.
          Assert.IsTrue(mockupSetResult);
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Primitive.U128 rpcResult = await rpcClient.GetInactive();
+         Ajuna.NetApi.Model.Types.Primitive.U128 rpcResult = await rpcClient.GetDeactivated();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 GetTestValue8()
+      public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 GetTestValue8()
       {
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 result;
-         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 result;
+         result = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27();
          result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U32>();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U32[] {
                   this.GetTestValueU32()});
@@ -226,7 +226,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TreasuryControllerClient rpcClient = new TreasuryControllerClient(_httpClient, subscriptionClient);
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 mockupValue = this.GetTestValue8();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 mockupValue = this.GetTestValue8();
 
 
          Assert.IsTrue(await rpcClient.SubscribeApprovals());
@@ -239,7 +239,7 @@ namespace Bajun.Network.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 rpcResult = await rpcClient.GetApprovals();
+         Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 rpcResult = await rpcClient.GetApprovals();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

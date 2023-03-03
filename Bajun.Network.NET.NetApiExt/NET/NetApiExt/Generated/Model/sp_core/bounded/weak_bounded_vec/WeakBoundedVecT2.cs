@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bound
     
     
     /// <summary>
-    /// >> 330 - Composite[sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2]
+    /// >> 353 - Composite[sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT2 : BaseType

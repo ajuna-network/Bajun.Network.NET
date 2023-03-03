@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.p
     }
     
     /// <summary>
-    /// >> 273 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
+    /// >> 281 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64, Ajuna.NetApi.Model.Types.Primitive.U64>>

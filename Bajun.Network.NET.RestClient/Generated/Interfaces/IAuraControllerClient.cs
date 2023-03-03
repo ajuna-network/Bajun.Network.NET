@@ -16,7 +16,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface IAuraControllerClient
    {
-      Task<BoundedVecT23> GetAuthorities();
+      Task<BoundedVecT26> GetAuthorities();
       Task<bool> SubscribeAuthorities();
       Task<Slot> GetCurrentSlot();
       Task<bool> SubscribeCurrentSlot();

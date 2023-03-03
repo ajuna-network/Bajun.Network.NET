@@ -15,6 +15,6 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IVestingControllerMockupClient
    {
-      Task<bool> SetVestingSchedules(BoundedVecT19 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetVestingSchedules(BoundedVecT22 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 139 - Composite[Cow]
+    /// >> 151 - Composite[Cow]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Cow : BaseType

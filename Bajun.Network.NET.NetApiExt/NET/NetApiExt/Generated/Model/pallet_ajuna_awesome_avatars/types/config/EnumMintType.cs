@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     }
     
     /// <summary>
-    /// >> 282 - Variant[pallet_ajuna_awesome_avatars.types.config.MintType]
+    /// >> 290 - Variant[pallet_ajuna_awesome_avatars.types.config.MintType]
     /// </summary>
     public sealed class EnumMintType : BaseEnum<MintType>
     {

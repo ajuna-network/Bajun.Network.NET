@@ -21,7 +21,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetIdentityOf(Registration value, AccountId32 key);
       Task<bool> SetSuperOf(BaseTuple<AccountId32, EnumData> value, AccountId32 key);
-      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT11> value, AccountId32 key);
-      Task<bool> SetRegistrars(BoundedVecT12 value);
+      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT14> value, AccountId32 key);
+      Task<bool> SetRegistrars(BoundedVecT15 value);
    }
 }

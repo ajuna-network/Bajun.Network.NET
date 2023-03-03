@@ -16,7 +16,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilMembershipControllerClient
    {
-      Task<BoundedVecT26> GetMembers();
+      Task<BoundedVecT29> GetMembers();
       Task<bool> SubscribeMembers();
       Task<AccountId32> GetPrime();
       Task<bool> SubscribePrime();

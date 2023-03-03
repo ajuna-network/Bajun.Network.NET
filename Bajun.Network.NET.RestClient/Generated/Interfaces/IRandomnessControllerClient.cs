@@ -15,7 +15,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface IRandomnessControllerClient
    {
-      Task<BoundedVecT27> GetRandomMaterial();
+      Task<BoundedVecT30> GetRandomMaterial();
       Task<bool> SubscribeRandomMaterial();
    }
 }

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto
     
     
     /// <summary>
-    /// >> 354 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 378 - Composite[sp_core.crypto.KeyTypeId]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class KeyTypeId : BaseType

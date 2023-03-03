@@ -25,17 +25,17 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT21> GetInvulnerables()
+      public async Task<BoundedVecT24> GetInvulnerables()
       {
-         return await SendRequestAsync<BoundedVecT21>(_httpClient, "collatorselection/invulnerables");
+         return await SendRequestAsync<BoundedVecT24>(_httpClient, "collatorselection/invulnerables");
       }
       public async Task<bool> SubscribeInvulnerables()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Invulnerables");
       }
-      public async Task<BoundedVecT22> GetCandidates()
+      public async Task<BoundedVecT25> GetCandidates()
       {
-         return await SendRequestAsync<BoundedVecT22>(_httpClient, "collatorselection/candidates");
+         return await SendRequestAsync<BoundedVecT25>(_httpClient, "collatorselection/candidates");
       }
       public async Task<bool> SubscribeCandidates()
       {

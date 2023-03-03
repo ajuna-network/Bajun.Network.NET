@@ -29,9 +29,12 @@ namespace Bajun.Network.NET.RestClient.Mockup
       public IDmpQueueControllerMockupClient DmpQueueControllerClient;
       public IIdentityControllerMockupClient IdentityControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
+      public INftControllerMockupClient NftControllerClient;
+      public INftStakeControllerMockupClient NftStakeControllerClient;
+      public INftTransferControllerMockupClient NftTransferControllerClient;
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
-      public IPreImageControllerMockupClient PreImageControllerClient;
+      public IPreimageControllerMockupClient PreimageControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
       public IRandomnessControllerMockupClient RandomnessControllerClient;
       public ISchedulerControllerMockupClient SchedulerControllerClient;
@@ -41,7 +44,6 @@ namespace Bajun.Network.NET.RestClient.Mockup
       public ITimestampControllerMockupClient TimestampControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
-      public IUniquesControllerMockupClient UniquesControllerClient;
       public IVestingControllerMockupClient VestingControllerClient;
       public IXcmpQueueControllerMockupClient XcmpQueueControllerClient;
       public MockupClient(HttpClient httpClient)
@@ -58,9 +60,12 @@ namespace Bajun.Network.NET.RestClient.Mockup
          DmpQueueControllerClient = new DmpQueueControllerMockupClient(_httpClient);
          IdentityControllerClient = new IdentityControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
+         NftControllerClient = new NftControllerMockupClient(_httpClient);
+         NftStakeControllerClient = new NftStakeControllerMockupClient(_httpClient);
+         NftTransferControllerClient = new NftTransferControllerMockupClient(_httpClient);
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);
-         PreImageControllerClient = new PreImageControllerMockupClient(_httpClient);
+         PreimageControllerClient = new PreimageControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          RandomnessControllerClient = new RandomnessControllerMockupClient(_httpClient);
          SchedulerControllerClient = new SchedulerControllerMockupClient(_httpClient);
@@ -70,7 +75,6 @@ namespace Bajun.Network.NET.RestClient.Mockup
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
-         UniquesControllerClient = new UniquesControllerMockupClient(_httpClient);
          VestingControllerClient = new VestingControllerMockupClient(_httpClient);
          XcmpQueueControllerClient = new XcmpQueueControllerMockupClient(_httpClient);
       }

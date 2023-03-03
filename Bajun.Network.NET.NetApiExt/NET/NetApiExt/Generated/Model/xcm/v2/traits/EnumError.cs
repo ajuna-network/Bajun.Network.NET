@@ -72,7 +72,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v2.traits
     }
     
     /// <summary>
-    /// >> 62 - Variant[xcm.v2.traits.Error]
+    /// >> 54 - Variant[xcm.v2.traits.Error]
     /// </summary>
     public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Ajuna.NetApi.Model.Types.Primitive.U64, BaseVoid, Ajuna.NetApi.Model.Types.Primitive.U64, BaseVoid, BaseVoid>
     {

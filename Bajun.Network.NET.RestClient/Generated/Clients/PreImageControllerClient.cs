@@ -16,30 +16,30 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Bajun.Network.NET.RestClient.Generated.Interfaces;
    
-   public sealed class PreImageControllerClient : BaseClient, IPreImageControllerClient
+   public sealed class PreimageControllerClient : BaseClient, IPreimageControllerClient
    {
       private HttpClient _httpClient;
       private BaseSubscriptionClient _subscriptionClient;
-      public PreImageControllerClient(HttpClient httpClient, BaseSubscriptionClient subscriptionClient)
+      public PreimageControllerClient(HttpClient httpClient, BaseSubscriptionClient subscriptionClient)
       {
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
       public async Task<EnumRequestStatus> GetStatusFor(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<EnumRequestStatus>(_httpClient, "preimage/statusfor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage.StatusForParams(key));
+         return await SendRequestAsync<EnumRequestStatus>(_httpClient, "preimage/statusfor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
       public async Task<bool> SubscribeStatusFor(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await _subscriptionClient.SubscribeAsync("PreImage.StatusFor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage.StatusForParams(key));
+         return await _subscriptionClient.SubscribeAsync("Preimage.StatusFor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
-      public async Task<BoundedVecT17> GetPreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<BoundedVecT20> GetPreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key)
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "preimage/preimagefor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage.PreimageForParams(key));
+         return await SendRequestAsync<BoundedVecT20>(_httpClient, "preimage/preimagefor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }
       public async Task<bool> SubscribePreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key)
       {
-         return await _subscriptionClient.SubscribeAsync("PreImage.PreimageFor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage.PreimageForParams(key));
+         return await _subscriptionClient.SubscribeAsync("Preimage.PreimageFor", Bajun.Network.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }
    }
 }

@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet
     }
     
     /// <summary>
-    /// >> 313 - Variant[pallet_scheduler.pallet.Error]
+    /// >> 346 - Variant[pallet_scheduler.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

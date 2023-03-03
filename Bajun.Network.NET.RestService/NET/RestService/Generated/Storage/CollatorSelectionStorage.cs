@@ -28,13 +28,13 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21 GetInvulnerables();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 GetInvulnerables();
         
         /// <summary>
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 GetCandidates();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetCandidates();
         
         /// <summary>
         /// >> LastAuthoredBlock
@@ -68,12 +68,12 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21> _invulnerablesTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24> _invulnerablesTypedStorage;
         
         /// <summary>
         /// _candidatesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> _candidatesTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> _candidatesTypedStorage;
         
         /// <summary>
         /// _lastAuthoredBlockTypedStorage typed storage field
@@ -95,8 +95,8 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// </summary>
         public CollatorSelectionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InvulnerablesTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
-            this.CandidatesTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
+            this.InvulnerablesTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
+            this.CandidatesTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
             this.LastAuthoredBlockTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("CollatorSelection.LastAuthoredBlock", storageDataProvider, storageChangeDelegates);
             this.DesiredCandidatesTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("CollatorSelection.DesiredCandidates", storageDataProvider, storageChangeDelegates);
             this.CandidacyBondTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U128>("CollatorSelection.CandidacyBond", storageDataProvider, storageChangeDelegates);
@@ -105,7 +105,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21> InvulnerablesTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24> InvulnerablesTypedStorage
         {
             get
             {
@@ -120,7 +120,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _candidatesTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> CandidatesTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> CandidatesTypedStorage
         {
             get
             {
@@ -202,7 +202,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21 GetInvulnerables()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 GetInvulnerables()
         {
             return InvulnerablesTypedStorage.Get();
         }
@@ -220,7 +220,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 GetCandidates()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetCandidates()
         {
             return CandidatesTypedStorage.Get();
         }

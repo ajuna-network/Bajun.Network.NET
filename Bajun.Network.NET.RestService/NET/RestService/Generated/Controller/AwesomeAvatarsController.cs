@@ -53,10 +53,10 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Treasurer")]
         [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "TreasurerParams")]
-        public IActionResult GetTreasurer()
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "TreasurerParams", typeof(Ajuna.NetApi.Model.Types.Primitive.U16))]
+        public IActionResult GetTreasurer(string key)
         {
-            return this.Ok(_awesomeAvatarsStorage.GetTreasurer());
+            return this.Ok(_awesomeAvatarsStorage.GetTreasurer(key));
         }
         
         /// <summary>
@@ -131,11 +131,22 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         /// >> Owners
         /// </summary>
         [HttpGet("Owners")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28), 200)]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31), 200)]
         [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "OwnersParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetOwners(string key)
         {
             return this.Ok(_awesomeAvatarsStorage.GetOwners(key));
+        }
+        
+        /// <summary>
+        /// >> LockedAvatars
+        /// </summary>
+        [HttpGet("LockedAvatars")]
+        [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "LockedAvatarsParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256))]
+        public IActionResult GetLockedAvatars(string key)
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetLockedAvatars(key));
         }
         
         /// <summary>

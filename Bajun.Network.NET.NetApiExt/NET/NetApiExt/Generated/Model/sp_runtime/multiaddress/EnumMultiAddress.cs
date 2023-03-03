@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress
     }
     
     /// <summary>
-    /// >> 185 - Variant[sp_runtime.multiaddress.MultiAddress]
+    /// >> 197 - Variant[sp_runtime.multiaddress.MultiAddress]
     /// </summary>
     public sealed class EnumMultiAddress : BaseEnumExt<MultiAddress, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Base.BaseTuple>, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr20U8>
     {

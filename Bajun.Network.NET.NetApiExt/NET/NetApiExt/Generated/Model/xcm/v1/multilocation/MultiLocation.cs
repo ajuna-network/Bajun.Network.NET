@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multilocation
     
     
     /// <summary>
-    /// >> 66 - Composite[xcm.v1.multilocation.MultiLocation]
+    /// >> 58 - Composite[xcm.v1.multilocation.MultiLocation]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class MultiLocation : BaseType

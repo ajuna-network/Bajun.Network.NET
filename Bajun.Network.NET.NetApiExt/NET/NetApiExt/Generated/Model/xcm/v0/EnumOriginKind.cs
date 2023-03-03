@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0
     }
     
     /// <summary>
-    /// >> 89 - Variant[xcm.v0.OriginKind]
+    /// >> 81 - Variant[xcm.v0.OriginKind]
     /// </summary>
     public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {

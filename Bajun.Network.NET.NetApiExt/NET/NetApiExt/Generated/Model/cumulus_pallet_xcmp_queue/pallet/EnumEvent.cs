@@ -36,7 +36,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.
     }
     
     /// <summary>
-    /// >> 60 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// >> 52 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

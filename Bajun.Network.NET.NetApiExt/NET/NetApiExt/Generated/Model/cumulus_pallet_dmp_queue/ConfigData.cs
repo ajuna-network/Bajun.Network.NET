@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     
     
     /// <summary>
-    /// >> 375 - Composite[cumulus_pallet_dmp_queue.ConfigData]
+    /// >> 399 - Composite[cumulus_pallet_dmp_queue.ConfigData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ConfigData : BaseType

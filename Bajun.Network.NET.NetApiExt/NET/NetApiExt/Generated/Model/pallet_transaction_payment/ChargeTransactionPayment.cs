@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_transaction_payment
     
     
     /// <summary>
-    /// >> 423 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 475 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 399 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayStats]
+    /// >> 423 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayStats]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class PlayStats : BaseType
@@ -37,7 +37,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// <summary>
         /// >> seasons_participated
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet _seasonsParticipated;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 _seasonsParticipated;
         
         public Ajuna.NetApi.Model.Types.Primitive.U32 First
         {
@@ -63,7 +63,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet SeasonsParticipated
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 SeasonsParticipated
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             First.Decode(byteArray, ref p);
             Last = new Ajuna.NetApi.Model.Types.Primitive.U32();
             Last.Decode(byteArray, ref p);
-            SeasonsParticipated = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSet();
+            SeasonsParticipated = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1();
             SeasonsParticipated.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

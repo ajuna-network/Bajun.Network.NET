@@ -20,21 +20,21 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
     
     
     /// <summary>
-    /// PreImageController controller to access storages.
+    /// PreimageController controller to access storages.
     /// </summary>
     [ApiController()]
     [Route("[controller]")]
-    public sealed class PreImageController : ControllerBase
+    public sealed class PreimageController : ControllerBase
     {
         
-        private IPreImageStorage _preImageStorage;
+        private IPreimageStorage _preimageStorage;
         
         /// <summary>
-        /// PreImageController constructor.
+        /// PreimageController constructor.
         /// </summary>
-        public PreImageController(IPreImageStorage preImageStorage)
+        public PreimageController(IPreimageStorage preimageStorage)
         {
-            _preImageStorage = preImageStorage;
+            _preimageStorage = preimageStorage;
         }
         
         /// <summary>
@@ -43,21 +43,21 @@ namespace Bajun.Network.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("StatusFor")]
         [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage), "StatusForParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256))]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.PreimageStorage), "StatusForParams", typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetStatusFor(string key)
         {
-            return this.Ok(_preImageStorage.GetStatusFor(key));
+            return this.Ok(_preimageStorage.GetStatusFor(key));
         }
         
         /// <summary>
         /// >> PreimageFor
         /// </summary>
         [HttpGet("PreimageFor")]
-        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17), 200)]
-        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.PreImageStorage), "PreimageForParams", typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32>))]
+        [ProducesResponseType(typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20), 200)]
+        [StorageKeyBuilder(typeof(Bajun.Network.NET.NetApiExt.Generated.Storage.PreimageStorage), "PreimageForParams", typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetPreimageFor(string key)
         {
-            return this.Ok(_preImageStorage.GetPreimageFor(key));
+            return this.Ok(_preimageStorage.GetPreimageFor(key));
         }
     }
 }

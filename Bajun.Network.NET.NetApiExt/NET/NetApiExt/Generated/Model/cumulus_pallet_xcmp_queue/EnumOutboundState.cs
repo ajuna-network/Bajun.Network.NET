@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
     }
     
     /// <summary>
-    /// >> 368 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 392 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 281 - Composite[pallet_ajuna_awesome_avatars.types.config.MintOption]
+    /// >> 289 - Composite[pallet_ajuna_awesome_avatars.types.config.MintOption]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class MintOption : BaseType

@@ -23,7 +23,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT23 value)
+      public async Task<bool> SetAuthorities(BoundedVecT26 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Aura/Authorities", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AuraStorage.AuthoritiesParams());
       }

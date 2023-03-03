@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 392 - Composite[pallet_ajuna_awesome_avatars.types.season.SeasonStatus]
+    /// >> 416 - Composite[pallet_ajuna_awesome_avatars.types.season.SeasonStatus]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class SeasonStatus : BaseType

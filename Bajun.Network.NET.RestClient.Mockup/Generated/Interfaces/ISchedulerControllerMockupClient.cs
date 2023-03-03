@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    public interface ISchedulerControllerMockupClient
    {
       Task<bool> SetIncompleteSince(U32 value);
-      Task<bool> SetAgenda(BoundedVecT15 value, U32 key);
+      Task<bool> SetAgenda(BoundedVecT18 value, U32 key);
       Task<bool> SetLookup(BaseTuple<U32, U32> value, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
    }
 }

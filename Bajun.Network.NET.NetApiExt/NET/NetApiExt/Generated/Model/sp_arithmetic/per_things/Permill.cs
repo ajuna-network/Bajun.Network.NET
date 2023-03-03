@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things
     
     
     /// <summary>
-    /// >> 383 - Composite[sp_arithmetic.per_things.Permill]
+    /// >> 407 - Composite[sp_arithmetic.per_things.Permill]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Permill : BaseType

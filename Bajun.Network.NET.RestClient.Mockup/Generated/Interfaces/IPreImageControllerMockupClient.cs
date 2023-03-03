@@ -14,9 +14,9 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
-   public interface IPreImageControllerMockupClient
+   public interface IPreimageControllerMockupClient
    {
       Task<bool> SetStatusFor(EnumRequestStatus value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetPreimageFor(BoundedVecT17 value, Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key);
+      Task<bool> SetPreimageFor(BoundedVecT20 value, Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key);
    }
 }

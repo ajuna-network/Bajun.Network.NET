@@ -20,7 +20,7 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilControllerClient
    {
-      Task<BoundedVecT25> GetProposals();
+      Task<BoundedVecT28> GetProposals();
       Task<bool> SubscribeProposals();
       Task<EnumRuntimeCall> GetProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

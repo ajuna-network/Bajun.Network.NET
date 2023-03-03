@@ -26,7 +26,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances
     }
     
     /// <summary>
-    /// >> 332 - Variant[pallet_balances.Reasons]
+    /// >> 355 - Variant[pallet_balances.Reasons]
     /// </summary>
     public sealed class EnumReasons : BaseEnum<Reasons>
     {

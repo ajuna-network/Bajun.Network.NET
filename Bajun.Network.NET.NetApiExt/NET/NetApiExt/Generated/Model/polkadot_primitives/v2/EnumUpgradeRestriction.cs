@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     }
     
     /// <summary>
-    /// >> 146 - Variant[polkadot_primitives.v2.UpgradeRestriction]
+    /// >> 158 - Variant[polkadot_primitives.v2.UpgradeRestriction]
     /// </summary>
     public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
     {

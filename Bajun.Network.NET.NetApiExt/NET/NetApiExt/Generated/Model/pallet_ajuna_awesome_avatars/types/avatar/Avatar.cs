@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 394 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
+    /// >> 418 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Avatar : BaseType
@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// <summary>
         /// >> dna
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 _dna;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 _dna;
         
         /// <summary>
         /// >> souls
@@ -51,7 +51,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 Dna
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 Dna
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             var start = p;
             SeasonId = new Ajuna.NetApi.Model.Types.Primitive.U16();
             SeasonId.Decode(byteArray, ref p);
-            Dna = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+            Dna = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
             Dna.Decode(byteArray, ref p);
             Souls = new Ajuna.NetApi.Model.Types.Primitive.U32();
             Souls.Decode(byteArray, ref p);

@@ -38,7 +38,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.junction
     }
     
     /// <summary>
-    /// >> 68 - Variant[xcm.v1.junction.Junction]
+    /// >> 60 - Variant[xcm.v1.junction.Junction]
     /// </summary>
     public sealed class EnumJunction : BaseEnumExt<Junction, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.junction.EnumNetworkId, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.junction.EnumNetworkId, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.junction.EnumNetworkId, Bajun.Network.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Ajuna.NetApi.Model.Types.Primitive.U8, Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U128>, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.junction.EnumBodyId, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.junction.EnumBodyPart>>
     {

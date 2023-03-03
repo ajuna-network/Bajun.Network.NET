@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 172 - Composite[pallet_multisig.Multisig]
+    /// >> 184 - Composite[pallet_multisig.Multisig]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Multisig : BaseType

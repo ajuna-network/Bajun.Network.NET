@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collator_selection.
     
     
     /// <summary>
-    /// >> 348 - Composite[pallet_collator_selection.pallet.CandidateInfo]
+    /// >> 371 - Composite[pallet_collator_selection.pallet.CandidateInfo]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateInfo : BaseType

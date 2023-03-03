@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 GetVestingSchedules(string key);
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 GetVestingSchedules(string key);
     }
     
     /// <summary>
@@ -42,20 +42,20 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _vestingSchedulesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19> _vestingSchedulesTypedStorage;
+        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> _vestingSchedulesTypedStorage;
         
         /// <summary>
         /// VestingStorage constructor.
         /// </summary>
         public VestingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.VestingSchedulesTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19>("Vesting.VestingSchedules", storageDataProvider, storageChangeDelegates);
+            this.VestingSchedulesTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22>("Vesting.VestingSchedules", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _vestingSchedulesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19> VestingSchedulesTypedStorage
+        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> VestingSchedulesTypedStorage
         {
             get
             {
@@ -90,13 +90,13 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 GetVestingSchedules(string key)
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 GetVestingSchedules(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VestingSchedulesTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 result))
+            if (VestingSchedulesTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 result))
             {
                 return result;
             }

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 117 - Composite[pallet_ajuna_awesome_avatars.types.config.MintConfig]
+    /// >> 111 - Composite[pallet_ajuna_awesome_avatars.types.config.MintConfig]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class MintConfig : BaseType
@@ -43,16 +43,6 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// >> free_mint_fee_multiplier
         /// </summary>
         private Ajuna.NetApi.Model.Types.Primitive.U16 _freeMintFeeMultiplier;
-        
-        /// <summary>
-        /// >> free_mint_transfer_fee
-        /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U16 _freeMintTransferFee;
-        
-        /// <summary>
-        /// >> min_free_mint_transfer
-        /// </summary>
-        private Ajuna.NetApi.Model.Types.Primitive.U16 _minFreeMintTransfer;
         
         public Ajuna.NetApi.Model.Types.Primitive.Bool Open
         {
@@ -102,30 +92,6 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Ajuna.NetApi.Model.Types.Primitive.U16 FreeMintTransferFee
-        {
-            get
-            {
-                return this._freeMintTransferFee;
-            }
-            set
-            {
-                this._freeMintTransferFee = value;
-            }
-        }
-        
-        public Ajuna.NetApi.Model.Types.Primitive.U16 MinFreeMintTransfer
-        {
-            get
-            {
-                return this._minFreeMintTransfer;
-            }
-            set
-            {
-                this._minFreeMintTransfer = value;
-            }
-        }
-        
         public override string TypeName()
         {
             return "MintConfig";
@@ -138,8 +104,6 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             result.AddRange(Fees.Encode());
             result.AddRange(Cooldown.Encode());
             result.AddRange(FreeMintFeeMultiplier.Encode());
-            result.AddRange(FreeMintTransferFee.Encode());
-            result.AddRange(MinFreeMintTransfer.Encode());
             return result.ToArray();
         }
         
@@ -154,10 +118,6 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             Cooldown.Decode(byteArray, ref p);
             FreeMintFeeMultiplier = new Ajuna.NetApi.Model.Types.Primitive.U16();
             FreeMintFeeMultiplier.Decode(byteArray, ref p);
-            FreeMintTransferFee = new Ajuna.NetApi.Model.Types.Primitive.U16();
-            FreeMintTransferFee.Decode(byteArray, ref p);
-            MinFreeMintTransfer = new Ajuna.NetApi.Model.Types.Primitive.U16();
-            MinFreeMintTransfer.Decode(byteArray, ref p);
             TypeSize = p - start;
         }
     }

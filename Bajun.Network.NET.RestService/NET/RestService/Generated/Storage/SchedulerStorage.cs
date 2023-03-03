@@ -33,7 +33,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15 GetAgenda(string key);
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 GetAgenda(string key);
         
         /// <summary>
         /// >> Lookup
@@ -59,7 +59,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15> _agendaTypedStorage;
+        private TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18> _agendaTypedStorage;
         
         /// <summary>
         /// _lookupTypedStorage typed storage field
@@ -72,7 +72,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         public SchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.IncompleteSinceTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("Scheduler.IncompleteSince", storageDataProvider, storageChangeDelegates);
-            this.AgendaTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
+            this.AgendaTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
             this.LookupTypedStorage = new TypedMapStorage<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32>>("Scheduler.Lookup", storageDataProvider, storageChangeDelegates);
         }
         
@@ -94,7 +94,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage property
         /// </summary>
-        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15> AgendaTypedStorage
+        public TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18> AgendaTypedStorage
         {
             get
             {
@@ -161,13 +161,13 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15 GetAgenda(string key)
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 GetAgenda(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15 result))
+            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18 result))
             {
                 return result;
             }

@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primiti
     
     
     /// <summary>
-    /// >> 63 - Composite[polkadot_parachain.primitives.Id]
+    /// >> 55 - Composite[polkadot_parachain.primitives.Id]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Id : BaseType

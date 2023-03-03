@@ -29,9 +29,9 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT25> GetProposals()
+      public async Task<BoundedVecT28> GetProposals()
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "council/proposals");
+         return await SendRequestAsync<BoundedVecT28>(_httpClient, "council/proposals");
       }
       public async Task<bool> SubscribeProposals()
       {

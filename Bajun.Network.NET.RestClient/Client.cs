@@ -30,9 +30,12 @@ namespace Bajun.Network.NET.RestClient
       public IDmpQueueControllerClient DmpQueueControllerClient;
       public IIdentityControllerClient IdentityControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
+      public INftControllerClient NftControllerClient;
+      public INftStakeControllerClient NftStakeControllerClient;
+      public INftTransferControllerClient NftTransferControllerClient;
       public IParachainInfoControllerClient ParachainInfoControllerClient;
       public IParachainSystemControllerClient ParachainSystemControllerClient;
-      public IPreImageControllerClient PreImageControllerClient;
+      public IPreimageControllerClient PreimageControllerClient;
       public IProxyControllerClient ProxyControllerClient;
       public IRandomnessControllerClient RandomnessControllerClient;
       public ISchedulerControllerClient SchedulerControllerClient;
@@ -42,7 +45,6 @@ namespace Bajun.Network.NET.RestClient
       public ITimestampControllerClient TimestampControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
       public ITreasuryControllerClient TreasuryControllerClient;
-      public IUniquesControllerClient UniquesControllerClient;
       public IVestingControllerClient VestingControllerClient;
       public IXcmpQueueControllerClient XcmpQueueControllerClient;
       public Client(HttpClient httpClient, BaseSubscriptionClient subscriptionClient)
@@ -60,9 +62,12 @@ namespace Bajun.Network.NET.RestClient
          DmpQueueControllerClient = new DmpQueueControllerClient(_httpClient, _subscriptionClient);
          IdentityControllerClient = new IdentityControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
+         NftControllerClient = new NftControllerClient(_httpClient, _subscriptionClient);
+         NftStakeControllerClient = new NftStakeControllerClient(_httpClient, _subscriptionClient);
+         NftTransferControllerClient = new NftTransferControllerClient(_httpClient, _subscriptionClient);
          ParachainInfoControllerClient = new ParachainInfoControllerClient(_httpClient, _subscriptionClient);
          ParachainSystemControllerClient = new ParachainSystemControllerClient(_httpClient, _subscriptionClient);
-         PreImageControllerClient = new PreImageControllerClient(_httpClient, _subscriptionClient);
+         PreimageControllerClient = new PreimageControllerClient(_httpClient, _subscriptionClient);
          ProxyControllerClient = new ProxyControllerClient(_httpClient, _subscriptionClient);
          RandomnessControllerClient = new RandomnessControllerClient(_httpClient, _subscriptionClient);
          SchedulerControllerClient = new SchedulerControllerClient(_httpClient, _subscriptionClient);
@@ -72,7 +77,6 @@ namespace Bajun.Network.NET.RestClient
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);
          TreasuryControllerClient = new TreasuryControllerClient(_httpClient, _subscriptionClient);
-         UniquesControllerClient = new UniquesControllerClient(_httpClient, _subscriptionClient);
          VestingControllerClient = new VestingControllerClient(_httpClient, _subscriptionClient);
          XcmpQueueControllerClient = new XcmpQueueControllerClient(_httpClient, _subscriptionClient);
       }

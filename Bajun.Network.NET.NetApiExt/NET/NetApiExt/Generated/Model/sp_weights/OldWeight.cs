@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights
     
     
     /// <summary>
-    /// >> 278 - Composite[sp_weights.OldWeight]
+    /// >> 286 - Composite[sp_weights.OldWeight]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class OldWeight : BaseType

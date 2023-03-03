@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 96 - Variant[xcm.VersionedMultiAssets]
+    /// >> 88 - Variant[xcm.VersionedMultiAssets]
     /// </summary>
     public sealed class EnumVersionedMultiAssets : BaseEnumExt<VersionedMultiAssets, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v0.multi_asset.EnumMultiAsset>, Bajun.Network.NET.NetApiExt.Generated.Model.xcm.v1.multiasset.MultiAssets>
     {

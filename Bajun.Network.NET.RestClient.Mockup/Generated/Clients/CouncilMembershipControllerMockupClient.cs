@@ -23,7 +23,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BoundedVecT26 value)
+      public async Task<bool> SetMembers(BoundedVecT29 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CouncilMembership/Members", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CouncilMembershipStorage.MembersParams());
       }

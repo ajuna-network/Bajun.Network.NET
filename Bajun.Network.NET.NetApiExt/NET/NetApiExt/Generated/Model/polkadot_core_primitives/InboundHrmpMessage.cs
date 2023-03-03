@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_core_primitives
     
     
     /// <summary>
-    /// >> 166 - Composite[polkadot_core_primitives.InboundHrmpMessage]
+    /// >> 178 - Composite[polkadot_core_primitives.InboundHrmpMessage]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class InboundHrmpMessage : BaseType

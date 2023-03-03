@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetProposals();
+        Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 GetProposals();
         
         /// <summary>
         /// >> ProposalOf
@@ -70,7 +70,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _proposalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> _proposalsTypedStorage;
+        private TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28> _proposalsTypedStorage;
         
         /// <summary>
         /// _proposalOfTypedStorage typed storage field
@@ -102,7 +102,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// </summary>
         public CouncilStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.ProposalsTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25>("Council.Proposals", storageDataProvider, storageChangeDelegates);
+            this.ProposalsTypedStorage = new TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28>("Council.Proposals", storageDataProvider, storageChangeDelegates);
             this.ProposalOfTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>("Council.ProposalOf", storageDataProvider, storageChangeDelegates);
             this.VotingTypedStorage = new TypedMapStorage<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.Votes>("Council.Voting", storageDataProvider, storageChangeDelegates);
             this.ProposalCountTypedStorage = new TypedStorage<Ajuna.NetApi.Model.Types.Primitive.U32>("Council.ProposalCount", storageDataProvider, storageChangeDelegates);
@@ -113,7 +113,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// <summary>
         /// _proposalsTypedStorage property
         /// </summary>
-        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> ProposalsTypedStorage
+        public TypedStorage<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28> ProposalsTypedStorage
         {
             get
             {
@@ -226,7 +226,7 @@ namespace Bajun.Network.NET.RestService.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetProposals()
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT28 GetProposals()
         {
             return ProposalsTypedStorage.Get();
         }

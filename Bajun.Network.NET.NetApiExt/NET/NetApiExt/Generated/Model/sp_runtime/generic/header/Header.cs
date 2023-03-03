@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_runtime.generic.header
     
     
     /// <summary>
-    /// >> 240 - Composite[sp_runtime.generic.header.Header]
+    /// >> 248 - Composite[sp_runtime.generic.header.Header]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType

@@ -21,19 +21,19 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
 {
     
     
-    public sealed class PreImageStorage
+    public sealed class PreimageStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
-        public PreImageStorage(SubstrateClientExt client)
+        public PreimageStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PreImage", "StatusFor"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "StatusFor"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PreImage", "PreimageFor"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32>), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "PreimageFor"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32>), typeof(Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20)));
         }
         
         /// <summary>
@@ -42,7 +42,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string StatusForParams(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
         {
-            return RequestGenerator.GetStorage("PreImage", "StatusFor", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+            return RequestGenerator.GetStorage("Preimage", "StatusFor", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                         Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, new Ajuna.NetApi.Model.Types.IType[] {
                         key});
         }
@@ -62,7 +62,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// </summary>
         public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> StatusFor(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
         {
-            string parameters = PreImageStorage.StatusForParams(key);
+            string parameters = PreimageStorage.StatusForParams(key);
             var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>(parameters, token);
             return result;
         }
@@ -72,7 +72,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string PreimageForParams(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key)
         {
-            return RequestGenerator.GetStorage("PreImage", "PreimageFor", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
+            return RequestGenerator.GetStorage("Preimage", "PreimageFor", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                         Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, new Ajuna.NetApi.Model.Types.IType[] {
                         key});
         }
@@ -89,15 +89,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17> PreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20> PreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
         {
-            string parameters = PreImageStorage.PreimageForParams(key);
-            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17>(parameters, token);
+            string parameters = PreimageStorage.PreimageForParams(key);
+            var result = await _client.GetStorageAsync<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT20>(parameters, token);
             return result;
         }
     }
     
-    public sealed class PreImageCalls
+    public sealed class PreimageCalls
     {
         
         /// <summary>
@@ -108,7 +108,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(bytes.Encode());
-            return new Method(9, "PreImage", 0, "note_preimage", byteArray.ToArray());
+            return new Method(9, "Preimage", 0, "note_preimage", byteArray.ToArray());
         }
         
         /// <summary>
@@ -119,7 +119,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hash.Encode());
-            return new Method(9, "PreImage", 1, "unnote_preimage", byteArray.ToArray());
+            return new Method(9, "Preimage", 1, "unnote_preimage", byteArray.ToArray());
         }
         
         /// <summary>
@@ -130,7 +130,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hash.Encode());
-            return new Method(9, "PreImage", 2, "request_preimage", byteArray.ToArray());
+            return new Method(9, "Preimage", 2, "request_preimage", byteArray.ToArray());
         }
         
         /// <summary>
@@ -141,15 +141,15 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hash.Encode());
-            return new Method(9, "PreImage", 3, "unrequest_preimage", byteArray.ToArray());
+            return new Method(9, "Preimage", 3, "unrequest_preimage", byteArray.ToArray());
         }
     }
     
-    public sealed class PreImageConstants
+    public sealed class PreimageConstants
     {
     }
     
-    public enum PreImageErrors
+    public enum PreimageErrors
     {
         
         /// <summary>

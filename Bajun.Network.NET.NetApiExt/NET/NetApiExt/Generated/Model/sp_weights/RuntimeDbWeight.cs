@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights
     
     
     /// <summary>
-    /// >> 137 - Composite[sp_weights.RuntimeDbWeight]
+    /// >> 149 - Composite[sp_weights.RuntimeDbWeight]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class RuntimeDbWeight : BaseType

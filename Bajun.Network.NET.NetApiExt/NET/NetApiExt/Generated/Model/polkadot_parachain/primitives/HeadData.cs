@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primiti
     
     
     /// <summary>
-    /// >> 144 - Composite[polkadot_parachain.primitives.HeadData]
+    /// >> 156 - Composite[polkadot_parachain.primitives.HeadData]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class HeadData : BaseType

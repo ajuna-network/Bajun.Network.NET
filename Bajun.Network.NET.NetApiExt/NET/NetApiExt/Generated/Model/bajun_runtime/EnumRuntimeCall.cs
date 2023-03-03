@@ -34,9 +34,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime
         
         Scheduler = 8,
         
-        PreImage = 9,
-        
-        Uniques = 10,
+        Preimage = 9,
         
         Balances = 15,
         
@@ -63,12 +61,18 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime
         CouncilMembership = 43,
         
         AwesomeAvatars = 51,
+        
+        Nft = 60,
+        
+        NftTransfer = 61,
+        
+        NftStake = 62,
     }
     
     /// <summary>
-    /// >> 175 - Variant[bajun_runtime.RuntimeCall]
+    /// >> 187 - Variant[bajun_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumCall, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_authorship.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_sudo.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumCall, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_authorship.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_sudo.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumCall, Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_staking.pallet.EnumCall>
     {
     }
 }

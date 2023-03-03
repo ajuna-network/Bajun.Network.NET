@@ -14,11 +14,11 @@ namespace Bajun.Network.NET.RestClient.Generated.Interfaces
    using Bajun.Network.NET.NetApiExt.Generated.Model.pallet_preimage;
    using Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
-   public interface IPreImageControllerClient
+   public interface IPreimageControllerClient
    {
       Task<EnumRequestStatus> GetStatusFor(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeStatusFor(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT17> GetPreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key);
+      Task<BoundedVecT20> GetPreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key);
       Task<bool> SubscribePreimageFor(Ajuna.NetApi.Model.Types.Base.BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Primitive.U32> key);
    }
 }

@@ -28,7 +28,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
       }
-      public async Task<bool> SetAgenda(BoundedVecT15 value, U32 key)
+      public async Task<bool> SetAgenda(BoundedVecT18 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }

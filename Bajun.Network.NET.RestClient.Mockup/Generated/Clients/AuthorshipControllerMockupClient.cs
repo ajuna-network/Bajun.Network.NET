@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetUncles(BoundedVecT20 value)
+      public async Task<bool> SetUncles(BoundedVecT23 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Authorship/Uncles", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.AuthorshipStorage.UnclesParams());
       }

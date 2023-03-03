@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.extensions.ch
     
     
     /// <summary>
-    /// >> 421 - Composite[frame_system.extensions.check_nonce.CheckNonce]
+    /// >> 473 - Composite[frame_system.extensions.check_nonce.CheckNonce]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class CheckNonce : BaseType

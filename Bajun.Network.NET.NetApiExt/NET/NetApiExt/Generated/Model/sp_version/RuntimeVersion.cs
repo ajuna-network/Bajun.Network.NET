@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_version
     
     
     /// <summary>
-    /// >> 138 - Composite[sp_version.RuntimeVersion]
+    /// >> 150 - Composite[sp_version.RuntimeVersion]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class RuntimeVersion : BaseType

@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_authorship
     }
     
     /// <summary>
-    /// >> 343 - Variant[pallet_authorship.UncleEntryItem]
+    /// >> 366 - Variant[pallet_authorship.UncleEntryItem]
     /// </summary>
     public sealed class EnumUncleEntryItem : BaseEnumExt<UncleEntryItem, Ajuna.NetApi.Model.Types.Primitive.U32, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256, Ajuna.NetApi.Model.Types.Base.BaseOpt<Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>
     {

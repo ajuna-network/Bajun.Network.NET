@@ -32,7 +32,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     }
     
     /// <summary>
-    /// >> 176 - Variant[pallet_utility.pallet.Call]
+    /// >> 188 - Variant[pallet_utility.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U16, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller, Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, Ajuna.NetApi.Model.Types.Base.BaseVec<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Bajun.Network.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, Bajun.Network.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>

@@ -30,7 +30,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_collator_selection.
     }
     
     /// <summary>
-    /// >> 57 - Variant[pallet_collator_selection.pallet.Event]
+    /// >> 49 - Variant[pallet_collator_selection.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

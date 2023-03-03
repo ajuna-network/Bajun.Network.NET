@@ -39,13 +39,13 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Organizer");
       }
-      public async Task<AccountId32> GetTreasurer()
+      public async Task<AccountId32> GetTreasurer(U16 key)
       {
-         return await SendRequestAsync<AccountId32>(_httpClient, "awesomeavatars/treasurer");
+         return await SendRequestAsync<AccountId32>(_httpClient, "awesomeavatars/treasurer", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams(key));
       }
-      public async Task<bool> SubscribeTreasurer()
+      public async Task<bool> SubscribeTreasurer(U16 key)
       {
-         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Treasurer");
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Treasurer", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams(key));
       }
       public async Task<U16> GetCurrentSeasonId()
       {
@@ -95,13 +95,21 @@ namespace Bajun.Network.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Avatars", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<BoundedVecT28> GetOwners(AccountId32 key)
+      public async Task<BoundedVecT31> GetOwners(AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT28>(_httpClient, "awesomeavatars/owners", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
+         return await SendRequestAsync<BoundedVecT31>(_httpClient, "awesomeavatars/owners", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
       public async Task<bool> SubscribeOwners(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Owners", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
+      }
+      public async Task<U128> GetLockedAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      {
+         return await SendRequestAsync<U128>(_httpClient, "awesomeavatars/lockedavatars", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.LockedAvatarsParams(key));
+      }
+      public async Task<bool> SubscribeLockedAvatars(Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.LockedAvatars", Bajun.Network.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.LockedAvatarsParams(key));
       }
       public async Task<AccountInfo> GetAccounts(AccountId32 key)
       {

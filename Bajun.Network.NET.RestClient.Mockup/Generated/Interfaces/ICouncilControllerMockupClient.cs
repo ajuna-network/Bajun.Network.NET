@@ -20,7 +20,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICouncilControllerMockupClient
    {
-      Task<bool> SetProposals(BoundedVecT25 value);
+      Task<bool> SetProposals(BoundedVecT28 value);
       Task<bool> SetProposalOf(EnumRuntimeCall value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetVoting(Votes value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetProposalCount(U32 value);

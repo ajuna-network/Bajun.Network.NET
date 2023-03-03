@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 133 - Composite[frame_system.limits.WeightsPerClass]
+    /// >> 145 - Composite[frame_system.limits.WeightsPerClass]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class WeightsPerClass : BaseType

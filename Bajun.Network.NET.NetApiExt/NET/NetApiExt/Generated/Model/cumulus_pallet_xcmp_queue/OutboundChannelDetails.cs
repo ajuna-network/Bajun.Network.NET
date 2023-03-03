@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
     
     
     /// <summary>
-    /// >> 367 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 391 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType

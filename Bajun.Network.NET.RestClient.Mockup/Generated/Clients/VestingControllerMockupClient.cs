@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetVestingSchedules(BoundedVecT19 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetVestingSchedules(BoundedVecT22 value, Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Vesting/VestingSchedules", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
       }

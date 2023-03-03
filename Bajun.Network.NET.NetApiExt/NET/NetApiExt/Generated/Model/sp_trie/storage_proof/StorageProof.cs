@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
     
     
     /// <summary>
-    /// >> 147 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 159 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType

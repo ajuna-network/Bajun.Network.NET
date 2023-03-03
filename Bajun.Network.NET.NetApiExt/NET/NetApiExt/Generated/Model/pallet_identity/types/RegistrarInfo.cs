@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 295 - Composite[pallet_identity.types.RegistrarInfo]
+    /// >> 328 - Composite[pallet_identity.types.RegistrarInfo]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class RegistrarInfo : BaseType

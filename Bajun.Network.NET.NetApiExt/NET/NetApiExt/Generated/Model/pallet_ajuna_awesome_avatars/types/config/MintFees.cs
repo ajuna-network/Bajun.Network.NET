@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 118 - Composite[pallet_ajuna_awesome_avatars.types.config.MintFees]
+    /// >> 112 - Composite[pallet_ajuna_awesome_avatars.types.config.MintFees]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class MintFees : BaseType

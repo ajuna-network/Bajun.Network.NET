@@ -22,7 +22,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_transaction_payment
     }
     
     /// <summary>
-    /// >> 53 - Variant[pallet_transaction_payment.pallet.Event]
+    /// >> 45 - Variant[pallet_transaction_payment.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

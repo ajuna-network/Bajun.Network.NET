@@ -23,11 +23,11 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT21 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT24 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT22 value)
+      public async Task<bool> SetCandidates(BoundedVecT25 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Bajun.Network.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }

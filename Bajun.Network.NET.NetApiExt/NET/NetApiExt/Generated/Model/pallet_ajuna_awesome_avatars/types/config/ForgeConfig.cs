@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 119 - Composite[pallet_ajuna_awesome_avatars.types.config.ForgeConfig]
+    /// >> 113 - Composite[pallet_ajuna_awesome_avatars.types.config.ForgeConfig]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class ForgeConfig : BaseType

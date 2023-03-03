@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 403 - Composite[pallet_ajuna_awesome_avatars.types.account.TradeStats]
+    /// >> 427 - Composite[pallet_ajuna_awesome_avatars.types.account.TradeStats]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class TradeStats : BaseType

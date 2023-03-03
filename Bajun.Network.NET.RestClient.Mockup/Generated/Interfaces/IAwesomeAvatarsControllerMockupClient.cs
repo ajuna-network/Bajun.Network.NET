@@ -23,14 +23,15 @@ namespace Bajun.Network.NET.RestClient.Mockup.Generated.Interfaces
    public interface IAwesomeAvatarsControllerMockupClient
    {
       Task<bool> SetOrganizer(AccountId32 value);
-      Task<bool> SetTreasurer(AccountId32 value);
+      Task<bool> SetTreasurer(AccountId32 value, U16 key);
       Task<bool> SetCurrentSeasonId(U16 value);
       Task<bool> SetCurrentSeasonStatus(SeasonStatus value);
       Task<bool> SetSeasons(Season value, U16 key);
       Task<bool> SetTreasury(U128 value, U16 key);
       Task<bool> SetGlobalConfigs(GlobalConfig value);
       Task<bool> SetAvatars(BaseTuple<AccountId32, Avatar> value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetOwners(BoundedVecT28 value, AccountId32 key);
+      Task<bool> SetOwners(BoundedVecT31 value, AccountId32 key);
+      Task<bool> SetLockedAvatars(U128 value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetAccounts(AccountInfo value, AccountId32 key);
       Task<bool> SetSeasonStats(SeasonInfo value, BaseTuple<U16, AccountId32> key);
       Task<bool> SetTrade(U128 value, Bajun.Network.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

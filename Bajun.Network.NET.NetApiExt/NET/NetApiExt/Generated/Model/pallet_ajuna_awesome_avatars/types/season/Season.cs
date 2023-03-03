@@ -18,7 +18,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
     
     
     /// <summary>
-    /// >> 109 - Composite[pallet_ajuna_awesome_avatars.types.season.Season]
+    /// >> 103 - Composite[pallet_ajuna_awesome_avatars.types.season.Season]
     /// </summary>
     [AjunaNodeType(TypeDefEnum.Composite)]
     public sealed class Season : BaseType
@@ -27,12 +27,12 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// <summary>
         /// >> name
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 _name;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 _name;
         
         /// <summary>
         /// >> description
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 _description;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 _description;
         
         /// <summary>
         /// >> early_start
@@ -77,17 +77,17 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// <summary>
         /// >> tiers
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 _tiers;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 _tiers;
         
         /// <summary>
         /// >> single_mint_probs
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 _singleMintProbs;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 _singleMintProbs;
         
         /// <summary>
         /// >> batch_mint_probs
         /// </summary>
-        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 _batchMintProbs;
+        private Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 _batchMintProbs;
         
         /// <summary>
         /// >> base_prob
@@ -104,7 +104,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         /// </summary>
         private Ajuna.NetApi.Model.Types.Primitive.U16 _periods;
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 Name
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 Name
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 Description
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 Description
         {
             get
             {
@@ -224,7 +224,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 Tiers
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 Tiers
         {
             get
             {
@@ -236,7 +236,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 SingleMintProbs
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 SingleMintProbs
         {
             get
             {
@@ -248,7 +248,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             }
         }
         
-        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 BatchMintProbs
+        public Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 BatchMintProbs
         {
             get
             {
@@ -326,9 +326,9 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Name = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+            Name = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
             Name.Decode(byteArray, ref p);
-            Description = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5();
+            Description = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2();
             Description.Decode(byteArray, ref p);
             EarlyStart = new Ajuna.NetApi.Model.Types.Primitive.U32();
             EarlyStart.Decode(byteArray, ref p);
@@ -346,11 +346,11 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avata
             MinSacrifices.Decode(byteArray, ref p);
             MaxSacrifices = new Ajuna.NetApi.Model.Types.Primitive.U8();
             MaxSacrifices.Decode(byteArray, ref p);
-            Tiers = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+            Tiers = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3();
             Tiers.Decode(byteArray, ref p);
-            SingleMintProbs = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+            SingleMintProbs = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
             SingleMintProbs.Decode(byteArray, ref p);
-            BatchMintProbs = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+            BatchMintProbs = new Bajun.Network.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
             BatchMintProbs.Decode(byteArray, ref p);
             BaseProb = new Ajuna.NetApi.Model.Types.Primitive.U8();
             BaseProb.Decode(byteArray, ref p);

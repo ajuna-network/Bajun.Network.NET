@@ -24,7 +24,7 @@ namespace Bajun.Network.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 181 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 193 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Bajun.Network.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
     {
