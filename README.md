@@ -1,5 +1,5 @@
-# Bajun.Network .NET API
-*Ajuna.NET API Extensions for the Bajun Network*  
+# Bajun Network .NET API
+*Substrate .NET API Extensions for the Bajun Network*  
 ![Build](https://github.com/ajuna-network/Bajun.Network.NET/actions/workflows/build.yml/badge.svg)
 [![Nuget](https://img.shields.io/nuget/v/Bajun.Network.NET.Extension)](https://www.nuget.org/packages/Bajun.Network.NET.Extension/)
 [![GitHub issues](https://img.shields.io/github/issues/ajuna-network/Bajun.Network.NET.svg)](https://github.com/ajuna-network/Bajun.Network.NET/issues)
